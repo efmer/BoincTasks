@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseIntel|Win32">
+      <Configuration>ReleaseIntel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseSSE|Win32">
+      <Configuration>ReleaseSSE</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F46A379F-29A6-49AF-97EE-A0483EB9BC36}</ProjectGuid>
+    <RootNamespace>BoincTasksLibrary</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseIntel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSSE|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseIntel|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSSE|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseIntel|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseSSE|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseIntel|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseSSE|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ReleaseIntel|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ReleaseSSE|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ReleaseIntel|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ReleaseSSE|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseIntel|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseSSE|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\programma\BoincTasks\BoincTasks\boinc\boinc_source\boinc;C:\programma\BoincTasks\BoincTasks\boinc\boinc_source\boinc\lib;C:\programma\BoincTasks\BoincTasks\boinc\boinc_source\boinc\api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseIntel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\programma\BoincTasks\BoincTasks\boinc\boinc_source\boinc;C:\programma\BoincTasks\BoincTasks\boinc\boinc_source\boinc\lib;C:\programma\BoincTasks\BoincTasks\boinc\boinc_source\boinc\api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSSE|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\programma\BoincTasks\BoincTasks\boinc\boinc_source\boinc;C:\programma\BoincTasks\BoincTasks\boinc\boinc_source\boinc\lib;C:\programma\BoincTasks\BoincTasks\boinc\boinc_source\boinc\api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\BoincTasks\BoincTasks.h" />
+    <ClInclude Include="..\BoincTasks\ChildFrm.h" />
+    <ClInclude Include="..\BoincTasks\ColorListBox.h" />
+    <ClInclude Include="..\BoincTasks\Computer.h" />
+    <ClInclude Include="..\BoincTasks\Label.h" />
+    <ClInclude Include="..\BoincTasks\MainFrm.h" />
+    <ClInclude Include="..\BoincTasks\registry.h" />
+    <ClInclude Include="..\BoincTasks\resource.h" />
+    <ClInclude Include="..\BoincTasks\Selection.h" />
+    <ClInclude Include="..\BoincTasks\SortColumn.h" />
+    <ClInclude Include="..\BoincTasks\stdafx.h" />
+    <ClInclude Include="..\BoincTasks\UpdateCheck.h" />
+    <ClInclude Include="..\BoincTasks\WebRead.h" />
+    <ClInclude Include="..\BoincTasks\WndColor.h" />
+    <ClInclude Include="..\BoincTasks\WndGraphic.h" />
+    <ClInclude Include="..\BoincTasks\WorkUnit.h" />
+    <ClInclude Include="..\BoincTasks\Xml.h" />
+    <ClInclude Include="..\BoincTasks\ComputerDoc.h" />
+    <ClInclude Include="..\BoincTasks\ComputerView.h" />
+    <ClInclude Include="..\BoincTasks\RemoteCombinedDoc.h" />
+    <ClInclude Include="..\BoincTasks\RemoteCombinedMessageView.h" />
+    <ClInclude Include="..\BoincTasks\RemoteCombinedProjectView.h" />
+    <ClInclude Include="..\BoincTasks\RemoteCombinedTaskView.h" />
+    <ClInclude Include="..\BoincTasks\RemoteCombinedTransferView.h" />
+    <ClInclude Include="..\BoincTasks\RemoteDoc.h" />
+    <ClInclude Include="..\BoincTasks\RemoteMessageView.h" />
+    <ClInclude Include="..\BoincTasks\RemoteProjectView.h" />
+    <ClInclude Include="..\BoincTasks\RemoteTaskView.h" />
+    <ClInclude Include="..\BoincTasks\RemoteTransferView.h" />
+    <ClInclude Include="..\BoincTasks\TasksDoc.h" />
+    <ClInclude Include="..\BoincTasks\TasksView.h" />
+    <ClInclude Include="..\BoincTasks\ThreadRpc.h" />
+    <ClInclude Include="..\BoincTasks\AboutDlg.h" />
+    <ClInclude Include="..\BoincTasks\DlgBarComputer.h" />
+    <ClInclude Include="..\BoincTasks\DlgColor.h" />
+    <ClInclude Include="..\BoincTasks\DlgGraphic.h" />
+    <ClInclude Include="..\BoincTasks\DlgGraphicColor.h" />
+    <ClInclude Include="..\BoincTasks\DlgLogging.h" />
+    <ClInclude Include="..\BoincTasks\DlgPrefDisk.h" />
+    <ClInclude Include="..\BoincTasks\DlgPrefMain.h" />
+    <ClInclude Include="..\BoincTasks\DlgPrefNetwork.h" />
+    <ClInclude Include="..\BoincTasks\DlgPrefProcessor.h" />
+    <ClInclude Include="..\BoincTasks\DlgProgress.h" />
+    <ClInclude Include="..\BoincTasks\DlgSettings.h" />
+    <ClInclude Include="..\BoincTasks\DlgTimer.h" />
+    <ClInclude Include="..\BoincTasks\DlgUpdate.h" />
+    <ClInclude Include="..\BoincTasks\DlgYesNo.h" />
+    <ClInclude Include="..\BoincTasks\InPlaceEdit.h" />
+    <ClInclude Include="..\BoincTasks\listviewex.h" />
+    <ClInclude Include="..\BoincTasks\sort.h" />
+    <ClInclude Include="..\BoincTasks\TemplateRemoteProjectView.h" />
+    <ClInclude Include="..\BoincTasks\TemplateRemoteTaskView.h" />
+    <ClInclude Include="..\BoincTasks\TemplateRemoteTransferView.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\BoincTasks\res\bmpColors.bmp" />
+    <None Include="..\BoincTasks\res\boinc.ico" />
+    <None Include="..\BoincTasks\res\BoincTasks.ico" />
+    <None Include="..\BoincTasks\res\BoincTasks.rc2" />
+    <None Include="..\BoincTasks\res\BoincTasksDoc.ico" />
+    <None Include="..\BoincTasks\res\combined.ico" />
+    <None Include="..\BoincTasks\res\computerButton.bmp" />
+    <None Include="..\BoincTasks\res\efmerBoinc.ico" />
+    <None Include="..\BoincTasks\res\eFMerBoincTasks.ico" />
+    <None Include="..\16x16-free-application-icons\ico\Globe.ico" />
+    <None Include="..\BoincTasks\res\ico00001.ico" />
+    <None Include="..\BoincTasks\res\icon1.ico" />
+    <None Include="..\BoincTasks\res\idr_boin.ico" />
+    <None Include="..\BoincTasks\res\idr_hand_link.ico" />
+    <None Include="..\BoincTasks\res\mainfram.bmp" />
+    <None Include="..\BoincTasks\res\stateico.bmp" />
+    <None Include="..\BoincTasks\res\Toolbar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\BoincTasks\BoincTasks.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\BoincTasks\BoincTasks.cpp" />
+    <ClCompile Include="..\BoincTasks\ChildFrm.cpp" />
+    <ClCompile Include="..\BoincTasks\ColorListBox.cpp" />
+    <ClCompile Include="..\BoincTasks\Computers.cpp" />
+    <ClCompile Include="..\BoincTasks\Label.cpp" />
+    <ClCompile Include="..\BoincTasks\MainFrm.cpp" />
+    <ClCompile Include="..\BoincTasks\Selection.cpp" />
+    <ClCompile Include="..\BoincTasks\SortColumn.cpp" />
+    <ClCompile Include="..\BoincTasks\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseIntel|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseSSE|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\BoincTasks\UpdateCheck.cpp" />
+    <ClCompile Include="..\BoincTasks\WebRead.cpp" />
+    <ClCompile Include="..\BoincTasks\WndColor.cpp" />
+    <ClCompile Include="..\BoincTasks\WndGraphic.cpp" />
+    <ClCompile Include="..\BoincTasks\WorkUnit.cpp" />
+    <ClCompile Include="..\BoincTasks\Xml.cpp" />
+    <ClCompile Include="..\BoincTasks\ComputerDoc.cpp" />
+    <ClCompile Include="..\BoincTasks\ComputerView.cpp" />
+    <ClCompile Include="..\BoincTasks\RemoteCombinedDoc.cpp" />
+    <ClCompile Include="..\BoincTasks\RemoteCombinedMessageView.cpp" />
+    <ClCompile Include="..\BoincTasks\RemoteCombinedProjectView.cpp" />
+    <ClCompile Include="..\BoincTasks\RemoteCombinedTaskView.cpp" />
+    <ClCompile Include="..\BoincTasks\RemoteCombinedTransferView.cpp" />
+    <ClCompile Include="..\BoincTasks\RemoteDoc.cpp" />
+    <ClCompile Include="..\BoincTasks\RemoteMessageView.cpp" />
+    <ClCompile Include="..\BoincTasks\RemoteProjectView.cpp" />
+    <ClCompile Include="..\BoincTasks\RemoteTaskView.cpp" />
+    <ClCompile Include="..\BoincTasks\RemoteTransferView.cpp" />
+    <ClCompile Include="..\BoincTasks\TasksDoc.cpp" />
+    <ClCompile Include="..\BoincTasks\TasksView.cpp" />
+    <ClCompile Include="..\BoincTasks\ThreadRpc.cpp" />
+    <ClCompile Include="..\BoincTasks\ThreadScheduler.cpp" />
+    <ClCompile Include="..\BoincTasks\ThreadStatusAnimation.cpp" />
+    <ClCompile Include="..\BoincTasks\AboutDlg.cpp" />
+    <ClCompile Include="..\BoincTasks\DlgBarComputer.cpp" />
+    <ClCompile Include="..\BoincTasks\DlgColor.cpp" />
+    <ClCompile Include="..\BoincTasks\DlgGraphic.cpp" />
+    <ClCompile Include="..\BoincTasks\DlgGraphicColor.cpp" />
+    <ClCompile Include="..\BoincTasks\DlgLogging.cpp" />
+    <ClCompile Include="..\BoincTasks\DlgPrefDisk.cpp" />
+    <ClCompile Include="..\BoincTasks\DlgPrefMain.cpp" />
+    <ClCompile Include="..\BoincTasks\DlgPrefNetwork.cpp" />
+    <ClCompile Include="..\BoincTasks\DlgPrefProcessor.cpp" />
+    <ClCompile Include="..\BoincTasks\DlgProgress.cpp" />
+    <ClCompile Include="..\BoincTasks\DlgSettings.cpp" />
+    <ClCompile Include="..\BoincTasks\DlgTimer.cpp" />
+    <ClCompile Include="..\BoincTasks\DlgUpdate.cpp" />
+    <ClCompile Include="..\BoincTasks\DlgYesNo.cpp" />
+    <ClCompile Include="..\BoincTasks\functions.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseIntel|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseSSE|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\BoincTasks\InPlaceEdit.cpp" />
+    <ClCompile Include="..\BoincTasks\listviewex.cpp" />
+    <ClCompile Include="..\BoincTasks\TemplateRemoteProjectView.cpp" />
+    <ClCompile Include="..\BoincTasks\TemplateRemoteTaskView.cpp" />
+    <ClCompile Include="..\BoincTasks\TemplateRemoteTransferView.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

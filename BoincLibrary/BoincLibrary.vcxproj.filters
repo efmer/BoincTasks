@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="boinc">
+      <UniqueIdentifier>{78217335-52f5-41e0-90f4-99b187017d24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boinc\cpp">
+      <UniqueIdentifier>{2261cc83-4a93-4332-b821-aba32fef80c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boinc\header">
+      <UniqueIdentifier>{2b9f3470-5cd4-44f2-b6a0-1754ceacfbf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boinc\header\Encryption">
+      <UniqueIdentifier>{a9587bec-49bf-4855-a91c-a4ea5714908a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Boinc\coproc.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\diagnostics.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\filesys.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\gui_rpc_client.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\gui_rpc_client_ops.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\hostinfo.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\md5.c">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\md5_file.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\miofile.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\network.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\notice.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\parse.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\prefs.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\proxy_info.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\str_util.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\util.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\mfile.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\win_util.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\shmem.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\url.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Boinc\cc_config.cpp">
+      <Filter>boinc\cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Boinc\parse.h">
+      <Filter>boinc\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Boinc\cl_boinc.h">
+      <Filter>boinc\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Boinc\url.h">
+      <Filter>boinc\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Boinc\util.h">
+      <Filter>boinc\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Boinc\cc_config.h">
+      <Filter>boinc\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Boinc\gui_rpc_client.h">
+      <Filter>boinc\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Boinc\common_defs.h">
+      <Filter>boinc\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Encryption\CBase64EncodeDecode.h">
+      <Filter>boinc\header\Encryption</Filter>
+    </ClInclude>
+    <ClInclude Include="Encryption\CCrypto.h">
+      <Filter>boinc\header\Encryption</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

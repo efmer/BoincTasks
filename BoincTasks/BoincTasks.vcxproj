@@ -1,0 +1,1369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseIntel|ARM">
+      <Configuration>ReleaseIntel</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseIntel|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseIntel|x64">
+      <Configuration>ReleaseIntel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseLarge|ARM">
+      <Configuration>ReleaseLarge</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseLarge|Win32">
+      <Configuration>xReleaseLarge</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseLarge|x64">
+      <Configuration>ReleaseLarge</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseSSE|ARM">
+      <Configuration>ReleaseSSE</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseSSE|Win32">
+      <Configuration>xReleaseSSE</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseSSE|x64">
+      <Configuration>ReleaseSSE</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|ARM">
+      <Configuration>Template</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|x64">
+      <Configuration>Template</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="xReleaseLarge|ARM">
+      <Configuration>xReleaseLarge</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="xReleaseSSE|ARM">
+      <Configuration>xReleaseSSE</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{71E4D355-E3B9-4B28-A7E3-782A66BEF8F1}</ProjectGuid>
+    <RootNamespace>BoincTasks</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>Intel C++ Compiler XE 13.0</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>Intel C++ Compiler XE 13.0</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>Intel C++ Compiler XE 13.0</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>Intel C++ Compiler XE 13.0</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>Intel C++ Compiler XE 13.0</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <PlatformToolset>Intel C++ Compiler XE 13.0</PlatformToolset>
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='ReleaseIntel|x64'">
+    <PlatformToolset>Intel C++ Compiler XE 13.0</PlatformToolset>
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseIntel|ARM'" Label="Configuration">
+    <PlatformToolset>Intel C++ Compiler XE 13.0</PlatformToolset>
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Template|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Template|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|ARM'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|ARM'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|ARM'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|ARM'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|ARM'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|ARM'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|ARM'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|ARM'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|ARM'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|ARM'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|ARM'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|ARM'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|ARM'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|ARM'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|ARM'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName)64</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(ProjectName)64</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName)64</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(ProjectName)64</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName)64</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(ProjectName)64</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|x64'">$(ProjectName)_sse2_64</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|ARM'">$(ProjectName)_sse2_64</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|x64'">$(ProjectName)64_large</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|ARM'">$(ProjectName)64_large</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PublicIncludeDirectories>$(PublicIncludeDirectories)</PublicIncludeDirectories>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D BoincTasks %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Wtsapi32.lib;Psapi.lib;Shell32.lib;ws2_32.lib;Dbghelp.lib;mpr.lib;Winmm.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D BoincTasks %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <FloatingPointModel>Precise</FloatingPointModel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Wtsapi32.lib;Psapi.lib;Shell32.lib;ws2_32.lib;Dbghelp.lib;mpr.lib;Winmm.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)64.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+      <HeapReserveSize>
+      </HeapReserveSize>
+      <HeapCommitSize>
+      </HeapCommitSize>
+      <StackReserveSize>
+      </StackReserveSize>
+      <StackCommitSize>
+      </StackCommitSize>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>cd   $(OutDir)
+$(OutDir)sign_exe.bat
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D BoincTasks %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cryptlib.lib;Wtsapi32.lib;Psapi.lib;Shell32.lib;ws2_32.lib;Dbghelp.lib;mpr.lib;Winmm.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)64.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <HeapReserveSize>
+      </HeapReserveSize>
+      <HeapCommitSize>
+      </HeapCommitSize>
+      <StackReserveSize>
+      </StackReserveSize>
+      <StackCommitSize>
+      </StackCommitSize>
+      <AdditionalLibraryDirectories>E:\Programma\cryptopp-master\x64\Output\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>cd   $(OutDir)
+$(OutDir)sign_exe.bat
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D BoincTasks %(AdditionalOptions)</AdditionalOptions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <OmitFramePointers>true</OmitFramePointers>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>C:\programma\BoincTasks\BoincTasks;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Wtsapi32.lib;Psapi.lib;Shell32.lib;ws2_32.lib;mpr.lib;Dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)boinctasks.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D BoincTasks %(AdditionalOptions)</AdditionalOptions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>E:\Programma\cryptopp-master;..\BoincLibrary\Encryption;..\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <OmitFramePointers>true</OmitFramePointers>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>C:\programma\BoincTasks\BoincTasks;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Wtsapi32.lib;Psapi.lib;Shell32.lib;ws2_32.lib;mpr.lib;Dbghelp.lib;windowscodecs.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)boinctasks.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D BoincTasks %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <OmitFramePointers>true</OmitFramePointers>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Wtsapi32.lib;Psapi.lib;Shell32.lib;ws2_32.lib;mpr.lib;Dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)boinctasks64.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D BoincTasks %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <OmitFramePointers>true</OmitFramePointers>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Wtsapi32.lib;Psapi.lib;Shell32.lib;ws2_32.lib;mpr.lib;Dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)boinctasks64.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D BoincTasks %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\BoincLibrary\Encryption;..\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Wtsapi32.lib;Psapi.lib;Shell32.lib;ws2_32.lib;Dbghelp.lib;Winmm.lib;windowscodecs.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)boinctasks64.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D BoincTasks %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\BoincLibrary\Encryption;..\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cryptlib.lib;Wtsapi32.lib;Psapi.lib;Shell32.lib;ws2_32.lib;Dbghelp.lib;Winmm.lib;windowscodecs.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)boinctasks64.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalLibraryDirectories>E:\Programma\cryptopp-master\x64\Output\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D BoincTasks %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <EnableEnhancedInstructionSet>/arch:AVX</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Wtsapi32.lib;Psapi.lib;Shell32.lib;ws2_32.lib;mpr.lib;Dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)boinctasks_sse2_64.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|ARM'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D BoincTasks %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <EnableEnhancedInstructionSet>/arch:AVX</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Wtsapi32.lib;Psapi.lib;Shell32.lib;ws2_32.lib;mpr.lib;Dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)boinctasks_sse2_64.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D BoincTasks %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LARGE_COMPUTERS;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Psapi.lib;Shell32.lib;ws2_32.lib;mpr.lib;Dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)boinctasks64_large.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|ARM'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D BoincTasks %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LARGE_COMPUTERS;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Psapi.lib;Shell32.lib;ws2_32.lib;mpr.lib;Dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)boinctasks64_large.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|ARM'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseIntel|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>D:\programma\BoincTasks\BoincTasks_1_4_3\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/D BoincTasks %(AdditionalOptions)</AdditionalOptions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <OptimizeForWindowsApplication>true</OptimizeForWindowsApplication>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>DbgHelp.lib;Psapi.lib;Mpr.lib;Wtsapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <NoEntryPoint>false</NoEntryPoint>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseIntel|ARM'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>D:\programma\BoincTasks\BoincTasks_1_4_3\BoincLibrary\Boinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/D BoincTasks %(AdditionalOptions)</AdditionalOptions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <OptimizeForWindowsApplication>true</OptimizeForWindowsApplication>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>DbgHelp.lib;Psapi.lib;Mpr.lib;Wtsapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <NoEntryPoint>false</NoEntryPoint>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common\bf\BlowFish.cpp" />
+    <ClCompile Include="AnsiToUtf8.cpp" />
+    <ClCompile Include="Base64.cpp" />
+    <ClCompile Include="BoincClientManager.cpp" />
+    <ClCompile Include="BoincTasks.cpp" />
+    <ClCompile Include="Computers.cpp" />
+    <ClCompile Include="CondenseResource.cpp" />
+    <ClCompile Include="ContextMenu.cpp" />
+    <ClCompile Include="CreateHtml.cpp" />
+    <ClCompile Include="CreateHtmlWebServer.cpp" />
+    <ClCompile Include="CreateHtmlWebServerButton.cpp" />
+    <ClCompile Include="CreateHtmlWebServerComputerSelect.cpp" />
+    <ClCompile Include="CreateHtmlNotices.cpp" />
+    <ClCompile Include="CreateHtmlWebServerFilter.cpp" />
+    <ClCompile Include="CreateHtmlWebServerGraph.cpp" />
+    <ClCompile Include="CreateHtmlWebServerGraphComputerSelect.cpp" />
+    <ClCompile Include="CreateHtmlWebServerGraphProjectSelect.cpp" />
+    <ClCompile Include="CreateHtmlWebServerProperties.cpp" />
+    <ClCompile Include="DateConvert.cpp" />
+    <ClCompile Include="DgPrefExclusiveAdd.cpp" />
+    <ClCompile Include="DlgBarProject.cpp" />
+    <ClCompile Include="DlgBarSide.cpp" />
+    <ClCompile Include="DlgDebug.cpp" />
+    <ClCompile Include="DlgEditAppInfoConfig.cpp" />
+    <ClCompile Include="DlgEditConfig.cpp" />
+    <ClCompile Include="DlgEditConfigBase.cpp" />
+    <ClCompile Include="DlgGraphicDeadline.cpp" />
+    <ClCompile Include="DlgGraphicTransfer.cpp" />
+    <ClCompile Include="DlgHistory.cpp" />
+    <ClCompile Include="DlgPrefExclusive.cpp" />
+    <ClCompile Include="DlgAddAccountManager.cpp" />
+    <ClCompile Include="DlgColorTemperature.cpp" />
+    <ClCompile Include="DlgComputerLocation.cpp" />
+    <ClCompile Include="DlgFont.cpp" />
+    <ClCompile Include="DlgGraphicTasks.cpp" />
+    <ClCompile Include="DlgGraphicTemperature.cpp" />
+    <ClCompile Include="DlgNotices.cpp" />
+    <ClCompile Include="DlgProxyHttp.cpp" />
+    <ClCompile Include="DlgProxyMain.cpp" />
+    <ClCompile Include="DlgProxySocks.cpp" />
+    <ClCompile Include="DlgRules.cpp" />
+    <ClCompile Include="DlgRulesLogging.cpp" />
+    <ClCompile Include="DlgScheduler.cpp" />
+    <ClCompile Include="DlgSearch.cpp" />
+    <ClCompile Include="DlgSelectComputer.cpp" />
+    <ClCompile Include="DlgSetDebt.cpp" />
+    <ClCompile Include="DlgSettingsMessage.cpp" />
+    <ClCompile Include="DlgSettingsMobile.cpp" />
+    <ClCompile Include="DlgSettingsNotices.cpp" />
+    <ClCompile Include="DlgSettingsProject.cpp" />
+    <ClCompile Include="DlgSettingsRules.cpp" />
+    <ClCompile Include="DlgSettingsTransfer.cpp" />
+    <ClCompile Include="DlgSettingsWWW.cpp" />
+    <ClCompile Include="DlgThreadGraph.cpp" />
+    <ClCompile Include="DlgTThrottle.cpp" />
+    <ClCompile Include="Draw.cpp" />
+    <ClCompile Include="History.cpp" />
+    <ClCompile Include="HtmlConnect.cpp" />
+    <ClCompile Include="Json.cpp" />
+    <ClCompile Include="ListCtrlEdit.cpp" />
+    <ClCompile Include="ListCtrlHistory.cpp" />
+    <ClCompile Include="ListCtrlRules.cpp" />
+    <ClCompile Include="ListCtrlSelectComputer.cpp" />
+    <ClCompile Include="Mac.cpp" />
+    <ClCompile Include="MemoryUse.cpp" />
+    <ClCompile Include="NumberFormat.cpp" />
+    <ClCompile Include="OperationItem.cpp" />
+    <ClCompile Include="PushCheck.cpp" />
+    <ClCompile Include="RemoteCombinedNoticesView.cpp" />
+    <ClCompile Include="RichEditCtrlXml.cpp" />
+    <ClCompile Include="RpcClient.cpp" />
+    <ClCompile Include="Rules.cpp" />
+    <ClCompile Include="SkinHeader.cpp" />
+    <ClCompile Include="StringCopyNew.cpp" />
+    <ClCompile Include="TasksProperties.cpp" />
+    <ClCompile Include="TextBox.cpp" />
+    <ClCompile Include="ThreadBoincClient.cpp" />
+    <ClCompile Include="ThreadCloudConnect.cpp" />
+    <ClCompile Include="ThreadCloudServer.cpp" />
+    <ClCompile Include="ThreadConnect.cpp" />
+    <ClCompile Include="ThreadGarbageCollector.cpp" />
+    <ClCompile Include="ThreadHostSearch.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="Selection.cpp" />
+    <ClCompile Include="SortColumn.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|ARM'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|ARM'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThreadIpSearch.cpp" />
+    <ClCompile Include="ThreadProcessTime.cpp" />
+    <ClCompile Include="ThreadRpcClientSearch.cpp" />
+    <ClCompile Include="ThreadRpcSearch.cpp" />
+    <ClCompile Include="ThreadStats.cpp" />
+    <ClCompile Include="ThreadWebServer.cpp" />
+    <ClCompile Include="ThreadWebServerConnection.cpp" />
+    <ClCompile Include="TimeString.cpp" />
+    <ClCompile Include="ThreadRpcClient.cpp" />
+    <ClCompile Include="Translate.cpp" />
+    <ClCompile Include="UpdateCheck.cpp" />
+    <ClCompile Include="UseCpuGpu.cpp" />
+    <ClCompile Include="WebServer2.cpp" />
+    <ClCompile Include="WebServerProcess.cpp" />
+    <ClCompile Include="Wildcard.cpp" />
+    <ClCompile Include="WndColor.cpp" />
+    <ClCompile Include="WndGraphic.cpp" />
+    <ClCompile Include="WndGraphicDeadline.cpp" />
+    <ClCompile Include="WndGraphicTasks.cpp" />
+    <ClCompile Include="WndGraphicTemperature.cpp" />
+    <ClCompile Include="WndGraphicTransfer.cpp" />
+    <ClCompile Include="WndScheduler.cpp" />
+    <ClCompile Include="WndThreadGraph.cpp" />
+    <ClCompile Include="WorkUnit.cpp" />
+    <ClCompile Include="Xml.cpp" />
+    <ClCompile Include="RemoteCombinedComputerView.cpp" />
+    <ClCompile Include="RemoteCombinedDoc.cpp" />
+    <ClCompile Include="RemoteCombinedHistoryView.cpp" />
+    <ClCompile Include="RemoteCombinedMessageView.cpp" />
+    <ClCompile Include="RemoteCombinedProjectView.cpp" />
+    <ClCompile Include="RemoteCombinedTaskView.cpp" />
+    <ClCompile Include="RemoteCombinedTransferView.cpp" />
+    <ClCompile Include="ThreadRpc.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="ColorListBox.cpp" />
+    <ClCompile Include="CombinedChildFrm.cpp" />
+    <ClCompile Include="functions.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='xReleaseSSE|ARM'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='xReleaseLarge|ARM'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="InPlaceEdit.cpp" />
+    <ClCompile Include="Label.cpp" />
+    <ClCompile Include="ListCtrlFindComputers.cpp" />
+    <ClCompile Include="ListCtrlFloater.cpp" />
+    <ClCompile Include="listviewex.cpp" />
+    <ClCompile Include="ListViewMine.cpp" />
+    <ClCompile Include="RemoteDocTemplate.cpp" />
+    <ClCompile Include="TemplateRemoteComputerView.cpp" />
+    <ClCompile Include="TemplateRemoteHistoryView.cpp" />
+    <ClCompile Include="TemplateRemoteMessageView.cpp" />
+    <ClCompile Include="TemplateRemoteProjectView.cpp" />
+    <ClCompile Include="TemplateRemoteTaskView.cpp" />
+    <ClCompile Include="TemplateRemoteTransferView.cpp" />
+    <ClCompile Include="TToolbar.cpp" />
+    <ClCompile Include="MultiLanguage.cpp" />
+    <ClCompile Include="Translation.cpp" />
+    <ClCompile Include="AboutDlg.cpp" />
+    <ClCompile Include="DlgAddProject.cpp" />
+    <ClCompile Include="DlgBarComputer.cpp" />
+    <ClCompile Include="DlgBarViewSelect.cpp" />
+    <ClCompile Include="DlgColorGeneral.cpp" />
+    <ClCompile Include="DlgColorHistory.cpp" />
+    <ClCompile Include="DlgColorMain.cpp" />
+    <ClCompile Include="DlgColorMessages.cpp" />
+    <ClCompile Include="DlgColorProjects.cpp" />
+    <ClCompile Include="DlgColorTasks.cpp" />
+    <ClCompile Include="DlgColorWarnings.cpp" />
+    <ClCompile Include="DlgFloating.cpp" />
+    <ClCompile Include="DlgGraphic.cpp" />
+    <ClCompile Include="DlgColorGraphic.cpp" />
+    <ClCompile Include="DlgLogging.cpp" />
+    <ClCompile Include="DlgPrefDisk.cpp" />
+    <ClCompile Include="DlgPrefMain.cpp" />
+    <ClCompile Include="DlgPrefNetwork.cpp" />
+    <ClCompile Include="DlgPrefProcessor.cpp" />
+    <ClCompile Include="DlgProperties.cpp" />
+    <ClCompile Include="DlgSearchComputers.cpp" />
+    <ClCompile Include="DlgSettingsExpert.cpp" />
+    <ClCompile Include="DlgSettingsGadget.cpp" />
+    <ClCompile Include="DlgSettingsGeneral.cpp" />
+    <ClCompile Include="DlgSettingsHistory.cpp" />
+    <ClCompile Include="DlgSettingsMain.cpp" />
+    <ClCompile Include="DlgSettingsTasks.cpp" />
+    <ClCompile Include="DlgSettingsView.cpp" />
+    <ClCompile Include="DlgSettingsWarning.cpp" />
+    <ClCompile Include="DlgTimer.cpp" />
+    <ClCompile Include="DlgUpdate.cpp" />
+    <ClCompile Include="DlgYesNo.cpp" />
+    <ClCompile Include="ListCtrlComputer.cpp" />
+    <ClCompile Include="TabCtrlView.cpp" />
+    <ClCompile Include="XmlParser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnsiToUtf8.h" />
+    <ClInclude Include="Base64.h" />
+    <ClInclude Include="Blowfish.h" />
+    <ClInclude Include="BoincClientManager.h" />
+    <ClInclude Include="BoincTasks.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="ColorListBox.h" />
+    <ClInclude Include="CombinedChildFrm.h" />
+    <ClInclude Include="Computer.h" />
+    <ClInclude Include="CondenseResource.h" />
+    <ClInclude Include="ContextMenu.h" />
+    <ClInclude Include="CreateHtml.h" />
+    <ClInclude Include="CreateHtmlWebServer.h" />
+    <ClInclude Include="CreateHtmlWebServerButton.h" />
+    <ClInclude Include="CreateHtmlWebServerComputerSelect.h" />
+    <ClInclude Include="CreateHtmlNotices.h" />
+    <ClInclude Include="CreateHtmlWebServerFilter.h" />
+    <ClInclude Include="CreateHtmlWebServerGraph.h" />
+    <ClInclude Include="CreateHtmlWebServerGraphComputerSelect.h" />
+    <ClInclude Include="CreateHtmlWebServerGraphProjectSelect.h" />
+    <ClInclude Include="CreateHtmlWebServerProperties.h" />
+    <ClInclude Include="DateConvert.h" />
+    <ClInclude Include="DgPrefExclusiveAdd.h" />
+    <ClInclude Include="DlgBarProject.h" />
+    <ClInclude Include="DlgBarSide.h" />
+    <ClInclude Include="DlgDebug.h" />
+    <ClInclude Include="DlgEditAppInfoConfig.h" />
+    <ClInclude Include="DlgEditConfig.h" />
+    <ClInclude Include="DlgEditConfigBase.h" />
+    <ClInclude Include="DlgGraphicDeadline.h" />
+    <ClInclude Include="DlgGraphicTransfer.h" />
+    <ClInclude Include="DlgHistory.h" />
+    <ClInclude Include="DlgPrefExclusive.h" />
+    <ClInclude Include="DlgAddAccountManager.h" />
+    <ClInclude Include="DlgColorTemperature.h" />
+    <ClInclude Include="DlgComputerLocation.h" />
+    <ClInclude Include="DlgFont.h" />
+    <ClInclude Include="DlgGraphicTasks.h" />
+    <ClInclude Include="DlgGraphicTemperature.h" />
+    <ClInclude Include="DlgNotices.h" />
+    <ClInclude Include="DlgProxyHttp.h" />
+    <ClInclude Include="DlgProxyMain.h" />
+    <ClInclude Include="DlgProxySocks.h" />
+    <ClInclude Include="DlgRules.h" />
+    <ClInclude Include="DlgRulesLogging.h" />
+    <ClInclude Include="DlgScheduler.h" />
+    <ClInclude Include="DlgSearch.h" />
+    <ClInclude Include="DlgSelectComputer.h" />
+    <ClInclude Include="DlgSetDebt.h" />
+    <ClInclude Include="DlgSettingsMessage.h" />
+    <ClInclude Include="DlgSettingsMobile.h" />
+    <ClInclude Include="DlgSettingsNotices.h" />
+    <ClInclude Include="DlgSettingsProject.h" />
+    <ClInclude Include="DlgSettingsRules.h" />
+    <ClInclude Include="DlgSettingsTransfer.h" />
+    <ClInclude Include="DlgSettingsWWW.h" />
+    <ClInclude Include="DlgThreadGraph.h" />
+    <ClInclude Include="DlgTThrottle.h" />
+    <ClInclude Include="Draw.h" />
+    <ClInclude Include="History.h" />
+    <ClInclude Include="HtmlConnect.h" />
+    <ClInclude Include="Json.h" />
+    <ClInclude Include="ListCtrlEdit.h" />
+    <ClInclude Include="ListCtrlHistory.h" />
+    <ClInclude Include="ListCtrlRules.h" />
+    <ClInclude Include="ListCtrlSelectComputer.h" />
+    <ClInclude Include="Mac.h" />
+    <ClInclude Include="MemDC.h" />
+    <ClInclude Include="MemoryUse.h" />
+    <ClInclude Include="NumberFormat.h" />
+    <ClInclude Include="OperationItem.h" />
+    <ClInclude Include="PushCheck.h" />
+    <ClInclude Include="RemoteCombinedNoticesView.h" />
+    <ClInclude Include="RichEditCtrlXml.h" />
+    <ClInclude Include="Rules.h" />
+    <ClInclude Include="SkinHeader.h" />
+    <ClInclude Include="StringCopyNew.h" />
+    <ClInclude Include="TasksProperties.h" />
+    <ClInclude Include="TextBox.h" />
+    <ClInclude Include="ThreadBoincClient.h" />
+    <ClInclude Include="ThreadCloudConnect.h" />
+    <ClInclude Include="ThreadCloudServer.h" />
+    <ClInclude Include="ThreadConnect.h" />
+    <ClInclude Include="ThreadGarbageCollector.h" />
+    <ClInclude Include="ThreadHostSearch.h" />
+    <ClInclude Include="Label.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="registry.h" />
+    <ClInclude Include="RemoteDocTemplate.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Selection.h" />
+    <ClInclude Include="SortColumn.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="ThreadIpSearch.h" />
+    <ClInclude Include="ThreadProcessTime.h" />
+    <ClInclude Include="ThreadRpcClientSearch.h" />
+    <ClInclude Include="ThreadRpcSearch.h" />
+    <ClInclude Include="ThreadStats.h" />
+    <ClInclude Include="ThreadWebServer.h" />
+    <ClInclude Include="ThreadWebServerConnection.h" />
+    <ClInclude Include="TimeString.h" />
+    <ClInclude Include="Translate.h" />
+    <ClInclude Include="UpdateCheck.h" />
+    <ClInclude Include="UseCpuGpu.h" />
+    <ClInclude Include="WebServer2.h" />
+    <ClInclude Include="WebServerProcess.h" />
+    <ClInclude Include="Wildcard.h" />
+    <ClInclude Include="WndColor.h" />
+    <ClInclude Include="WndGraphic.h" />
+    <ClInclude Include="WndGraphicDeadline.h" />
+    <ClInclude Include="WndGraphicTasks.h" />
+    <ClInclude Include="WndGraphicTemperature.h" />
+    <ClInclude Include="WndGraphicTransfer.h" />
+    <ClInclude Include="WndScheduler.h" />
+    <ClInclude Include="WndThreadGraph.h" />
+    <ClInclude Include="WorkUnit.h" />
+    <ClInclude Include="Xml.h" />
+    <ClInclude Include="RemoteCombinedComputerView.h" />
+    <ClInclude Include="RemoteCombinedDoc.h" />
+    <ClInclude Include="RemoteCombinedHistoryView.h" />
+    <ClInclude Include="RemoteCombinedMessageView.h" />
+    <ClInclude Include="RemoteCombinedProjectView.h" />
+    <ClInclude Include="RemoteCombinedTaskView.h" />
+    <ClInclude Include="RemoteCombinedTransferView.h" />
+    <ClInclude Include="ThreadRpc.h" />
+    <ClInclude Include="..\..\rpctesting\client\RpcClient.h" />
+    <ClInclude Include="..\..\rpctesting\client\ThreadRpcClient.h" />
+    <ClInclude Include="AboutDlg.h" />
+    <ClInclude Include="DlgAddProject.h" />
+    <ClInclude Include="DlgBarComputer.h" />
+    <ClInclude Include="DlgBarViewSelect.h" />
+    <ClInclude Include="DlgColorGeneral.h" />
+    <ClInclude Include="DlgColorHistory.h" />
+    <ClInclude Include="DlgColorMain.h" />
+    <ClInclude Include="DlgColorMessages.h" />
+    <ClInclude Include="DlgColorProjects.h" />
+    <ClInclude Include="DlgColorTasks.h" />
+    <ClInclude Include="DlgColorWarnings.h" />
+    <ClInclude Include="DlgFloating.h" />
+    <ClInclude Include="DlgGraphic.h" />
+    <ClInclude Include="DlgColorGraphic.h" />
+    <ClInclude Include="DlgLogging.h" />
+    <ClInclude Include="DlgPrefDisk.h" />
+    <ClInclude Include="DlgPrefMain.h" />
+    <ClInclude Include="DlgPrefNetwork.h" />
+    <ClInclude Include="DlgPrefProcessor.h" />
+    <ClInclude Include="DlgProperties.h" />
+    <ClInclude Include="DlgSearchComputers.h" />
+    <ClInclude Include="DlgSettingsExpert.h" />
+    <ClInclude Include="DlgSettingsGadget.h" />
+    <ClInclude Include="DlgSettingsGeneral.h" />
+    <ClInclude Include="DlgSettingsHistory.h" />
+    <ClInclude Include="DlgSettingsMain.h" />
+    <ClInclude Include="DlgSettingsTasks.h" />
+    <ClInclude Include="DlgSettingsView.h" />
+    <ClInclude Include="DlgSettingsWarning.h" />
+    <ClInclude Include="DlgTimer.h" />
+    <ClInclude Include="DlgUpdate.h" />
+    <ClInclude Include="DlgYesNo.h" />
+    <ClInclude Include="ListCtrlComputer.h" />
+    <ClInclude Include="TabCtrlView.h" />
+    <ClInclude Include="InPlaceEdit.h" />
+    <ClInclude Include="ListCtrlFindComputers.h" />
+    <ClInclude Include="ListCtrlFloater.h" />
+    <ClInclude Include="listviewex.h" />
+    <ClInclude Include="ListViewMine.h" />
+    <ClInclude Include="SortComputer.h" />
+    <ClInclude Include="SortHistory.h" />
+    <ClInclude Include="SortProject.h" />
+    <ClInclude Include="SortTask.h" />
+    <ClInclude Include="SortTransfer.h" />
+    <ClInclude Include="TemplateRemoteComputerView.h" />
+    <ClInclude Include="TemplateRemoteHistoryView.h" />
+    <ClInclude Include="TemplateRemoteMessageView.h" />
+    <ClInclude Include="TemplateRemoteProjectView.h" />
+    <ClInclude Include="TemplateRemoteTaskView.h" />
+    <ClInclude Include="TemplateRemoteTransferView.h" />
+    <ClInclude Include="TToolbar.h" />
+    <ClInclude Include="MultiLanguage.h" />
+    <ClInclude Include="Translation.h" />
+    <ClInclude Include="XmlParser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\Erase.bmp" />
+    <None Include="..\..\16x16-free-application-icons\fatcow-hosting-icons-2400\16x16\networking_green.png" />
+    <None Include="..\..\16x16-free-application-icons\fatcow-hosting-icons-2400\16x16\networking_red.png" />
+    <None Include="..\..\16x16-free-application-icons\fatcow-hosting-icons-2400\16x16\server.png" />
+    <None Include="..\..\16x16-free-application-icons\fatcow-hosting-icons-2400\16x16\server_go.png" />
+    <None Include="..\..\16x16-free-application-icons\fatcow-hosting-icons-2400\16x16\shape_square.png" />
+    <None Include="..\..\16x16-free-application-icons\fatcow-hosting-icons-2400\16x16\shape_square_go.png" />
+    <None Include="..\..\BoincTasks_1_6_3\BoincTasks\res\platform\android.bmp" />
+    <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\About.bmp" />
+    <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\No.bmp" />
+    <None Include="res\bitmap1.bmp" />
+    <None Include="res\bitmap2.bmp" />
+    <None Include="res\bitmap3.bmp" />
+    <None Include="res\bmp00001.bmp" />
+    <None Include="res\bmpColors.bmp" />
+    <None Include="res\boinc.ico" />
+    <None Include="..\..\boinc\clientgui\res\BOINCGUIApp.ico" />
+    <None Include="res\BoincTasks.ico" />
+    <None Include="res\BoincTasks.rc2" />
+    <None Include="res\BoincTasksDoc.ico" />
+    <None Include="res\ColumnHeaderEnd.bmp" />
+    <None Include="res\ColumnHeaderSpan.bmp" />
+    <None Include="res\ColumnHeaderStart.bmp" />
+    <None Include="res\combined.ico" />
+    <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\Computer 16x16.bmp" />
+    <None Include="res\computerbar.bmp" />
+    <None Include="res\computerButton.bmp" />
+    <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\Disaster.bmp" />
+    <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\Download.bmp" />
+    <None Include="res\efmerBoinc.ico" />
+    <None Include="res\eFMerBoincTasks.ico" />
+    <None Include="res\Help symbol.bmp" />
+    <None Include="res\help.png" />
+    <None Include="res\ico00001.ico" />
+    <None Include="res\icon1.ico" />
+    <None Include="res\icon_projects.ico" />
+    <None Include="res\icoRemote.ico" />
+    <None Include="res\icoSuspend.ico" />
+    <None Include="res\idr_boin.ico" />
+    <None Include="res\idr_hand_link.ico" />
+    <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\Mail.bmp" />
+    <None Include="res\mainfram.bmp" />
+    <None Include="16x16-free-application-icons\16x16-free-application-icons\ico\Network connection.ico" />
+    <None Include="perfect-network-icons\normal\bmp\16x16\Network group.bmp" />
+    <None Include="res\platform\android.bmp" />
+    <None Include="res\platform\android.ico" />
+    <None Include="res\platform\android.png" />
+    <None Include="res\platform\ati.bmp" />
+    <None Include="res\platform\freebsd.bmp" />
+    <None Include="res\platform\linux.bmp" />
+    <None Include="res\platform\mac.bmp" />
+    <None Include="res\platform\nvidia.bmp" />
+    <None Include="res\platform\virtualbox.bmp" />
+    <None Include="res\platform\windows.bmp" />
+    <None Include="res\project.bmp" />
+    <None Include="res\ssl.bmp" />
+    <None Include="res\stateico.bmp" />
+    <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\Text.bmp" />
+    <None Include="res\s_at_nl.bmp" />
+    <None Include="res\toolbarcomputersdisabled.bmp" />
+    <None Include="res\toolbar_allowed_disabled.bmp" />
+    <None Include="res\toolbar_always.bmp" />
+    <None Include="res\toolbar_operations _disabled24.bmp" />
+    <None Include="res\tool_boi.bmp" />
+    <None Include="res\Toolbar.bmp" />
+    <None Include="res\toolbar1.bmp" />
+    <None Include="res\toolbar_.bmp" />
+    <None Include="res\toolbar_operations.bmp" />
+    <None Include="res\toolbarcomputers.bmp" />
+    <None Include="res\toolbartasks.bmp" />
+    <None Include="res\viewicons.bmp" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BoincTasks.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BoincLibrary\BoincLibrary.vcxproj">
+      <Project>{4458d7ca-4753-4281-879a-1efedb912fd1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="BoincTasks.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

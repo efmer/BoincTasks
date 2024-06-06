@@ -1,0 +1,1451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\doc_view">
+      <UniqueIdentifier>{84e3880a-991b-4d03-a542-22101528bf3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\threads">
+      <UniqueIdentifier>{6fae48ac-ee2b-4840-ac8f-b7fbc10064d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\threads\TThrottle">
+      <UniqueIdentifier>{29210ec5-c10a-4e8d-b49b-a651e657e190}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lib">
+      <UniqueIdentifier>{aa91a3b3-4971-4500-8364-141666d696dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\language">
+      <UniqueIdentifier>{75a8be5e-f737-41b3-8bcb-49a97b01622b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dlg">
+      <UniqueIdentifier>{85980fba-95db-488a-8396-59d412819b43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\threads">
+      <UniqueIdentifier>{057aeb70-a541-4407-adac-fd96a34fbd2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\threads\TThrottle">
+      <UniqueIdentifier>{cb85efdd-df68-4efd-b008-d26e0413600e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dlg">
+      <UniqueIdentifier>{8d2fc901-d51b-4b28-8464-e256d7cfd4a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dlg\DlgFunctions">
+      <UniqueIdentifier>{cb860098-749c-48d9-a5b4-0be164af9bc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lib">
+      <UniqueIdentifier>{475cfd2b-8d3f-477a-a0e9-acf7598f891e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Header Files\language">
+      <UniqueIdentifier>{b2ff5eee-6608-4f23-a3e6-00f3e43b8f9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\threads\search">
+      <UniqueIdentifier>{d58000fc-2a7a-48f6-a64c-2a56105a68db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\threads\search">
+      <UniqueIdentifier>{d5c564b1-c5af-49a9-a3b1-92054f2ac2ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dlg\Dlg Temperatrue graph">
+      <UniqueIdentifier>{10fcb96f-0a12-4f02-bb94-dfec907309dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dlg\Dlg Temperature graph">
+      <UniqueIdentifier>{90b85286-d8f1-44bc-a234-885c15b1c3cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\html">
+      <UniqueIdentifier>{32d7bbde-8a8b-4c3c-833e-db9e91e9118a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\html">
+      <UniqueIdentifier>{b0053949-9158-4dec-b5f7-14149c1cc445}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\History">
+      <UniqueIdentifier>{99477367-7fcf-429f-9561-05ded782ba8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\History">
+      <UniqueIdentifier>{b53d9829-d3be-4f3d-bcd5-8a58ad3f3014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dlg\Dlg Graphic Tasks">
+      <UniqueIdentifier>{893b1bcc-8638-4b5c-8ca5-2349b2ef5370}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dlg\Dlg Graphic">
+      <UniqueIdentifier>{ec233284-8a4b-47c9-af17-fb5b31788052}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dlg\Dlg Graphic">
+      <UniqueIdentifier>{96908c8b-855c-40c3-bd6c-6ccd5fd3d0eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dlg\Dlg Settings">
+      <UniqueIdentifier>{c74ef193-6697-45f1-9a76-3114403af59b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dlg\Dlg Settings">
+      <UniqueIdentifier>{863bd5a4-f2be-4bfc-916d-3190fa0dff6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dlg\Dlg Boinc settings">
+      <UniqueIdentifier>{8bdeffcf-e989-42ff-a3e4-db0962acf674}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dlg\Dlg Boinc settings">
+      <UniqueIdentifier>{296c5155-53f2-4923-ad76-b6b52719af02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dlg\Dlg Graphic Tasks">
+      <UniqueIdentifier>{a41fc4a8-b2d3-4848-9da6-7ed45ee9cb53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dlg\Dlg History">
+      <UniqueIdentifier>{af91f0eb-5f77-441f-8860-efcebfad117d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dlg\Dlg History">
+      <UniqueIdentifier>{2d61f483-986a-4c70-9ba7-c923b6c458d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dlg\Dlg Functions">
+      <UniqueIdentifier>{923a1513-3a6f-4d1f-91e6-eed80f18e156}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dlg\Dlg Color">
+      <UniqueIdentifier>{5401520f-be2c-4918-9d76-118893306b04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dlg\Dlg Color">
+      <UniqueIdentifier>{153362ed-0ab5-46ab-8e2b-44522e9a7c6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dlg\Dlg Graphic Transfer">
+      <UniqueIdentifier>{fb190e01-4feb-4321-82f2-593a49316397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dlg\Dlg Graphic Transfer">
+      <UniqueIdentifier>{81cf49d4-a2c0-4648-b94b-29d94ed8741e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dlg\Dlg Edit Config">
+      <UniqueIdentifier>{9a965c07-c3cb-4129-8597-7519a9823f5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dlg\Dlg Edit Config">
+      <UniqueIdentifier>{880143d1-95a4-41a6-ba4e-624ec607c4b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dlg\Dlg Thread graph">
+      <UniqueIdentifier>{770b395a-74c9-4a52-be08-03df9982556f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dlg\Dlg Thread graph">
+      <UniqueIdentifier>{00be49f5-8d61-47cd-8c9b-e41ae4720f9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mobile">
+      <UniqueIdentifier>{6ef38b7f-0889-495b-bdb0-4cc570caaf95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mobile">
+      <UniqueIdentifier>{f0e95b23-125c-40b4-b87c-f72c0b6502f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dlg\Dlg Graph Deadline">
+      <UniqueIdentifier>{98e965db-f33a-4604-8317-37d768634ef2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dlg\Dlg Graphic Deadline">
+      <UniqueIdentifier>{49538d03-d3e8-4da5-bd25-ed8ed8287c54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dlg\Dlg Scheduler">
+      <UniqueIdentifier>{bd40a83b-6f14-4478-8cdf-b024c3da4321}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dlg\Dlg Settings\Dlg Scheduler">
+      <UniqueIdentifier>{ce213046-ab47-4eb5-85c2-5347aa168686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\doc_view">
+      <UniqueIdentifier>{0fd75237-146e-4986-a25e-3f76c3636c13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dlg\Dlg Select Compuer">
+      <UniqueIdentifier>{7966f72c-9066-453d-ba03-8d51909fc430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dlg\Dlg Select Compuer">
+      <UniqueIdentifier>{1bd3c7c2-62ed-4e73-8446-7ef0fba4d419}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BoincClientManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BoincTasks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Computers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ContextMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Selection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SortColumn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateCheck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkUnit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Xml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteCombinedComputerView.cpp">
+      <Filter>Source Files\doc_view</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteCombinedDoc.cpp">
+      <Filter>Source Files\doc_view</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteCombinedHistoryView.cpp">
+      <Filter>Source Files\doc_view</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteCombinedMessageView.cpp">
+      <Filter>Source Files\doc_view</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteCombinedProjectView.cpp">
+      <Filter>Source Files\doc_view</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteCombinedTaskView.cpp">
+      <Filter>Source Files\doc_view</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteCombinedTransferView.cpp">
+      <Filter>Source Files\doc_view</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadRpc.cpp">
+      <Filter>Source Files\threads</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildFrm.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorListBox.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="CombinedChildFrm.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="functions.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="InPlaceEdit.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Label.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlFindComputers.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlFloater.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="listviewex.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="ListViewMine.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteDocTemplate.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateRemoteComputerView.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateRemoteHistoryView.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateRemoteMessageView.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateRemoteProjectView.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateRemoteTaskView.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateRemoteTransferView.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="TToolbar.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiLanguage.cpp">
+      <Filter>Source Files\language</Filter>
+    </ClCompile>
+    <ClCompile Include="Translation.cpp">
+      <Filter>Source Files\language</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgAddProject.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgBarComputer.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgBarViewSelect.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgFloating.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgLogging.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSearchComputers.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgTimer.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgUpdate.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgYesNo.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlComputer.cpp">
+      <Filter>Source Files\dlg\Dlg Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="TabCtrlView.cpp">
+      <Filter>Source Files\dlg\Dlg Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="DateConvert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgProxyHttp.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgProxySocks.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgProxyMain.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadHostSearch.cpp">
+      <Filter>Source Files\threads\search</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadRpcSearch.cpp">
+      <Filter>Source Files\threads\search</Filter>
+    </ClCompile>
+    <ClCompile Include="UseCpuGpu.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Rules.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlRules.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgRulesLogging.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="WndColor.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinHeader.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadRpcClient.cpp">
+      <Filter>Source Files\threads\TThrottle</Filter>
+    </ClCompile>
+    <ClCompile Include="RpcClient.cpp">
+      <Filter>Source Files\threads\TThrottle</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberFormat.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="CondenseResource.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeString.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadConnect.cpp">
+      <Filter>Source Files\threads</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgGraphicTemperature.cpp">
+      <Filter>Source Files\dlg\Dlg Temperature graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw.cpp">
+      <Filter>Source Files\dlg\Dlg Temperature graph</Filter>
+    </ClCompile>
+    <ClCompile Include="WndGraphicTemperature.cpp">
+      <Filter>Source Files\dlg\Dlg Temperature graph</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSetDebt.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteCombinedNoticesView.cpp">
+      <Filter>Source Files\doc_view</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateHtml.cpp">
+      <Filter>Source Files\html</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateHtmlNotices.cpp">
+      <Filter>Source Files\html</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryUse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Translate.cpp">
+      <Filter>Source Files\language</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgProperties.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="History.cpp">
+      <Filter>Source Files\History</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgAddAccountManager.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="StringCopyNew.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OperationItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TasksProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgGraphicTasks.cpp">
+      <Filter>Source Files\dlg\Dlg Graphic Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgGraphic.cpp">
+      <Filter>Source Files\dlg\Dlg Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="WndGraphic.cpp">
+      <Filter>Source Files\dlg\Dlg Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="WndGraphicTasks.cpp">
+      <Filter>Source Files\dlg\Dlg Graphic Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSettingsExpert.cpp">
+      <Filter>Source Files\dlg\Dlg Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSettingsWWW.cpp">
+      <Filter>Source Files\dlg\Dlg Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSettingsGadget.cpp">
+      <Filter>Source Files\dlg\Dlg Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSettingsGeneral.cpp">
+      <Filter>Source Files\dlg\Dlg Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSettingsHistory.cpp">
+      <Filter>Source Files\dlg\Dlg Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSettingsMain.cpp">
+      <Filter>Source Files\dlg\Dlg Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSettingsNotices.cpp">
+      <Filter>Source Files\dlg\Dlg Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSettingsProject.cpp">
+      <Filter>Source Files\dlg\Dlg Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSettingsRules.cpp">
+      <Filter>Source Files\dlg\Dlg Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSettingsTasks.cpp">
+      <Filter>Source Files\dlg\Dlg Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSettingsView.cpp">
+      <Filter>Source Files\dlg\Dlg Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSettingsWarning.cpp">
+      <Filter>Source Files\dlg\Dlg Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSettingsMessage.cpp">
+      <Filter>Source Files\dlg\Dlg Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSettingsTransfer.cpp">
+      <Filter>Source Files\dlg\Dlg Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="AnsiToUtf8.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgComputerLocation.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadWebServer.cpp">
+      <Filter>Source Files\mobile</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPrefDisk.cpp">
+      <Filter>Source Files\dlg\Dlg Boinc settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPrefMain.cpp">
+      <Filter>Source Files\dlg\Dlg Boinc settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPrefNetwork.cpp">
+      <Filter>Source Files\dlg\Dlg Boinc settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPrefProcessor.cpp">
+      <Filter>Source Files\dlg\Dlg Boinc settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgTThrottle.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPrefExclusive.cpp">
+      <Filter>Source Files\dlg\Dlg Boinc settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DgPrefExclusiveAdd.cpp">
+      <Filter>Source Files\dlg\Dlg Boinc settings</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgHistory.cpp">
+      <Filter>Source Files\dlg\Dlg History</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlHistory.cpp">
+      <Filter>Source Files\dlg\Dlg History</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgColorGeneral.cpp">
+      <Filter>Source Files\dlg\Dlg Color</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgColorWarnings.cpp">
+      <Filter>Source Files\dlg\Dlg Color</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgColorGraphic.cpp">
+      <Filter>Source Files\dlg\Dlg Color</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgColorHistory.cpp">
+      <Filter>Source Files\dlg\Dlg Color</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgColorMain.cpp">
+      <Filter>Source Files\dlg\Dlg Color</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgColorMessages.cpp">
+      <Filter>Source Files\dlg\Dlg Color</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgColorProjects.cpp">
+      <Filter>Source Files\dlg\Dlg Color</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgColorTasks.cpp">
+      <Filter>Source Files\dlg\Dlg Color</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgColorTemperature.cpp">
+      <Filter>Source Files\dlg\Dlg Color</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgFont.cpp">
+      <Filter>Source Files\dlg\Dlg Color</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgGraphicTransfer.cpp">
+      <Filter>Source Files\dlg\Dlg Graphic Transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="WndGraphicTransfer.cpp">
+      <Filter>Source Files\dlg\Dlg Graphic Transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEditConfig.cpp">
+      <Filter>Source Files\dlg\Dlg Edit Config</Filter>
+    </ClCompile>
+    <ClCompile Include="RichEditCtrlXml.cpp">
+      <Filter>Source Files\dlg\Dlg Edit Config</Filter>
+    </ClCompile>
+    <ClCompile Include="XmlParser.cpp">
+      <Filter>Source Files\dlg\Dlg Edit Config</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadBoincClient.cpp">
+      <Filter>Source Files\threads</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadGarbageCollector.cpp">
+      <Filter>Source Files\threads</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgThreadGraph.cpp">
+      <Filter>Source Files\dlg\Dlg Thread graph</Filter>
+    </ClCompile>
+    <ClCompile Include="WndThreadGraph.cpp">
+      <Filter>Source Files\dlg\Dlg Thread graph</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadProcessTime.cpp">
+      <Filter>Source Files\dlg\Dlg Thread graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Wildcard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadStats.cpp">
+      <Filter>Source Files\threads</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateHtmlWebServerComputerSelect.cpp">
+      <Filter>Source Files\mobile</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSettingsMobile.cpp">
+      <Filter>Source Files\dlg\Dlg Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateHtmlWebServerFilter.cpp">
+      <Filter>Source Files\mobile</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateHtmlWebServerProperties.cpp">
+      <Filter>Source Files\mobile</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateHtmlWebServerGraph.cpp">
+      <Filter>Source Files\mobile</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateHtmlWebServer.cpp">
+      <Filter>Source Files\mobile</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateHtmlWebServerGraphProjectSelect.cpp">
+      <Filter>Source Files\mobile</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateHtmlWebServerButton.cpp">
+      <Filter>Source Files\mobile</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateHtmlWebServerGraphComputerSelect.cpp">
+      <Filter>Source Files\mobile</Filter>
+    </ClCompile>
+    <ClCompile Include="WebServerProcess.cpp">
+      <Filter>Source Files\mobile</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadWebServerConnection.cpp">
+      <Filter>Source Files\mobile</Filter>
+    </ClCompile>
+    <ClCompile Include="WebServer2.cpp">
+      <Filter>Source Files\mobile</Filter>
+    </ClCompile>
+    <ClCompile Include="AboutDlg.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgGraphicDeadline.cpp">
+      <Filter>Source Files\dlg\Dlg Graph Deadline</Filter>
+    </ClCompile>
+    <ClCompile Include="WndGraphicDeadline.cpp">
+      <Filter>Source Files\dlg\Dlg Graph Deadline</Filter>
+    </ClCompile>
+    <ClCompile Include="PushCheck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgNotices.cpp">
+      <Filter>Source Files\doc_view</Filter>
+    </ClCompile>
+    <ClCompile Include="WndScheduler.cpp">
+      <Filter>Source Files\dlg\Dlg Settings\Dlg Scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgScheduler.cpp">
+      <Filter>Source Files\dlg\Dlg Settings\Dlg Scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgRules.cpp">
+      <Filter>Source Files\dlg\Dlg Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadCloudServer.cpp">
+      <Filter>Source Files\mobile</Filter>
+    </ClCompile>
+    <ClCompile Include="HtmlConnect.cpp">
+      <Filter>Source Files\html</Filter>
+    </ClCompile>
+    <ClCompile Include="Base64.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadCloudConnect.cpp">
+      <Filter>Source Files\mobile</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgBarProject.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadIpSearch.cpp">
+      <Filter>Source Files\threads\search</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadRpcClientSearch.cpp">
+      <Filter>Source Files\threads\search</Filter>
+    </ClCompile>
+    <ClCompile Include="Json.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Mac.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\bf\BlowFish.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSearch.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgDebug.cpp">
+      <Filter>Source Files\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlSelectComputer.cpp">
+      <Filter>Source Files\dlg\Dlg Select Compuer</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSelectComputer.cpp">
+      <Filter>Source Files\dlg\Dlg Select Compuer</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgBarSide.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEditConfigBase.cpp">
+      <Filter>Source Files\dlg\Dlg Edit Config</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEditAppInfoConfig.cpp">
+      <Filter>Source Files\dlg\Dlg Edit Config</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BoincClientManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BoincTasks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorListBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CombinedChildFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Computer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContextMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Label.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="registry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Selection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SortColumn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateCheck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WndColor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkUnit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteCombinedComputerView.h">
+      <Filter>Header Files\doc_view</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteCombinedDoc.h">
+      <Filter>Header Files\doc_view</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteCombinedHistoryView.h">
+      <Filter>Header Files\doc_view</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteCombinedMessageView.h">
+      <Filter>Header Files\doc_view</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteCombinedProjectView.h">
+      <Filter>Header Files\doc_view</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteCombinedTaskView.h">
+      <Filter>Header Files\doc_view</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteCombinedTransferView.h">
+      <Filter>Header Files\doc_view</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadRpc.h">
+      <Filter>Header Files\threads</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\rpctesting\client\RpcClient.h">
+      <Filter>Header Files\threads\TThrottle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\rpctesting\client\ThreadRpcClient.h">
+      <Filter>Header Files\threads\TThrottle</Filter>
+    </ClInclude>
+    <ClInclude Include="AboutDlg.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgAddProject.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgBarComputer.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgBarViewSelect.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgFloating.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgLogging.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSearchComputers.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgTimer.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgUpdate.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgYesNo.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlComputer.h">
+      <Filter>Header Files\dlg\DlgFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="TabCtrlView.h">
+      <Filter>Header Files\dlg\DlgFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="InPlaceEdit.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlFindComputers.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlFloater.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="listviewex.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="ListViewMine.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="SortComputer.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="SortHistory.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="SortProject.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="SortTask.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="SortTransfer.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateRemoteComputerView.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateRemoteHistoryView.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateRemoteMessageView.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateRemoteProjectView.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateRemoteTaskView.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateRemoteTransferView.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="TToolbar.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiLanguage.h">
+      <Filter>Header Files\language</Filter>
+    </ClInclude>
+    <ClInclude Include="Translation.h">
+      <Filter>Header Files\language</Filter>
+    </ClInclude>
+    <ClInclude Include="DateConvert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgProxyHttp.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgProxyMain.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadHostSearch.h">
+      <Filter>Header Files\threads\search</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadRpcSearch.h">
+      <Filter>Header Files\threads\search</Filter>
+    </ClInclude>
+    <ClInclude Include="UseCpuGpu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rules.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlRules.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgRulesLogging.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinHeader.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="MemDC.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgFont.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgRules.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgProxySocks.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="NumberFormat.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="CondenseResource.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeString.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgGraphicTemperature.h">
+      <Filter>Header Files\dlg\Dlg Temperatrue graph</Filter>
+    </ClInclude>
+    <ClInclude Include="WndGraphicTemperature.h">
+      <Filter>Header Files\dlg\Dlg Temperatrue graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw.h">
+      <Filter>Header Files\dlg\Dlg Temperatrue graph</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteDocTemplate.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="Xml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSetDebt.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateHtml.h">
+      <Filter>Header Files\html</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateHtmlNotices.h">
+      <Filter>Header Files\html</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryUse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Translate.h">
+      <Filter>Header Files\language</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgProperties.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="History.h">
+      <Filter>Header Files\History</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteCombinedNoticesView.h">
+      <Filter>Header Files\doc_view</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgAddAccountManager.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="StringCopyNew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OperationItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TasksProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSettingsNotices.h">
+      <Filter>Header Files\dlg\DlgFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgGraphicTasks.h">
+      <Filter>Header Files\dlg\Dlg Graphic Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgGraphic.h">
+      <Filter>Header Files\dlg\Dlg Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="WndGraphic.h">
+      <Filter>Header Files\dlg\Dlg Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="WndGraphicTasks.h">
+      <Filter>Header Files\dlg\Dlg Graphic Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSettingsExpert.h">
+      <Filter>Header Files\dlg\Dlg Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSettingsWWW.h">
+      <Filter>Header Files\dlg\Dlg Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSettingsGadget.h">
+      <Filter>Header Files\dlg\Dlg Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSettingsGeneral.h">
+      <Filter>Header Files\dlg\Dlg Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSettingsHistory.h">
+      <Filter>Header Files\dlg\Dlg Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSettingsMain.h">
+      <Filter>Header Files\dlg\Dlg Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSettingsProject.h">
+      <Filter>Header Files\dlg\Dlg Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSettingsRules.h">
+      <Filter>Header Files\dlg\Dlg Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSettingsTasks.h">
+      <Filter>Header Files\dlg\Dlg Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSettingsView.h">
+      <Filter>Header Files\dlg\Dlg Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSettingsWarning.h">
+      <Filter>Header Files\dlg\Dlg Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSettingsTransfer.h">
+      <Filter>Header Files\dlg\Dlg Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSettingsMessage.h">
+      <Filter>Header Files\dlg\Dlg Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="AnsiToUtf8.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgComputerLocation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadWebServer.h">
+      <Filter>Header Files\mobile</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPrefDisk.h">
+      <Filter>Header Files\dlg\Dlg Boinc settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPrefMain.h">
+      <Filter>Header Files\dlg\Dlg Boinc settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPrefNetwork.h">
+      <Filter>Header Files\dlg\Dlg Boinc settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPrefProcessor.h">
+      <Filter>Header Files\dlg\Dlg Boinc settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgTThrottle.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="Blowfish.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPrefExclusive.h">
+      <Filter>Header Files\dlg\Dlg Boinc settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DgPrefExclusiveAdd.h">
+      <Filter>Header Files\dlg\Dlg Boinc settings</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgHistory.h">
+      <Filter>Header Files\dlg\Dlg History</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlHistory.h">
+      <Filter>Header Files\dlg\Dlg History</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgColorGeneral.h">
+      <Filter>Header Files\dlg\Dlg Color</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgColorGraphic.h">
+      <Filter>Header Files\dlg\Dlg Color</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgColorHistory.h">
+      <Filter>Header Files\dlg\Dlg Color</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgColorMain.h">
+      <Filter>Header Files\dlg\Dlg Color</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgColorMessages.h">
+      <Filter>Header Files\dlg\Dlg Color</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgColorProjects.h">
+      <Filter>Header Files\dlg\Dlg Color</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgColorTasks.h">
+      <Filter>Header Files\dlg\Dlg Color</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgColorTemperature.h">
+      <Filter>Header Files\dlg\Dlg Color</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgColorWarnings.h">
+      <Filter>Header Files\dlg\Dlg Color</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgGraphicTransfer.h">
+      <Filter>Header Files\dlg\Dlg Graphic Transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="WndGraphicTransfer.h">
+      <Filter>Header Files\dlg\Dlg Graphic Transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEditConfig.h">
+      <Filter>Header Files\dlg\Dlg Edit Config</Filter>
+    </ClInclude>
+    <ClInclude Include="RichEditCtrlXml.h">
+      <Filter>Header Files\dlg\Dlg Edit Config</Filter>
+    </ClInclude>
+    <ClInclude Include="XmlParser.h">
+      <Filter>Header Files\dlg\Dlg Edit Config</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadConnect.h">
+      <Filter>Header Files\threads</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadBoincClient.h">
+      <Filter>Header Files\threads</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadGarbageCollector.h">
+      <Filter>Header Files\threads</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgThreadGraph.h">
+      <Filter>Header Files\dlg\Dlg Thread graph</Filter>
+    </ClInclude>
+    <ClInclude Include="WndThreadGraph.h">
+      <Filter>Header Files\dlg\Dlg Thread graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Wildcard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgNotices.h">
+      <Filter>Header Files\doc_view</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadStats.h">
+      <Filter>Header Files\threads</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateHtmlWebServerComputerSelect.h">
+      <Filter>Header Files\mobile</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSettingsMobile.h">
+      <Filter>Header Files\dlg\Dlg Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateHtmlWebServerFilter.h">
+      <Filter>Header Files\mobile</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateHtmlWebServerProperties.h">
+      <Filter>Header Files\mobile</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateHtmlWebServer.h">
+      <Filter>Header Files\mobile</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateHtmlWebServerGraph.h">
+      <Filter>Header Files\mobile</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateHtmlWebServerGraphProjectSelect.h">
+      <Filter>Header Files\mobile</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateHtmlWebServerButton.h">
+      <Filter>Header Files\mobile</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateHtmlWebServerGraphComputerSelect.h">
+      <Filter>Header Files\mobile</Filter>
+    </ClInclude>
+    <ClInclude Include="WebServerProcess.h">
+      <Filter>Header Files\mobile</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadWebServerConnection.h">
+      <Filter>Header Files\mobile</Filter>
+    </ClInclude>
+    <ClInclude Include="WebServer2.h">
+      <Filter>Header Files\mobile</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgGraphicDeadline.h">
+      <Filter>Header Files\dlg\Dlg Graphic Deadline</Filter>
+    </ClInclude>
+    <ClInclude Include="WndGraphicDeadline.h">
+      <Filter>Header Files\dlg\Dlg Graphic Deadline</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadProcessTime.h">
+      <Filter>Header Files\dlg\Dlg Thread graph</Filter>
+    </ClInclude>
+    <ClInclude Include="PushCheck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgScheduler.h">
+      <Filter>Header Files\dlg\Dlg Scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="WndScheduler.h">
+      <Filter>Header Files\dlg\Dlg Scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadCloudServer.h">
+      <Filter>Header Files\mobile</Filter>
+    </ClInclude>
+    <ClInclude Include="HtmlConnect.h">
+      <Filter>Header Files\html</Filter>
+    </ClInclude>
+    <ClInclude Include="Base64.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadCloudConnect.h">
+      <Filter>Header Files\mobile</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgBarProject.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadIpSearch.h">
+      <Filter>Header Files\threads\search</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadRpcClientSearch.h">
+      <Filter>Header Files\threads\search</Filter>
+    </ClInclude>
+    <ClInclude Include="Json.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Mac.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSearch.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgDebug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlSelectComputer.h">
+      <Filter>Header Files\dlg\Dlg Select Compuer</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSelectComputer.h">
+      <Filter>Header Files\dlg\Dlg Select Compuer</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgBarSide.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEditConfigBase.h">
+      <Filter>Header Files\dlg\Dlg Edit Config</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEditAppInfoConfig.h">
+      <Filter>Header Files\dlg\Dlg Edit Config</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\bmp00001.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\bmpColors.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\boinc.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="..\..\boinc\clientgui\res\BOINCGUIApp.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\BoincTasks.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\BoincTasks.rc2">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\BoincTasksDoc.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\combined.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\Computer 16x16.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\computerbar.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\computerButton.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\Disaster.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\Download.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\efmerBoinc.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\eFMerBoincTasks.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\ico00001.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\icon1.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\icon_projects.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\icoRemote.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\icoSuspend.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\idr_boin.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\idr_hand_link.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\Mail.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\mainfram.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="16x16-free-application-icons\16x16-free-application-icons\ico\Network connection.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="perfect-network-icons\normal\bmp\16x16\Network group.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\stateico.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\Text.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\tool_boi.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\toolbar1.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\toolbar_.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\toolbar_operations.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\toolbarcomputers.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\toolbartasks.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\viewicons.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+    <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\No.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\ColumnHeaderStart.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\ColumnHeaderSpan.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\ColumnHeaderEnd.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\bitmap1.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\toolbar_operations _disabled24.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\About.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\bitmap2.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\toolbar_always.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\bitmap3.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="..\..\16x16-free-application-icons\fatcow-hosting-icons-2400\16x16\networking_green.png">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="..\..\16x16-free-application-icons\fatcow-hosting-icons-2400\16x16\networking_red.png">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="..\..\16x16-free-application-icons\fatcow-hosting-icons-2400\16x16\server_go.png">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="..\..\16x16-free-application-icons\fatcow-hosting-icons-2400\16x16\server.png">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="..\..\16x16-free-application-icons\fatcow-hosting-icons-2400\16x16\shape_square_go.png">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="..\..\16x16-free-application-icons\fatcow-hosting-icons-2400\16x16\shape_square.png">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="..\..\16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\Erase.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\toolbar_allowed_disabled.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\help.png">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\Help symbol.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\toolbarcomputersdisabled.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\s_at_nl.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\project.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\platform\android.png">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\platform\android.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\platform\android.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\platform\ati.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\platform\linux.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\platform\mac.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\platform\nvidia.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\platform\virtualbox.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\platform\windows.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\platform\freebsd.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="..\..\BoincTasks_1_6_3\BoincTasks\res\platform\android.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+    <None Include="res\ssl.bmp">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BoincTasks.rc">
+      <Filter>Header Files\Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
