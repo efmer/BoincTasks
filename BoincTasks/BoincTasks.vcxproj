@@ -1284,6 +1284,23 @@ $(OutDir)sign_exe.bat
     <None Include="..\..\16x16-free-application-icons\fatcow-hosting-icons-2400\16x16\shape_square.png" />
     <None Include="..\..\16x16-free-application-icons\fatcow-hosting-icons-2400\16x16\shape_square_go.png" />
     <None Include="..\..\BoincTasks_1_6_3\BoincTasks\res\platform\android.bmp" />
+    <None Include="..\release\html\notices_template.html" />
+    <None Include="..\release\lang\BoincTasks_BGR.btlang" />
+    <None Include="..\release\lang\BoincTasks_DEU.btlang" />
+    <None Include="..\release\lang\BoincTasks_ENU.btlang" />
+    <None Include="..\release\lang\BoincTasks_ESP.btlang" />
+    <None Include="..\release\lang\BoincTasks_FRA.btlang" />
+    <None Include="..\release\lang\BoincTasks_JPN.btlang" />
+    <None Include="..\release\lang\BoincTasks_NLD.btlang" />
+    <None Include="..\release\lang\BoincTasks_PLK.btlang" />
+    <None Include="..\release\lang\BoincTasks_PTG.btlang" />
+    <None Include="..\release\lang\BoincTasks_ROM.btlang" />
+    <None Include="..\release\lang\BoincTasks_RUS.btlang" />
+    <None Include="..\release\lang\BoincTasks_SKY.btlang" />
+    <None Include="..\release\lang\BoincTasks_SVE.btlang" />
+    <None Include="..\release\license.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
     <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\About.bmp" />
     <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\No.bmp" />
     <None Include="res\bitmap1.bmp" />
@@ -1357,6 +1374,14 @@ $(OutDir)sign_exe.bat
       <Project>{4458d7ca-4753-4281-879a-1efedb912fd1}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\release\lang\languages.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\release\html\collapse.png" />
+    <Image Include="..\release\html\delete.png" />
+    <Image Include="..\release\html\expand.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

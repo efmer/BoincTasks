@@ -157,6 +157,15 @@
     <Filter Include="Header Files\dlg\Dlg Select Compuer">
       <UniqueIdentifier>{1bd3c7c2-62ed-4e73-8446-7ef0fba4d419}</UniqueIdentifier>
     </Filter>
+    <Filter Include="external">
+      <UniqueIdentifier>{8bcba764-9786-4c4f-96a7-f2fdb8057a02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\Language">
+      <UniqueIdentifier>{c89dc06f-69b3-465b-8e4c-e104b339e8c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\Html">
+      <UniqueIdentifier>{9e7e868f-f5ba-4159-b74d-36ea0527d71f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BoincClientManager.cpp">
@@ -1442,10 +1451,71 @@
     <None Include="res\ssl.bmp">
       <Filter>Header Files\Resource Files</Filter>
     </None>
+    <None Include="..\release\lang\BoincTasks_DEU.btlang">
+      <Filter>external\Language</Filter>
+    </None>
+    <None Include="..\release\lang\BoincTasks_ENU.btlang">
+      <Filter>external\Language</Filter>
+    </None>
+    <None Include="..\release\lang\BoincTasks_ESP.btlang">
+      <Filter>external\Language</Filter>
+    </None>
+    <None Include="..\release\lang\BoincTasks_FRA.btlang">
+      <Filter>external\Language</Filter>
+    </None>
+    <None Include="..\release\lang\BoincTasks_JPN.btlang">
+      <Filter>external\Language</Filter>
+    </None>
+    <None Include="..\release\lang\BoincTasks_NLD.btlang">
+      <Filter>external\Language</Filter>
+    </None>
+    <None Include="..\release\lang\BoincTasks_PLK.btlang">
+      <Filter>external\Language</Filter>
+    </None>
+    <None Include="..\release\lang\BoincTasks_PTG.btlang">
+      <Filter>external\Language</Filter>
+    </None>
+    <None Include="..\release\lang\BoincTasks_ROM.btlang">
+      <Filter>external\Language</Filter>
+    </None>
+    <None Include="..\release\lang\BoincTasks_RUS.btlang">
+      <Filter>external\Language</Filter>
+    </None>
+    <None Include="..\release\lang\BoincTasks_SKY.btlang">
+      <Filter>external\Language</Filter>
+    </None>
+    <None Include="..\release\lang\BoincTasks_SVE.btlang">
+      <Filter>external\Language</Filter>
+    </None>
+    <None Include="..\release\lang\BoincTasks_BGR.btlang">
+      <Filter>external\Language</Filter>
+    </None>
+    <None Include="..\release\html\notices_template.html">
+      <Filter>external\Html</Filter>
+    </None>
+    <None Include="..\release\license.htm">
+      <Filter>external</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BoincTasks.rc">
       <Filter>Header Files\Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\release\lang\languages.xml">
+      <Filter>external\Language</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\release\html\collapse.png">
+      <Filter>external\Html</Filter>
+    </Image>
+    <Image Include="..\release\html\delete.png">
+      <Filter>external\Html</Filter>
+    </Image>
+    <Image Include="..\release\html\expand.png">
+      <Filter>external\Html</Filter>
+    </Image>
   </ItemGroup>
 </Project>
