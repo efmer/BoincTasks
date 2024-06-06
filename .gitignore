@@ -365,3 +365,4 @@ FodyWeavers.xsd
 *.dmp
 *.exe
 /BoincTasks.sln
+/release/lang/BoincTasks_BGR.btlang

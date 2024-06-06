@@ -1,0 +1,1430 @@
+<--  Last update version: V 1.84	-->
+
+<GroupCodePage>
+	<Page>			0					</>
+	<CharSet>		windows-1252		</>
+</GroupCodePage>
+
+<GroupViewProjects>
+	<RowProject>		Project							</>
+	<RowAccount>		Account							</>
+	<RowTeam>			Team							</>
+	<RowCredits>		Credits							</>
+	<RowAvgCredits>		Avg. Credits					</>
+	<RowHostCredits>	Host Credits					</>
+	<RowAvgHostCredits>	Host Avg. Credits				</>
+	<RowShareP>			Share %							</>
+	<RowTasks>			Tasks							</>
+	<RowTimeLeft>		Time Left						</>
+	<RowStatus>			Status							</>
+	<RowComputer>		Computer						</>
+	<RowVenue>			Venue							</>
+	<RowTasksDay>		Tasks a day						</>
+	<RowTasksWeek>		Tasks a week					</>
+	<RowProjectRank>	Project rank					</>
+	<RowTeamRank>		Team rank						</>
+	
+	<StatusSuspendedByGui>	Suspended					</>
+	<StatusNoNewTasks>		No new work					</>
+	<StatusDefered>			Deferred for:%20			</>
+	<StatusUpdating>		Updating					</>
+	<StatusUpdatingAM>		Updating account manager	</>
+	<StatusAttaching>		Attaching to project		</>
+	<StatusInitializing>	Initializing				</>
+	<StatusInProgress>		In progress					</>
+
+	<StatusReport>			Report completed tasks		</>
+	<StatusNeedWork>		Fetch work					</>
+	<StatusTrickle>			Send trickle-up				</>
+	<StatusProjectReq>		Req by project				</>	
+</GroupViewProjects>
+
+<GroupViewTasks>
+	<RowProject>		Project				</>
+	<RowApplication>	Application			</>
+	<RowName>			Name				</>
+	<RowElapsed>		Elapsed Time			</>
+	<RowCpuP>			CPU %				</>
+	<RowProgress>		Progress %			</>
+	<RowTimeLeft>		Time Left			</>
+	<RowDeadline>		Deadline			</>
+	<RowUse>			Use				</>
+	<RowStatus>			Status				</>
+	<RowThrottle>		Throttle			</>
+	<RowTemperature>	Temperature			</>
+	<RowComputer>		Computer			</>
+	<RowCheckpoint>		Checkpoint			</>
+	<RowDebt>			Debt				</>
+	<RowReceived>		Received			</>
+	<RowAccount>		Account				</>
+	<RowVirtual>		Virtual				</>
+	<RowMemory>			Memory				</>
+	<RowShare>			Share %				</>	
+
+	<StatusComputation>		Computation error	</>
+	<StatusAbortedByProject>	Aborted by project	</>	
+	<StatusAbortedByUser>		Aborted by user		</>
+	<StatusDownloading>		Downloading		</>
+	<StatusDownloadError>		Download error		</>	
+	<StatusUploading>		Uploading		</>
+	<StatusReadyTR>			Ready to report		</>
+	<StatusReadyTS>			Ready to start		</>
+	<StatusWaitingTR>		Waiting to run		</>
+	<StatusRunning>			Running			</>
+	<StatusRunningLP>		Running <		</>
+	<StatusRunningHP>		Running High P.		</>
+	<StatusAborted>			Aborted			</>
+	<StatusNew>			New			</>
+	<StatusSuspended>		Suspended by user	</>
+
+	<SuspendPrefix>		Suspended:%20 		</>
+	<SuspendOnBatt>		On batteries		</>
+	<SuspendUserAct>	User active		</>
+	<SuspendUserRq>		User request		</>
+	<SuspendTimeOD>		Time of day		</>
+	<SuspendBench>		Benchmarks		</>
+	<SuspendDisk>		Disk size		</>
+	<SuspendNoRI>		No recent input		</>
+	<SuspendInitial>	Initial			</>
+	<SuspendEx>		Exclusive app running	</>
+	<SuspendCpuUsage>	CPU usage >		</>
+	<Memory>		Waiting for memory	</>
+
+	<SuspendProject>	Project suspended	</>
+
+	<WarningDeadline>	Deadline warning	</>
+
+	<Initializing>		Initializing		</>
+
+	<FilterTasks>		[Tasks], double click to expand	</>
+</GroupViewTasks>
+
+<GroupViewTransfers>
+	<RowProject>		Project			</>
+	<RowFile>		File			</>
+	<RowProgress>		Progress %		</>
+	<RowSize>		Size			</>
+	<RowElapsed>		Elapsed			</>
+	<RowSpeed>		Speed			</>
+	<RowStatus>		Status			</>
+	<RowComputer>		Computer		</>
+
+	<StatusUploading>	Uploading		</>
+	<StatusDownloading>	Downloading		</>
+	<StatusRetry>		Retry in:		</>
+	<StatusUploadP>		Upload pending		</>
+	<StatusDownloadP>	Download pending	</>
+	<StatusRetryCount>	, retried: %d		</>
+	<StatusProjectBackoff>	Project backoff		</>
+</GroupViewTransfers>
+
+<GroupViewMessages>
+	<RowNr>			Nr			</>
+	<RowProject>		Project			</>
+	<RowTime>		Time			</>
+	<RowMessage>		Message			</>
+	<RowComputer>		Computer		</>
+
+	<StatusSelectOne>	Select only one computer, or use the right mouse button, to select a computer	</>
+</GroupViewMessages>
+
+<GroupViewHistory>
+	<RowProject>		Project			</>
+	<RowApplication>	Application		</>
+	<RowName>		Name			</>
+	<RowElapsed>		Elapsed Time		</>
+	<RowCompleted>		Completed		</>
+	<RowReported>		Reported		</>
+	<RowUse>		Use			</>
+	<RowCpuP>		CPU %			</>
+	<RowStatus>		Status			</>
+	<RowComputer>		Computer		</>
+	<RowVirtual>		Virtual			</>
+	<RowMemory>		Memory			</>
+	<RowVirtual>		Virtual			</>
+	<RowMemory>		Memory			</>
+
+	<StatusReportedOk>	Reported: OK		</>
+	<StatusReportedAb>	Reported: Aborted	</>
+	<StatusReportedCompErr>	Reported: Computation error (%d,%s)	</>
+	<StatusCompErr>		Computation error (%d,%s)		</>
+	<StatusMissed>		Missed			</>
+
+	<StatusWaitingForData>	Waiting for data	</>
+	<StatusToEnable>	To enable history:	</>
+	<StatusToEnableMenu>	Extra->Settings->History</>
+
+	<MessageTooLarge>	WARNING! History is too large, please adjust the day setting. Now:	</>
+</GroupViewHistory>
+
+<GroupViewComputer>
+	<Title>			Computers		</>
+	<Group>			Group			</>
+	<Id>			Computer Id		</>
+	<Ip>			IP Address		</>
+	<MAC>			MAC Address		</>
+	<Port>			Port			</>
+	<Password>		Password		</>
+	<Encrypted>		Encrypted		</>
+	<Boinc>			BOINC			</>
+	<BoincPlatform>	Platform		</>
+	<TThrottle>		TThrottle		</>
+	<Status>		Status			</>
+	<DaysWork>		Days work		</>
+	<WantedTaks>		Wanted tasks		</>
+
+	<AddNew>		new			</>
+	<AddThis>		this			</>
+
+	<ErrorEmptyId>		ERROR: Connect combined: Found an empty Computer ID, please give it an unique name.	</>
+	<ErrorIdenticalId>	ERROR: Connect combined: Found 2 Computer ID's: %s, that are identical.\n\rThis is not allowed. Change the Computer ID: %s, into an unique name!	</>
+
+	<ApplyChanges>		Do you want to apply the changes now? (Involves the closing and reopening of all windows.)
+</GroupViewComputer>
+
+<!--	Bars	-->
+
+<GroupBarViewSelect>
+	<History>		History			</>
+	<Messages>		Messages		</>
+	<Transfers>		Transfers		</>
+	<Tasks>			Tasks			</>
+	<Projects>		Projects		</>
+	<Computers>		Computers		</>
+	<Notices>		Notices			</>
+</GroupBarViewSelect>
+
+<GroupBarComputers>
+	<AllComputers>		All computers		</>
+</GroupBarComputers>
+
+<GroupBarProjects>
+	<AllProjects>		All projects		</>
+</GroupBarProjects>
+
+<!--	Menu	-->
+
+<GroupMenuComputer>
+	<Computers>		Computer		</>
+	<Detect>		Find computers		</>
+	<Add>			Add computer		</>
+	<Remove>		Remove computer		</>
+	<Connect>		Connect			</>
+</GroupMenuComputer>
+
+<GroupMenuMain>
+	<File>			File							</>
+	<FileStartBoinc>	Start BOINC Client (localhost)						</>	
+	<FileStartBoincS>	Start BOINC Client and all science applications. (only on localhost)	</>
+	<FileStopBoinc>		Stop BOINC Client (localhost)						</>	
+	<FileStopBoincS>	Stop BOINC Client and all science applications. (only on localhost)	</>
+	<FileReadColorConfig>	Read color settings					</>
+	<FileReadColorConfigS>	Read BoincTasks color and font setting from file	</>
+	<FileWriteColorConfig>	Write color settings					</>
+	<FileWriteColorConfigS>	Write BoincTasks color and font settings to file	</>
+	<FileExit>		Exit							</>	
+	<FileExitS>		Exit BoincTasks						</>
+
+	<View>			View							</>
+	<ViewToolGraphic>	Toolbar graphic						</>
+	<ViewToolGraphicS>	Show graphic toolbar					</>
+	<ViewToolOperations>	Toolbar operation 					</>
+	<ViewToolOperationsS>	Show operation toolbar (Suspend, Resume, Refresh..)	</>
+	<ViewToolAllow>		Toolbar allow						</>
+	<ViewToolAllowS>	Show allow network,CPU/GPU toolbar 			</>
+	<ViewViewSelection>	Selection bar						</>
+	<ViewViewSelectionS>	Show view selection bar (Project, Tasks, Transfer, Messages)	</>
+	<ViewComputer>		Sidebar computer selection				</>
+	<ViewComputerS>		Show the computer selection sidebar 			</>
+	<ViewProject>		Sidebar project selection				</>
+	<ViewProjectS>		Show the project selection sidebar 			</>
+
+	<ViewStatus>		Status bar						</>
+	<ViewStatusS>		Show status bar 					</>
+
+	<Show>			Show							</>
+	<ShowComputers>		Computers%09Control+Shift+C				</>
+	<ShowComputersS>	Switch to computer view					</>	
+	<ShowProjects>		Projects%09Control+Shift+P				</>
+	<ShowProjectsS>		Switch to projects view					</>
+	<ShowTasks>		Tasks%09Control+Shift+T					</>
+	<ShowTasksS>		Switch to tasks view					</>
+	<ShowTransfers>		Transfers%09Control+Shift+X				</>
+	<ShowTransfersS>	Switch to transfers view (upload and download)		</>	
+	<ShowMessages>		Messages%09Control+Shift+M				</>
+	<ShowMessagesS>		Switch to messages log					</>
+	<ShowHistory>		History%09Control+Shift+H				</>
+	<ShowHistoryS>		Switch to history log					</>
+	<ShowHistoryLong>	Long term History%09Control+Shift+L			</>
+	<ShowHistoryLongS>	Show long term history log				</>
+	<ShowNotices>		Notices%09Control+Shift+N				</>
+	<ShowNoticesS>		Switch to notices view					</>
+	<ShowStatistics>	Statistics graph%09Control+Shift+S			</>
+	<ShowStatisticsS>	Show statistics graph					</>
+	<ShowStatisticsTasks>	Tasks graph						</>
+	<ShowStatisticsTasksS>	Show tasks graph					</>
+	<ShowTemperature>	Temperature graph					</>
+	<ShowTemperatureS>	Show temperature graph					</>
+	<ShowGraphTransfer>	Data transfer graph					</>
+	<ShowGraphTransferS>	Show data transfer graph				</>
+	<ShowGraphDeadline>	Deadline graph						</>
+	<ShowGraphDeadlineS>	Show deadline graph					</>
+
+	<Projects>		Projects						</>
+	<ProjectsAdd>		Add a new project					</>
+	<ProjectsAddAccountM>	Account manager						</>
+	<ProjectsSynchronize>	Synchronize with					</>
+	<ProjectsSetDebt>	Set debt						</>
+
+	<Extra>			Extra							</>
+	<ExtraSetting>		BoincTasks settings 					</>
+	<ExtraColors>		BoincTasks colors and fonts 				</>
+	<ExtraPreference>	BOINC preference					</>
+	<ExtraProxy>		BOINC proxy settings					</>
+	<ExtraUpdateAll>	Report all completed tasks				</>
+	<ExtraStartup>		Auto startup with					</>
+	<ExtraAllowNetwork>	Allow network communication				</>
+	<ExtraAllowToRun>	Allow to run						</>
+	<ExtraAllowToRunGpu>	Allow to run GPU					</>
+	<ExtraRunBenchmark>	Run CPU benchmarks					</>
+	<ExtraRunBenchmarkLast>	Last time:						</>
+
+	<ExtraEditConfig>	Edit config file (cc_config.xml)				</>
+	<ExtraEditAppInfo>	Edit config file (app_config.xml)				</>	
+	<ExtraReadConfig>	Read config files (cc/app_config.xml)				</>
+	
+	<Window>		Window							</>
+	<WindowCascade>		Cascade							</>
+	<WindowCascadeS>	Arrange the windows so they overlap			</>
+	<WindowTile>		Tile							</>
+	<WindowTileS>		Arrange the windows so they don't overlap		</>
+	<WindowActivateS>	Activate this window					</>
+
+	<Help>			Help							</>
+	<HelpManual>		BoincTasks manual					</>
+	<HelpForum>		BoincTasks forum					</>
+	<HelpBoincWebsite>	BOINC website						</>
+	<HelpAbout>		About BoincTasks					</>
+	<HelpUpdate>		Update							</>
+	<HelpLog>		Log							</>
+	<HelpLogRules>		Rules log						</>
+
+	<CommonAllComputers>	All computers						</>
+	<CommonAlways>		Always							</>
+	<CommonAuto>		Based on preferences					</>
+	<CommonSnooze>		Snooze							</>
+	<CommonNever>		Never							</>
+</GroupMenuMain>
+
+<GroupPopUpTasks>
+	<Suspend>			Suspend					</>
+	<SuspendCp>			Suspend at Checkpoint	</>	
+	<Resume>			Resume					</>
+	<Abort>				Abort					</>
+	<Properties>		Properties				</>
+	<ProjectUpdate>		Project Update			</>
+	<ProjectSuspend>	Project Suspend			</>
+	<ProjectResume>		Project Resume			</>
+	<Filter>			Filter (combine) tasks on </>
+	<FilterReadyTR>		Ready to report			</>
+	<FilterWaitingTR>	Waiting to run			</>
+	<FilterReadyTS>		Ready to start			</>
+	<FilterUpload>		Upload					</>
+	<FilterDownload>	Download				</>
+	<FilterComputation>	Computation error		</>
+	<FilterSuspended>	Suspended				</>
+	<FilterAborted>		Aborted					</>
+	<FilterRunning>		Running					</>
+	<ShowActive>		Show only active tasks	</>
+	<ShowNonCpuIntensive>	Show non CPU intensive tasks	</>
+	<ShowCpu>			Show CPU tasks			</>
+	<ShowGpu>			Show GPU tasks			</>
+	<ShowGraphic>		Show graphic			</>
+	<AddRule>			Add rule			</>
+</GroupPopUpTasks>
+
+<GroupPopUpProjects>
+	<Update>		Update			</>
+	<Suspend>		Suspend			</>
+	<Resume>		Resume			</>
+	<NoNewTasks>		No new work		</>
+	<AllowNewTasks>		Allow new work		</>
+	<Properties>		Properties		</>
+	<AddRemove>		Add/remove		</>
+	<AddNew>		Add  a new project	</>
+	<Reset>			Reset			</>
+	<Detach>		Detach			</>
+</GroupPopUpProjects>
+
+<GroupPopUpTransfers>
+	<Retry>			Retry			</>
+	<RetryAll>		Retry all		</>
+	<Abort>			Abort			</>
+</GroupPopUpTransfers>
+
+<GroupPopUpMessages>
+	<ShowOnlyProjects>		Only show project			</>
+	<ShowOnlyProjectsAll>	All							</>
+	<IncludeGeneral>		Include general messages	</>
+	<Search>				Search						</>
+	<CopyAll>				Copy all to clipboard		</>
+	<CopySelected>			Copy selected to clipboard	</>
+</GroupPopUpMessages>
+
+<GroupPopUpTaskbar>
+	<Open>			Open			</>
+	<Update>		Update BoincTasks	</>
+	<About>			About BoincTasks	</>
+	<Snooze>		Snooze			</>
+	<SnoozeGpu>		Snooze GPU		</>
+	<Exit>			Exit			</>
+</GroupPopUpTaskbar>
+
+<GroupPopUpHeader>
+	<Enable>		Show or hide column	</>
+</GroupPopUpHeader>
+
+<GroupPopUpComputer>
+	<Properties>		Computer properties	</>
+</GroupPopUpComputer>
+
+
+<!--	Toolbars	-->
+
+<GroupToolbarGraphic>
+	<GraphCredit>		Open the statistics graph				</>
+	<GraphTasks>		Open the tasks graph					</>
+	<GraphTemperature>	Open the temperature graph				</>
+</GroupToolbarGraphic>
+
+<GroupToolbarOperations>
+	<Suspend>		Task suspend						</>
+	<Resume>		Task resume						</>
+	<Abort>			Task abort						</>
+	<UpdateProject>		Project update						</>
+	<SuspendProject>	Project suspend						</>
+	<ResumeProject>		Project resume						</>
+	<NoNewWorkProject>	Project no new work					</>
+	<AllowNewProject>	Project allow new work					</>
+</GroupToolbarOperations>
+
+<GroupToolbarAllow>
+	<NetworkPref>		Allow network communications, based on preferences	</>
+	<NetworkNever>		Never allow network communications			</>
+	<CpuGpuPref>		Run CPU and GPU, based on preferences			</>
+	<CpuGpuSnooze>		Snooze CPU and GPU					</>
+	<CpuGpuNever>		Never run CPU and GPU					</>
+	<GpuPref>		Run GPU, based on preferences				</>
+	<GpuSnooze>		Snooze GPU						</>
+	<GpuNever>		Never run GPU						</>
+</GroupToolbarAllow>
+
+
+<!--	Dialogs	-->
+
+<GroupDialogSettings>
+	<Title>			BoincTasks Settings		</>
+
+	<GeneralTitle>		General				</>
+	<GeneralStartAtLogin>	Start BoincTasks at login	</>
+	<GeneralStartBOINC>	Start BOINC client, when BoincTasks starts	</>
+	<GeneralStartBOINCDelay>Delay starting BOINC client for:</> 
+	<GeneralStopBOINCOnExit>Stop BOINC client on exit	</>
+	<GeneralConTThrottle>	Connect to TThrottle		</>
+	<GeneralHideAtStartup>	Hide BoincTasks at startup	</>
+	<GeneralPassword>	TThrottle password		</>
+	<GeneralShow>		Show password			</>
+	<GeneralLanguage>	Language			</>
+	<GeneralHotKeyMain>	Hotkey to show/hide BoincTasks	</>
+	<GeneralOs>		I'm running BoincTasks on	</>
+	<GeneralOsQuestionW>	Are you running Windows?	</>
+	<GeneralOsQuestionL>	Are you running Linux with Wine?</>
+	<GeneralOsQuestionM>	Are you running a Mac with Wine?</>
+	<GeneralWarningBoinc>	Warning: The BOINC Manager starts the BOINC client at login also.</>
+
+	<ProjectsTitle>		Projects			</>
+	<ProjectGroupName>	Show column			</>
+	<ProjectProject>	Project				</>
+	<ProjectAccount>	Account				</>
+	<ProjectTeam>		Team				</>
+	<ProjectUserCredits>	Credits				</>
+	<ProjectUserACredits>	Average Credits			</>
+	<ProjectHostCredits>	Credits Host			</>
+	<ProjectHostACredits>	Average Credits Host		</>
+	<ProjectShare>		Share %				</>
+	<ProjectTasks>		Tasks				</>
+	<ProjectTimeLeft>	Time Left			</>
+	<ProjectStatus>		Status				</>
+	<ProjectComputer>	Computer			</>
+	<ProjectVenue>		Venue				</>
+	<ProjectTasksDay>	Tasks a day			</>
+	<ProjectTasksWeek>	Tasks a week			</>
+	<ProjectRank>		Project rank			</>
+	<ProjectTeamRank>	Team rank			</>
+
+	<TasksTitle>		Tasks				</>
+	<TasksButtonDefault>	Default				</>
+	<TasksCheckUserFriendly>Use user friendly name		</>
+	<TasksCheckCondense>	Condense Use column		</>
+	<TasksAlternatingStripes>Use alternating stripes	</>
+	<TasksCheckRatioLong>	CPU % Long time average		</>
+	<TasksDeadlineRemaining>Deadline show remaining time	</>
+	<TasksAppSortOnNr>	Sort on Application Nr 	</>	
+	<TasksSortStatus>	Status column sorting		</>
+
+	<TasksCpuPercDigits>	CPU % digits			</>
+	<TasksCpuProgressDigits>Progress % digits		</>
+
+	<TasksGroupName>	Show column			</>
+	<TaskProject>		Project				</>
+	<TaskApplication>	Application			</>
+	<TaskName>		Name				</>
+	<TaskElapsedTime>	Elapsed Time			</>
+	<TaskCpuPerc>		CPU %				</>
+	<TaskProgress>		Progress %			</>
+	<TaskTimeLeft>		Time Left			</>
+	<TaskDeadline>		Deadline			</>
+	<TaskUse>		Use				</>
+	<TaskStatus>		Status				</>
+	<TaskThrottle>		Throttle			</>
+	<TaskTemperature>	Temperature			</>
+	<TaskComputer>		Computer			</>
+	<TaskCheckpoint>	Checkpoint			</>
+	<TaskDebt>		Debt				</>
+	<TaskReceived>		Received			</>
+	<TaskAccount>		Account				</>
+	<TaskVirtual>		Virtual memory			</>
+	<TaskMemory>		Memory				</>
+	<TasksMsgBoxExclude>	Some functions may not work properly, if you exclude the columns: Project, Name or Computer. It's better to reduce the column width to 0.</>
+
+	<TransferTitle>		Transfers			</>
+
+	<MessageTitle>		Messages			</>
+	<MessageKeep>		Keep message lines:		</>
+
+	<MessageProject>	Project				</>
+	<MessageMessage>	Message				</>
+	<MessageHighlight1>	Highlight 1:			</>
+	<MessageHighlight2>	Highlight 2:			</>
+	<MessageHighlight3>	Highlight 3:			</>
+	<MessageHighlight4>	Highlight 4:			</>
+	<MessageHighlight5>	Highlight 5:			</>
+	<MessageHighlight6>	Highlight 6:			</>
+	<MessageHighlight7>	Highlight 7:			</>
+	<MessageHighlight8>	Highlight 8:			</>
+	<MessageHighlight9>	Highlight 9:			</>
+	<MessageHighlight10>	Highlight 10:			</>
+
+	<ViewTitle>		View				</>
+	<ViewTimeFormat>	Time format			</>
+	<ViewTimeFComboSystem>	system				</>
+	<ViewTimeFCombo24h>	24 hour				</>	
+	<ViewTimeFCombo12h>	12 hour				</>
+	<ViewTimeFComboUser>	User defined			</>
+	<ViewRefreshRate>	Refresh rate			</>
+	<ViewRRateComboSlow>	Slow				</>
+	<ViewRRateComboNormal>	Normal				</>
+	<ViewRRateComboQuick>	Quick				</>
+	<ViewRRateComboManual>	Manual				</>
+	<ViewSeconds>		seconds				</>
+	<ViewSkin>		Use skin			</>
+	<ViewGridHorizontal>	Use horizontal grid lines	</>
+	<ViewGridVertical>	Use vertical grid Lines		</>
+	<ViewNumberFormat>	Decimal point and 1000 separator</>
+	<ViewPercRect>		Show percentage rectangle	</>
+	<ViewAdjustTime>	Adjust time to BOINC client run time	</>
+	<ViewTranslatable>	Translate BOINC text if possible</>
+
+	<HistoryTitle>		History				</>
+
+	<HistoryGroupName>	Show column			</>
+	<HistoryProject>	Project				</>
+	<HistoryProject>	Project				</>
+	<HistoryApplication>	Application			</>
+	<HistoryName>		Name				</>
+	<HistoryElapsedTime>	Elapsed Time			</>
+	<HistoryCompleted>	Completed			</>
+	<HistoryReported>	Reported			</>
+	<HistoryUse>		Use				</>
+	<HistoryCpuPerc>	CPU %				</>
+	<HistoryStatus>		Status				</>
+	<HistoryComputer>	Computer			</>
+	<HistoryVirtual>	Virtual memory			</>
+	<HistoryMemory>		Memory				</>
+	<HistoryApplication>	Application			</>
+	<HistoryName>		Name				</>
+	<HistoryElapsedTime>	Elapsed Time			</>
+	<HistoryCompleted>	Completed			</>
+	<HistoryReported>	Reported			</>
+	<HistoryUse>		Use				</>
+	<HistoryCpuPerc>	CPU %				</>
+	<HistoryStatus>		Status				</>
+	<HistoryComputer>	Computer			</>
+	<HistoryVirtual>	Virtual memory			</>
+	<HistoryMemory>		Memory				</>
+
+	<HistoryEnable>		Enable history logging		</>
+	<HistorySmart>		Smart mode			</>
+	<HistoryAccurate>	The "Time Left" column is less accurate.	</>
+	<HistoryRemove>		Remove history after		</>
+	<HistoryRemoveDays>	days and			</>
+	<HistoryRemoveHours>	hour(s)				</>
+	<HistoryMinUpdate>	Minimum update time		</>
+	<HistoryMaxUpdate>	Maximum update time		</>
+	<HistoryMaxUpdateSec>	second(s)			</>
+	<HistoryMoveLong>	Move to long term history after	</>
+	<HistoryBackup>		Make a backup of the history files. (not recommended)</>	
+
+	<HistoryDayWarning>	You are setting the history to less days,\r\nthis will result in the IMMEDIATE deletion of all results, if present, below the current setting\r\n\r\nAre you sure?</>
+
+	<NoticesTitle>		Notices				</>
+	<HideAfter>		Hide notice after		</>
+	<CheckEvery>		Check for new notices every (0=Disabled)	</>
+	<Alert>			Show alert every		</>
+	<Minutes>		minutes				</>
+	<Days>			days				</>
+	<NoticesSort>		Sort on				</>
+	<NoticesSortCategory>	Category			</>
+	<NoticesSortProject>	Project				</>
+	<NoticesSortCreation>	Creation time			</>
+	<NoticesSortArrival>	Arrival time			</>
+
+	<WarningsTitle>		Warnings			</>
+	<WarningCheckpoint>	Checkpoint warning		</>
+	<WarningDeadline>	Deadline warning		</>
+	<WarningDeadlineDays>	days and			</>
+	<WarningDeadlinehours>	hours				</>
+	<WarningIsActiveWhen>	Warning is active if: (Leave all fields blank, when not needed.)	</>
+	<WarningCpuBetween>	CPU between			</>
+	<WarningGpuBetween>	GPU between			</>
+	<WarningCpuPBetween>	CPU% between			</>
+	<WarningCpuTasks>	CPU less than			</>
+	<WarningGpuTasks>	GPU less than			</>
+	<WarningProject>	Project				</>
+	<WarningComputer>	Computer			</>
+
+	<GadgetTitle>		Gadget				</>
+	<GadgetModeTasks>	Mode: Show all running tasks	</>
+	<GadgetModeComputers>	Mode: Show all computers	</>
+	<GadgetRadioShowTop>	Show always on top		</>
+	<GadgetRadioShow>	Show always			</>
+	<GadgetRadioShowIcon>	Show only over icon after	</>
+	<GadgetShowIconFor>	Second(s), for			</>
+
+	<RulesTitle>		Rules				</>
+
+	<RulesColumnComputer>	Computer			</>
+	<RulesColumnProject>	Project				</>
+	<RulesColumnApplication>Application			</>
+	<RulesColumnRule>	Rule				</>
+
+	<RulesDeleteYesNo>	Do you want to delete the selected rule?	</>
+
+	<CloudTitle>		Cloud					</>
+	<WWWGroup>			FTP and external drive	</>
+	<WWWEnable>			Enable WWW update		</>
+
+	<MobileTitle>			Mobile											</>
+	<MobileEnable>			Enable mobile (Pad/Phone) on port:				</>
+	<MobilePassword>		Login password									</>
+	<MobileHeaderFont>		Header font size								</>
+	<MobileFont>			Text font size									</>
+	<MobileWarning>			Mobile was automatically disabled, enable it now?</>
+
+	<ExpertTitle>			Expert											</>
+	<ExpertOverride>		Override default (xml) Folder					</>
+	<ExpertEncryption>		Use encryption on computer password				</>
+	<ExpertCpidManual>		Manual CPID										</>
+	
+	<ExpertOverrideWarning> Changing the Folder, may result in losing the current computer settings! Make a backup of the xml files, before clicking on OK!</>
+	<ExpertInvalidFolder>	is not a valid folder							</>
+	<ExpertReconnect>		= Reconnect every xx seconds. (0 = disabled)	</>
+	<ExpertThreadTimeout>	Connection timeout in seconds. (120 = default)	</>
+	<ExpertSilentReboot>	Silently restart on a crash						</>
+	<ExpertRunTimes>		Enable thread runtime graph (requires a restart)</>
+	<ExpertRunTimesGraph>	Thread graph									</>
+
+	<ExpertPriority>		Thread priority									</>		
+	<ExpertPriorityNormal>	Normal											</>
+	<ExpertPriorityBelow>	Below											</>
+	<ExpertPriorityLow>		Low												</>
+
+	<GeneralSeconds>		Second(s)										</>
+	<GeneralRefresh>		Refresh every									</>
+</GroupDialogSettings>
+
+<GroupDialogColor>
+	<Title>			BoincTasks colors and fonts	</>
+
+	<TitleGeneral>		View				</>
+	<GeneralGrid>		Grid lines			</>
+	<GeneralFont>		Text				</>
+	<GeneralFontSel>	Text selection			</>
+	<GeneralBackSel>	Text background selection	</>
+	<GeneralBar>		Bar				</>
+	<GeneralBarOutline>	Bar outline			</>
+
+	<TitleMessages>		Messages			</>
+	<MessageNormal>		Normal				</>
+	<MessageHigh>		High				</>
+	<MessageHighest>	Highest				</>
+	<MessageHighlight1>	Highlight 1			</>
+	<MessageHighlight2>	Highlight 2			</>
+	<MessageHighlight3>	Highlight 3			</>
+	<MessageHighlight4>	Highlight 4			</>
+	<MessageHighlight5>	Highlight 5			</>
+	<MessageHighlight6>	Highlight 6			</>
+	<MessageHighlight7>	Highlight 7			</>
+	<MessageHighlight8>	Highlight 8			</>
+	<MessageHighlight9>	Highlight 9			</>
+	<MessageHighlight10>	Highlight 10			</>
+
+	<TitleProjects>		Projects			</>
+	<ProjectsRunning>	Running				</>
+	<ProjectsSuspended>	Suspended			</>
+	<ProjectsNoNewTasks>	No new work			</>
+
+	<TitleTasks>		Tasks				</>
+	<UploadDownload>	Upload-Download			</>
+	<UploadDownloadGpu>	Upload-Download GPU		</>
+	<Running>		Running				</>
+	<RunningGpu>		Running GPU			</>
+	<HighPriority>		High priority			</>
+	<HighPriorityGpu>	High priority GPU		</>
+	<Abort>			Abort				</>
+	<WaitingToRun>		Waiting to run			</>
+	<WaitingToRunGpu>	Waiting to run GPU		</>
+	<ReadyToStart>		Ready to start			</>
+	<ReadyToStartGpu>	Ready to start GPU		</>
+	<Error>			Error				</>
+	<ErrorGpu>		Error GPU			</>
+	<Suspended>		Suspended			</>
+	<SuspendedGpu>		Suspended GPU			</>
+
+	<TitleFont>		Font				</>
+	<FontUseSystem>		Use default system font		</>
+	<FontGroupGeneral>	General font			</>
+	<FontGroupGadget>	Gadget font			</>
+
+	<TitleHistory>		History				</>
+	<Upload>		Upload				</>
+	<UploadGpu>		Upload GPU			</>
+	<ReadyToReport>		Ready to report			</>
+	<ReadyToReportGpu>	Ready to report GPU		</>
+	<Reported>		Reported			</>
+	<ReportedGpu>		Reported GPU			</>
+	<ReportedError>		Reported error			</>
+	<ReportedErrorGpu>	Reported error GPU		</>
+	<Missed>		Missed				</>
+
+	<TitleTemperature>	Temperature			</>
+	<TemperatureCore>	Core				</>
+	<TemperatureGpu>	GPU				</>
+	<TemperatureTCpu>	Throttle CPU			</>
+	<TemperatureTGpu>	Throttle GPU			</>
+	<TemperatureMax>	Maximum				</>
+	<TemperatureBackground>	Background			</>
+	<TemperatureGridFine>	Grid fine			</>
+	<TemperatureGrid>	Grid				</>
+	<TemperatureText>	Text				</>
+
+	<TitleWarnings>		Warnings			</>
+	<CpuRatio>		CPU ratio			</>
+	<GpuRatio>		GPU ratio			</>
+	<Deadline>		Deadline			</>
+	<DeadlineRunning>	Deadline running		</>
+	<Tasks>			Task count			</>
+	<Checkpoint>		Checkpoint			</>
+
+	<ReadSettingsWarning>	Warning: About to READ from the settings.xml file. Proceed? 	</>
+	<WriteSettingsWarning>	Warning: About to WRITE to the settings.xml file. Proceed?	</>
+	<FailedSettingsWarning>	Error: Failed to read from, or write to the settings.xml file. 	</>
+</GroupDialogColor>
+
+<GroupDialogBoincSettings>
+	<Title>			BOINC Settings:%20			</>
+	<GeneralAnd>		and					</>
+	<GeneralMinutes>	minutes					</>
+	<GeneralNoRestrictions>	(No restrictions if equal)		</>
+	<GeneralMonday>		Monday					</>
+	<GeneralTuesday>	Tuesday					</>
+	<GeneralWednesday>	Wednesday				</>
+	<GeneralThursday>	Thursday				</>
+	<GeneralFriday>		Friday					</>
+	<GeneralSaturday>	Saturday				</>
+	<GeneralSunday>		Sunday					</>
+	<GeneralHourMinutes>	HH:MM					</>
+	<GeneralKBsec>		KBytes/sec				</>
+	<GeneralDayBetween>	Every day between the hours of		</>
+	<GeneralSeconds>	seconds					</>
+	<GeneralDayOfWeekTitle>	Day-of-week-override			</>
+	<GeneralGraphic>	Show as a graph				</>
+
+	<TitleProcessor>	Processor				</>
+	<PComputingTitle>	Computing allowed			</>
+	<PComputingBatteries>	While Computer is on batteries		</>
+	<PComputingUseCpu>	While computer is in use		</>
+	<PComputingUseGpu>	Use GPU while computer is in use	</>
+	<PComputingOnlyIdle>	Only after computer has been idle for	</>
+	<PComputingUsageLess>	While processor usage is less than	</>
+	<PComputingUsageLessP>	% (0 Means no restrictions)		</>
+
+	<POtherTitle>		Other options				</>
+	<POtherSwitchEvery>	Switch between applications every	</>
+	<POtherMultiprocessors>	On multiprocessor systems, use at most	</>
+	<POtherPercProcessor>	% of the processors			</>
+	<POtherUseAtMost>	Use at most				</>
+	<POtherPercCpu>		% CPU time				</>
+
+	<TitleNetwork>			Network					</>
+	<NetGeneralTitle>		General options				</>
+	<NetGeneralMaxDownload>		Maximum download rate			</>
+	<NetGeneralMaxUpload>		Maximum upload rate			</>
+	<NetTransferAtMost>		Transfer at most			</>
+	<NetTransferAtMostDays>		day(s)					</>	
+	<NetMBytesEvery>		Mbytes, every				</>
+	<NetGeneralConnectEvery>	Connect every				</>
+	<NetGeneralConnectEveryDays>	day(s)					</>
+	<NetGeneralMinWorkBuffer>	Minimum work buffer			</>	
+	<NetGeneralWorkBuffer>		Additional work buffer			</>
+	<NetGeneralWURegulator>		Work buffer set automatically by WU regulator	</>
+	<NetGeneralDaysMax>		day(s) (maximum 10)			</>
+	<NetGeneralSkipImage>		Skip image file verification (not recommended)	</>
+
+	<NetConnectionTitle>	Connection options			</>
+	<NetConnectionConfirm>	Confirm before connecting to internet	</>
+	<NetConnectionDWD>	Disconnect when done			</>
+
+	<NetNetworkTitle>	Network usage allowed			</>
+
+	<TitleDisk>		Disk					</>
+	<DiskDiskTitle>		Disk usage				</>
+	<DiskDiskAtMost>	Use at most				</>
+	<DiskDiskAtLeast>	Leave at least				</>
+	<DiskDiskWriteEvery>	Write to disk at most every		</>
+	<DiskDiskGigaDisk>	Gigabyte disk space			</>
+	<DiskDiskGigaDiskFree>	Gigabyte disk space free		</>
+	<DiskDiskGigaDiskTotal>	% of total disk space			</>
+	<DiskDiskPage>		% of page file (swap space)		</>
+
+	<DiskMemoryTitle>	Memory usage				</>
+	<DiskMemoryInUse>	% When computer is in use		</>
+	<DiskMemoryIdle>	% when computer is idle			</>
+	<DiskMemoryLeaveIn>	Leave application in memory while suspended	</>
+
+	<TitleExclusive>	Exclusive applications			</>
+	<TitleExclusiveAdd>	Add exclusive application		</>
+	<ExclusiveSelect>	Please choose an application		</>
+	<ExclusiveGpu>		GPU only				</>
+
+	<ButtonClearWarning>	Clear will erase ALL local settings, in ALL tabs! Do you really want to do this?	</>
+</GroupDialogBoincSettings>
+
+<GroupDialogGraphic>
+	<Title>			BoincTasks Credit Graphic</>
+	<TitleComputers>	Computers		</>
+	<TitleProjects>		Projects		</>
+	<RadioUser>		User			</>
+	<RadioComputer>		Computer		</>
+	<RadioTotal>		Total			</>
+	<RadioAverage>		Average			</>
+	<ButtonUpdate>		Update			</>
+	<EmptyComputer>		Select a computer	</>
+	<EmptyProject>		Select a project	</>
+	<NoData>		No data			</>
+	<DoubleClick>		Double click to maximize graph	</>
+	<MultipleSelections>	Multiple selections	</>
+	<Average>		Average			</>
+	<LineThickness>		= Line thickness	</>
+	<Period>		Over a period of:	</>
+	<Days>			day(s)			</>
+	<CombineProjects>	Combine projects	</>
+	<Expanded>		Expanded selection box	</>
+</GroupDialogGraphic>
+
+<GroupDialogGraphicTasks>
+	<Title>			BoincTasks Tasks Graphic</>
+</GroupDialogGraphicTasks>
+
+<GroupDialogGraphicDeadline>
+	<Title>			BoincTasks Deadline Graphic</>
+</GroupDialogGraphicDeadline>
+
+<GroupDialogGraphicTransfer>
+	<Title>			BoincTasks Transfer Graphic	</>
+	<up>			Uploaded			</>
+	<down>			Downloaded			</>
+</GroupDialogGraphicTransfer>
+
+<GroupDialogHistoryLong>
+	<Title>			BoincTasks long term History</>
+</GroupDialogHistoryLong>
+
+<GroupDialogGraphicColors>
+	<Title>			Graphic			</>
+	<ButtonBackground>	Background		</>
+	<ButtonProjectText>	Project text		</>
+	<ButtonScaleText>	Scale text		</>
+	<ButtonGrid>		Grid			</>
+	<ButtonColor>		Color			</>
+	<ButtonAverage>		Average			</>
+	<CheckFixed>		Fixed colors		</>
+</GroupDialogGraphicColors>
+
+<GroupDialogTemperatureGraphic>
+	<Title>			BoincTasks Temperature Graphic	</>
+	<Combo1Minute>		1 Minute			</>
+	<Combo5Minute>		5 Minutes			</>
+	<Combo10Minute>		10 Minutes			</>
+	<Combo30Minute>		30 Minutes			</>
+	<Combo60Minute>		60 Minutes			</>
+	<Combo3Hour>		3 Hour				</>
+	<Combo6Hour>		6 Hour				</>
+	<Combo12Hour>		12 Hour				</>
+	<Combo24Hour>		24 Hour				</>
+
+	<Core>			Core				</>
+	<Gpu>			GPU				</>
+	<CpuPerc>		CPU %				</>
+	<GpuPerc>		GPU %				</>
+	<CoreMax>		Max Core			</>
+	<GpuMax>		Max GPU				</>
+</GroupDialogTemperatureGraphic>
+
+<GroupDialogThreadGraphic>
+	<Title>			BoincTasks Thread Graphic	</>
+</GroupDialogThreadGraphic>
+
+<GroupDialogTThrottle>
+	<TitleComputers>	Computer			</>
+	<TitleTemperature>	Temperature			</>
+	<TitleRunPercentage>	Run percentage			</>
+	<Core>			Core				</>
+	<SetCore>		Set Core			</>
+	<Gpu>			GPU				</>
+	<SetGpu>		Set GPU				</>
+	<RunningCpu>		Running CPU			</>
+	<MaxCpu>		Max CPU %			</>
+	<MinCpu>		Min CPU %			</>
+	<RunningGpu>		Running GPU			</>
+	<AutoActive>		Auto active			</>
+</GroupDialogTThrottle>
+
+<GroupDialogSetDebt>
+	<Title>			Set debt on computer:		</>
+	<CpuShort>		CPU Short term debt		</>
+	<CpuLong>		CPU Long term debt		</>
+	<NVidiaShort>		NVIDIA Short term debt		</>
+	<NVidiaLong>		NVIDIA Long term debt		</>
+	<AtiShort>		ATI Short term debt		</>
+	<AtiLong>		ATI Long term debt		</>
+</GroupDialogSetDebt>
+
+<GroupDialogAddProject>
+	<Title>			Add a project to computer:%20			</>
+	<ComputerMain>		Add a project to computer			</>
+	<LoginName>		Login name / email				</>
+	<Password>		Password					</>
+	<UserName>		User name					</>
+	<CreateWhile>		Create a new account while adding a project.	</>
+	<AddComputers>		Add the project on additional computers.	</>
+
+	<MsgInvalidLoginName>	Invalid login name, \r\nemail address or password.\r\nToo short!	</>
+	<MsgPasswordsEqual>	Passwords must be equal!			</>
+	<MsgUsernameMissing>	Missing user name!				</>
+	<MsgProjectUrlShort>	Invalid project url.\r\nToo short!		</>
+
+	<MsgBusy>		Busy.....					</>
+	<MsgAddedSuccessfully>	Project added successfully			</>
+	<MsgErrorCreating>	Error in creating an account			</>
+	<MsgErrorUrl>		Url name not valid				</>
+	<MsgErrorFailedContact>	Failed to contact the project server		</>
+	<MsgErrorPassword>	Bad password					</>
+	<MsgErrorAlreadyAtt>	Already attached to this project		</>
+	<MsgErrorNotDatabase>	Not found in the database			</>
+	<MsgErrorUnableConnect>	Unable to connect				</>
+	<MsgErrorNotFound>	Not found					</>
+	<MsgErrorBadEmail>	Bad E-Mail address				</>
+
+	<ButtonWeb>		Website						</>
+	<ButtonAdd>		Add Project					</>
+</GroupDialogAddProject>
+
+<GroupDialogAddAccountManager>
+	<Title>			Account manager on computer:%20			</>
+	<UserName>		Login name / email				</>
+	<Password>		Password					</>
+	<ButtonWeb>		Website						</>
+	<ButtonAdd>		Add manager					</>
+	<ButtonRemove>		Remove manager					</>
+	<MsgAlready>		Using manager					</>
+</GroupDialogAddAccountManager>
+
+<GroupDialogProjectProperties>
+	<Computer>				Computer:				</>
+	<TitleProjectP>			Project properties		</>
+	<Project>				Project					</>
+	<General>				General					</>
+	<MasterUrl>				Master URL				</>
+	<UserName>				User name				</>
+	<Team>					Team					</>
+	<Venue>					Venue					</>
+	<TasksCompleted>		Tasks completed			</>
+	<TasksError>			Tasks error				</>
+	<ResourseShare>			Resource share			</>
+	<FileUploadDeferred>	File upload deferred	</>
+	<FileDownloadDeferred>	File download deferred	</>
+	<ComputerId>			Computer id				</>
+	<ExternalProjectId>		External cross project id (CPID)	</>
+	<NonCpuIntensive>		Non CPU intensive		</>
+	<SuspendedGui>			Suspended via GUI		</>
+	<DontReqWork>			Don't request more work			</>
+	<SchedulerInProg>		Scheduler call in progress		</>
+	<AttachedAcountM>		Attached via account manager	</>
+	<DetachWD>				Detach when done		</>
+	<Ended>					Ended					</>
+	<Credit>				Credit					</>
+	<UserCredit>			User					</>
+	<HostCredit>			Host					</>
+	<More>					More					</>
+	<DurationF>				Duration correction factor		</>
+	<Priority>				Scheduling priority		</>
+	<CpuBackoff>			CPU backoff time		</>
+	<CpuBackoffInterval>	Backoff Interval		</>
+	<CpuDontFetch>			Don't fetch CPU tasks	</>
+	<CudaBackoff>			NVIDIA backoff time		</>
+	<CudaDontFetch>			Don't fetch NVIDIA GPU Tasks	</>
+	<AtiBackoff>			ATI backoff time		</>
+	<AtiDontFetch>			Don't fetch ATI GPU Tasks	</>
+	<SchedulePending>		Schedule RPC Pending		</>
+
+	<CpuShortTimeDebt>		CPU Short term debt		</>
+	<CpuLongTimeDebt>		CPU Long term debt		</>
+	<CudaShortTimeDebt>		NVIDIA Short term debt	</>
+	<CudaLongTimeDebt>		NVIDIA Long term debt	</>
+	<AtiShortTimeDebt>		ATI Short term debt		</>
+	<AtiLongTimeDebt>		ATI Long term debt		</>
+
+	<Disk>					Disk					</>
+	<DiskUse>				This project disk usage		</>
+	<DiskAll>				All projects disk usage		</>
+	<DiskAllowed>			Allowed to use			</>
+	<DiskBoinc>				BOINC is using			</>
+	<DiskFree>				Free disk space			</>
+	<DiskTotal>				Total disk space		</>
+	<Total>					Total					</>
+	<Average>				Average					</>
+	<Yes>					Yes						</>
+	<No>					No						</>	
+</GroupDialogProjectProperties>
+
+<GroupDialogTaskProperties>
+	<Computer>		Computer:				</>
+	<TitleTaskP>		Task properties				</>
+	<Project>		Project					</>
+	<Application>		Application				</>
+	<Name>			Name					</>
+	<WorkunitName>		Workunit name				</>
+	<State>			State					</>
+	<Recieved>		Received				</>
+	<Deadline>		Report deadline				</>
+	<EstAppSpeed>		Estimated app speed			</>
+	<EstTaskSize>		Estimated task size			</>
+	<Resources>		Resources				</>
+	<CheckpointTime>	CPU time at last checkpoint		</>
+	<CpuTime>		CPU time				</>
+	<ElapsedTime>		Elapsed time				</>
+	<EstTimeRemaining>	Estimated time remaining		</>
+	<FractionDone>		Fraction done				</>
+	<VirtualMemory>		Virtual memory size			</>
+	<WorkingSetSize>	Working set size			</>
+	<Directoy>		Directory				</>
+	<Pid>			Process ID				</>
+</GroupDialogTaskProperties>
+
+<GroupDialogComputerProperties>
+	<Computer>		Computer				</>
+	<TitleComputerP>	Computer properties			</>
+	<CPU>			CPU					</>
+	<Os>			Os					</>
+	<Memory>		Memory					</>
+	<Disk>			Disk					</>
+	<GPU>			GPU					</>
+
+	<TimeHeader>		Time statistics				</>
+	<TimeBOINC>		BOINC run				</>
+	<TimeInternet>		Internet connection			</>
+	<TimeCPU>		CPU run					</>
+	<TimeGPU>		GPU run					</>
+	<TimeStart>		BOINC startup time			</>
+	<TimeUp>		BOINC previous uptime			</>
+</GroupDialogComputerProperties>
+
+<GroupDialogProjectOperation>
+	<QuestionReset>		Do you want to reset these projects?		</>
+	<QuestionDetach>	Do you want to detach from these projects?	</>
+	<MsgBoxSelectProject>	Select any project, for the computer that you want to add a new project	</>
+</GroupDialogProjectOperation>
+
+<GroupDialogTaskAbort>
+	<ColumnTask>		Task				</>
+	<ColumnProject>		Project				</>
+	<ColumnState>		State				</>
+	<ColumnDeadline>	Deadline			</>
+	<ColumnComputer>	Computer			</>
+	<QuestionAbort>		Do you want to abort the tasks above? </>
+</GroupDialogTaskAbort>
+
+<GroupDialogTransferAbort>
+	<QuestionAbort>		Are you sure, you want to abort the selected tasks?	</>
+</GroupDialogTransferAbort>
+
+<GroupDialogSearchComputer>
+	<Title>			Find computers			</>
+	<Computer>		Computer			</>
+	<IP>			IP address			</>
+	<Address>		Address:			</>
+	<Password>		Password:			</>
+	<CopyIP>		IP address to clipboard		</>
+	<CopyMAC>		MAC address to clipboard	</>
+	<CopyAll>		Copy all to clipboard		</>
+
+	<ButtonAddressRange>	Scan address range		</>
+	<ButtonStop>		Stop				</>
+	<ButtonSearchAgain>	Find				</>
+	<ButtonAdd>		Add selected			</>
+	<Yes>			Yes				</>
+</GroupDialogSearchComputer>
+
+<GroupDialogUpdate>
+	<Title>			Find a new version					</>
+
+	<CheckNew>		Press Check to find a new version.			</>
+	<UsesHttp>		(uses Http connection to www.efmer.eu on port 80)	</>
+	<CurrentVersion>	Current version: %s					</>
+	<LatestVersion>		Latest version : %s					</>
+	<LatestBetaVersion>	(Latest beta version : %s)				</>
+	<NewVersionFound>	New version found: %s					</>
+	<NewBetaVersionFound>	New beta version found: %s				</>
+	<ClickUpdate>		Click on Update to download this new version.		</>
+	<AlreadyCurrent>	You already have the most current version!		</>
+	<CantConnect>		Can't make an internet connection			</>
+	<CheckManually>		Check www.efmer.eu/boinc/boinctasks, manually		</>
+
+	<UpdateDirect>		Download directly using BoincTasks			</>
+	<Location>		Download from our server, located in			</>
+	<Europe>		Europe							</>
+	<NorthAmerica>		North America						</>
+
+	<ButtonCheck>		Check							</>
+	<ButtonUpdate>		Update							</>
+
+	<CheckAuto>		Automatically check for new versions			</>
+	<CheckBeta>		Include Beta versions					</>
+	<CheckUseBrowser>	Use the browser to download BoincTasks			</>
+	<TempFolder>		Folder to store download				</>
+	<UnableToDownload>	Unable to download BoincTasks				</>
+	<UnableToStore>		Couldn't write file					</>
+</GroupDialogUpdate>
+
+<GroupDialogLogging>
+	<Title>			Logging				</>
+	<TitleRules>		Logging rules			</>
+	<EnableDebug>		Enable debug mode		</>
+</GroupDialogLogging>
+
+<GroupDialogAbout>
+	<Title>			About				</>
+
+	<Text1>		%20eFMer BoincTasks, is a free program of eFMer.\r\n
+				%20Makers of TThrottle the other BOINC project that keeps your CPU and GPU temperature controlled.\r\n\r\n	</>
+	<TextProgrammer>	%20Programmer:												</>
+	<TextTesters>		\r\n\r\n%20Testers:%20											</>
+	<TextSupport>		%20Supported by:%20											</>
+	<Text2>			\r\n\r\n%20Suggestions to improve this program are welcome.\r\n\r\n
+				%20If you experience any problems let me know on the forum, or mail: boinc@efmer.eu.\r\n\r\n
+				%20Kind regards,\r\n
+				%20The eFMer team.\r\n\r\n
+				%20This program is released as Freeware\r\n
+				%20and the included eFMer licence agreement (licence.htm) applies.					</> 
+
+	<Credits>		%20			</>     <!-- %09Translation by		-->
+	<CreditsLink>		%20			</>	<!-- Team or link name		-->
+	<CreditsLinkHttp>	%20			</>	<!-- http link	http:/www.	-->
+</GroupDialogAbout>
+
+<GroupDialogProxy>
+	<Title>			Proxy settings:%20		</>
+
+	<HttpTitle>		HTTP Proxy			</>
+	<HttpConnect>		Connect via HTTP Proxy server	</>	
+	<HttpGroup>		HTTP Proxy Server Configuration	</>
+	<HttpServer>		Address:			</>
+	<HttpPort>		Port:				</>
+	<HttpNoFor>		Don't use proxy for:		</>
+	<HttpGroupUser>		Leave these blank if not needed	</>
+	<HttpUser>		User Name:			</>
+	<HttpPassWord>		Password:			</>
+
+	<SocksTitle>		SOCKS Proxy			</>
+	<SocksConnect>		Connect via SOCKS Proxy server	</>	
+	<SocksGroup>		SOCKS Proxy Server Configuration</>
+	<SocksServer>		Address:			</>
+	<SocksPort>		Port:				</>
+	<SocksNoFor>		Don't use proxy for:		</>
+	<SocksGroupUser>	Leave these blank if not needed	</>
+	<SocksUser>		User Name:			</>
+	<SocksPassWord>		Password:			</>
+</GroupDialogProxy>
+
+<GroupDialogRules>
+	<Title>			Rule editor			</>
+	<Name>			Rule name:			</>
+	<Computer>		Computer:			</>
+	<Project>		Project:			</>
+	<Application>		Application:			</>
+
+	<GroupType>		Type				</>
+	<GroupOperator>		Operator			</>
+	<GroupValue>		Value				</>
+	<GroupTime>		Time				</>
+	<GroupEvent>		Event				</>
+
+	<TypeElapsed>		Elapsed Time			</>
+	<TypeCpuP>		CPU %				</>
+	<TypeProgress>		Progress %			</>
+	<TypeProgressDelta>	Progress / min %		</>
+	<TypeTimeLeft>		Time Left			</>
+	<TypeConnection>	Connection			</>
+	<TypeUse>		Use				</>
+	<TypeTemperature>	Temperature			</>
+	<TypeStatus>		Status				</>
+	<TypeTime>		Wall-clock Time			</>
+	<TypeDeadline>		Deadline			</>
+	<TypeTimeLeftProject>	Time Left Project		</>
+
+	<CheckButton>		Check				</>
+	<ColorButton>		Color				</>
+
+	<EventMessageNone>	Show nothing			</>
+	<EventMessageNotice>	Show in Notices			</>
+	<EventMessage>		Show logging dialog		</>
+
+	<EventSuspendProject>	Suspend project			</>
+	<EventResumeProject>	Resume project			</>
+	<EventSnooze>			Snooze				</>
+	<EventSnoozeGpu>		Snooze GPU			</>
+	<EventNoNewWorkProject>	No more work			</>
+	<EventAllowNewWorkProject>Allow new work		</>
+	<EventSuspendTask>		Suspend task			</>
+	<EventProgram>			Run program			</>
+	<EventSuspendNetwork>	Suspend network		</>
+	<EventResumeNetwork>	Resume network		</>
+
+	<MsgIdenticalType>	Identical type			</>
+	<MsgNotRules>		There are no rules		</>
+	<MsgEmpty>		empty				</>
+	<MsgRuleNameEmpty>	Rule name is empty.		</>
+	<MsgRuleNameInUse>	Rule name is already in use.	</>
+	<MsgNoProgram>		No program, or batch file found	</>
+	<MsgOperatorNotSelected>Operator not selected after	</>
+	<MsgInvalidTime>	Invalid time			</>
+	<MsgTempRuleComputer>	A temperature rule must have a computer name	</>
+	<MsgInvalidUse>		Invalid use			</>
+	<MsgInvalidStatus>	Invalid status			</>
+	<MsgInvalidStatus2>	\r\nSyntax: 3,4 = status,count\r\n3 = error, 4 = uploading, 5 = Ready, 6 = aborted\r\n	</>
+	<MsgOnlyFirstType>	Only the first type may be used	</>
+	<MsgSnoozeFor>		Snooze for			</>
+	<MsgNotAllowed>		Not allowed			</>
+</GroupDialogRules>
+
+<GroupDialogMessageSearch>
+	<Title>				Search message		</>
+	
+</GroupDialogMessageSearch>
+
+<GroupDialogCommonButtons>
+	<YesButton>		Yes				</>
+	<NoButton>		No				</>
+	<CancelButton>		Cancel				</>
+	<OkButton>		Ok				</>
+	<ClearButton>		Clear				</>
+	<ApplyButton>		Apply				</>
+	<EditButton>		Edit				</>
+	<AddButton>		Add				</>
+	<DeleteButton>		Delete				</>
+</GroupDialogCommonButtons>
+
+<GroupMessageBox>
+	<ClientQuitQuestion>	Quit the BOINC client and stop all science projects?	</>
+	<ClientCouldntShutdown>	The BOINC client couldn't be shut down			</>
+	<ClientNotStartedBT>	The BOINC client wasn't started by BoincTasks and is still running</>
+</GroupMessageBox>
+
+
+<!--	Status Message	-->
+
+<GroupWindowStatusMessage>
+	<TasksUpdateInSeconds>	Update in %d seconds, %d Tasks	</>
+	<TasksWaiting>		Waiting, %d Tasks		</>
+	<StatusUpdateInSec>	Update in %d seconds		</>
+	<StatusWaiting>		Waiting				</>
+	<StatusUpdating>	Updating.....			</>
+	<StatusSwitched>	Switched, busy....		</>
+	<StatusClosing>		Closing....			</>
+	<StatusHistoryDisabled>	History is disabled		</>
+
+	<CombinedNotConnected>	Not connected			</>
+	<CombinedPassWord>	Password			</>
+	<CombinedState>		Not able to read state		</>
+	<CombinedConnecting>	Connecting.....			</>
+	<CombinedConnected>	Connected			</>
+	<CombinedLostConnection>Lost connection			</>
+
+	<Messages>		%20[Messages]			</>
+	<Tasks>			%20[Tasks]			</>
+	<Projects>		%20[Projects]			</>
+	<Transfer>		%20[Transfers]			</>
+	<History>		%20[History]			</>
+	<Computer>		%20[Computer]			</>
+	<Notices>		%20[Notices]			</>
+</GroupWindowStatusMessage>
+
+<GroupTaskbarMessage>
+	<Computers>		Connected computers		</>
+	<Running>		Running				</>
+</GroupTaskbarMessage>
+
+<GroupNoticesMessage>
+	<More>			more...				</>
+	<ThereAreNew>		There are %d new notices	</>
+	<CatClient>		Notice from BOINC		</>
+	<CatScheduler>		Notice from server		</>
+	<CatBoincTasks>		Notice from BoincTasks		</>
+	<CatTThrottle>		Notice from TThrottle		</>
+	<BalloonTitle>		Notices				</>
+	<NoNotices>		There are no notices		</>
+	<DisabledUser>		Notices disabled by user	</>
+</GroupNoticesMessage>
+
+<GroupMobile>
+	<LoginHeader>		Login				</>
+	<LoginHeaderAuto>	Automatic login			</>
+	<LoginAuto>		Retrieving login information.......</>
+	<LoginHeaderFailed>	Login Failed			</>
+	<LoginKeep>		Keep me logged in:		</>
+	<LoginStore>		Store password			</>
+	<LoginPassword>		Password:			</>
+	<LoginNeedPassword>	<p>To use BoincTask, you need to enter a password.<br><br>This password can be found in Extra->BoincTasks Settings->Mobile.</p>
+
+	<Logout>		Logout				</>
+	<Options>		Options				</>
+	<More>			More				</>
+	<Less>			Less				</>
+
+	<FontSize>		Font size			</>
+	<MultipleSelections>	Multiple selections		</>
+
+	<Sort>			Sort				</>
+	<Sort1>			Sort on: 1 First		</>
+	<Sort2>			Sort on: 2 Second		</>
+	<Sort3>			Sort on: 3 Third		</>
+
+	<Filter>		Filter				</>
+
+	<Report>		Report				</>
+	<Graph>			Graph				</>
+	<SingleSelection>	Single selection		</>
+	<ToggleFilter>		Toggle filter on selected	</>
+	<ToggleFullScreen>	Toggle full screen		</>
+
+	<GraphDone>		Done				</>
+	<GraphSComputer>	Select computer			</>
+	<GraphSProject>		Select project			</>
+</GroupMobile>
+
+<TranslatableBoincText>
+	<0>	Message from^														</>
+	<1>	Message from server^													</>
+	<2>	No work available for the applications you have selected. Please check your project preferences on the web site.^	</>
+	<3>	No work available for the applications you have selected.  Please check your project preferences on the web site.^	</>
+	<4>	Can't resolve hostname in remote_hosts.cfg^										</>
+	<5>	error^															</>
+	<6>	Unrecognized tag in cc_config.xml^											</>
+	<7>	is not available for^													</>
+	<8>	Missing end tag in cc_config.xml^											</>
+	<9>	BOINC can't access Internet - check network connection or proxy configuration.^						</>
+ 	<10>	Requested by user^													</>
+	<11>	To fetch work^														</>
+	<12>	To report completed tasks^												</>
+	<13>	To send trickle-up message^												</>
+	<14>	Requested by account manager^												</>
+	<15>	Project initialization^													</>
+	<16>	Requested by project^													</>
+	<17>	Unknown reason^														</>
+	<18>	A new version of BOINC is available.^											</>
+	<19>	Download it.^														</>
+	<20>	??															</>	
+	<21>	??															</>	
+	<22>	??															</>	
+	<23>	??															</>	
+	<24>	??															</>	
+	<25>	??															</>	
+	<26>	??															</>	
+	<27>	??															</>	
+	<28>	??															</>	
+	<29>	??															</>	
+
+</TranslatableBoincText>
+
+<--  syntax <TranslatableBoincText> <0>	English^OtherLanguage	</>		-->
+
+<TranslatableWWWText>
+	<0>	Message boards^Message boards						</>
+	<1>	Help^Help								</>
+	<2>	Your account^Your account						</>
+	<3>	Your preferences^Your preferences					</>
+	<4>	Your results^Your results						</>
+	<5>	Your computers^Your computers						</>
+	<6>	Your team^Your team							</>
+	<7>	Your messages^Your messages						</>
+	<8>	Common questions^Common questions					</>
+	<9>	Screensaver info^Screensaver info					</>
+	<10>	Report problems^Report problems						</>
+	<11>	Account summary^Account summary						</>
+	<12>	Donate to^Donate to							</>
+	<13>	Donate^Donate								</>
+	<14>	status^status								</>
+	<15>	Preferences^Preferences							</>
+	<16>	A new version of BOINC is available.^A new version of BOINC is available.</>
+	<17>	Download it.^Download it.						</>
+	<18>										</>
+	<19>										</>
+	<20>										</>
+	<21>										</>
+	<22>										</>
+	<23>										</>
+	<24>										</>
+	<25>										</>
+	<26>										</>
+	<27>										</>
+	<28>										</>
+	<29>										</>
+</TranslatableWWWText>
+
+<-- 
+
+Warning: the WWW text is matched sequential, so "Donate to" has to be put before "Donate"
+Otherwise "Donate" is found before "Donate to" 
+
+
+%20 = space
+%09 = horizontal tab
+%d = number
+
+
+Please read the translation instruction at http://www.efmer.eu/forum_tt/index.php?board=19.0
+
+
+Courier new 12
+-->
