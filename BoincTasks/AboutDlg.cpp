@@ -57,15 +57,19 @@ BOOL CAboutDlg::OnInitDialog()
 
 	// translations
 
-	sDisplayText = gszTranslation[PosDialogAboutTitle];
+	sDisplayText= gszTranslation[PosDialogAboutTitle];
 	sDisplayText+= " BoincTasks";
 	SetWindowText(sDisplayText);
 
-	sDisplayText = "\r\n";
+	sDisplayText = "This program is free software : you can redistribute it and /or modify it under the terms of the GNU General Public License as published by\r\n";
+	sDisplayText+= "the Free Software Foundation, either version 3 of the License, or any later version.\r\n";
+	sDisplayText+= "This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n";
+	sDisplayText+= "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the GNU General Public License for more details.\r\n";
+	sDisplayText+= "You should have received a copy of the GNU General Public License along with this program(license.html).If not, see < https://www.gnu.org/licenses/>.\r\n\r\n";
 	sDisplayText+= gszTranslation[PosDialogAboutText1];
 	sDisplayText+= gszTranslation[PosDialogAboutTextProgrammer];
 	sDisplayText+= " Fred Melgert";
-	sDisplayText = sDisplayText + gszTranslation[PosDialogAboutTextTesters];
+	sDisplayText+= gszTranslation[PosDialogAboutTextTesters];
 	sDisplayText+= "Corsair, Lammert, idahofisherman, Pepo, jjwhalen, wicked, glennaxl, Sekerob, Torsten, BeemerBiker, archae86, tlsi2000, John C, BobCat13,\r\n";
 	sDisplayText+= " Beyond, SuperJoker, John McLeod VII, dskrbt, indians, coolstream, Bernt, Norman, thebestjaspreet, gubment.cheez, Mellowman, Colin, ElGuillermo,\r\n";
 	sDisplayText+= " ReBoRnE33, BilBg, Tex1954, dougjj, Gord Sipko, brbecker, Ytterbium, GSD, TeeVeeEss, HighTech67, szopler, hucker.\r\n";
@@ -74,20 +78,20 @@ BOOL CAboutDlg::OnInitDialog()
 	sDisplayText+= "eFMer, Mark James (6), David Anderson (3), Armand Medeiros (3), Art Brown (3), Sylvester Rademaker (2), Carl Caamano (2), John Kerr,\r\n";
 	sDisplayText+= " Paul York, Peter Hardy, Teemu Mannermaa, Joseph Stateson, Peter Stoll, Richard Furnari, John Chastain, Yves Trehot, Tobias Greifzu,\r\n";
 	sDisplayText+= " JoaoLuis Pena, Peter Slacik, Rick Goddard,Lars Jensen, Martin Duszynski Jr, MEB Consulting Services Inc., Jose Ernani, Polak Filho,\r\n";
-	sDisplayText+= " Philipp Bliedung, Jan Ingmar Karlsson, Charles Cybulski, Tom Milinovich, Jefferson Lawrence, Peter Scott, Joseph Watterson,\r\n";
-	sDisplayText+= " Bengt-Åke Johansson, Rob Beentjes, Earl T Koskie Jr, David Barstow, Mark Ritter, john michel, Yu-Hsien Ko, BOINC Poland,\r\n";
+	sDisplayText+= " Philipp Bliedung, Jan Ingmar Karlsson, Charles Cybulski, Tom Milinovich, Jefferson Lawrence, Peter Scott, Joseph Watterson,Robert Georgell (2)\r\n";
+	sDisplayText+= " Bengt-Åke Johansson, Rob Beentjes, Earl T Koskie Jr, David Barstow, Mark Ritter, john michel, Yu-Hsien Ko, BOINC Poland, Nicholas Mitchell\r\n";
 	sDisplayText+= " Thomas Koch, Alan Hanson, Ashley Wright, Fred Evans, Mike Green, Scott Ritchie, Piotr Wieczorek, Hartmut Schmoldt, Paul Bowyer,\r\n";
 	sDisplayText+= " Charles Elliott, Trevor vanRijn, John McClelland, Ytterbium, Jose Ramirez, Jonathon G Morris, William White, Thosten Sorge (2), Lionel Cador, \r\n";
 	sDisplayText+= " Step Williamson, Anthony Welch, John Janoch, Alan Hanson, S@NL-JBG, Robert Carter, Loren Vanstone, David McMillan, Douglas Orlowsky,\r\n";
 	sDisplayText+= " Stephen Ellison, Greg Staunton - JugNut (3), William Plachy, SekeRob2, R.A.Hicks, Rodney Duane, Matthew Belben (2), Sean Humphries, Michael Hartsell,\r\n";
 	sDisplayText+= " Lushchay Vladimir, Alain Denos, Steven Pepperell (2), Richard Roberts, Yeti, Daniel Wimmer, Richard Bassett, Wendell Dunn Iii, Damien Healy (6),\r\n";
-	sDisplayText+= " John Burton, P McVeigh, Abhinav Singh, TeeVeeEss, Giles Averay-Jones, Thorsten Sambale, Jeremy Hanson, William Johnston, kiberdweller.\r\n";
-	sDisplayText+= " Charles Elliott, Peter Wright, Mark Whitmore, Michael D Henderson (2), Joerg Steinmetz, Kari Hyvönen, Erik Veit (9), David Huffman-Gottschling.\r\n";
-	sDisplayText+= " MWG Creations, Mark Hudson, Alexander Lagerberg, Mikhail Romanov, Time Logic Systems, Inc, Dirk Gudenschwager, Daniel McArdell.\r\n";
+	sDisplayText+= " John Burton, P McVeigh, Abhinav Singh, TeeVeeEss, Giles Averay-Jones, Thorsten Sambale, Jeremy Hanson, kiberdweller.\r\n";
+	sDisplayText+= " Charles Elliott, Peter Wright, Mark Whitmore, Michael D Henderson (2), Joerg Steinmetz, Kari Hyvönen, Erik Veit (15), David Huffman-Gottschling.\r\n";
+	sDisplayText+= " MWG Creations, Mark Hudson, Alexander Lagerberg, Mikhail Romanov, Time Logic Systems, Inc, Dirk Gudenschwager, Daniel McArdell, James Kimball (3).\r\n";
 	sDisplayText+= " Websters computers, David Chapman.\r\n";
-// updated upto 8-june-2023
+// updated upto 7-june-2023
 
-	sDisplayText = sDisplayText + gszTranslation[PosDialogAboutText2];
+	sDisplayText+= gszTranslation[PosDialogAboutText2];
 
 	m_textTranslatedBy.SetWindowText(gszTranslation[PosDialogAboutCredits]);
 	m_textTranslatedTeam.SetWindowText(gszTranslation[PosDialogAboutCreditsLink]);
@@ -135,7 +139,7 @@ BOOL CAboutDlg::OnInitDialog()
 		m_snlHttp.ShowWindow(SW_SHOW);
 	}
 
-	SetTimer(UTIMER_DLG_ABOUT, 100, 0);
+	SetTimer(UTIMER_DLG_ABOUT, 50, 0);
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
@@ -247,7 +251,7 @@ void CAboutDlg::OnShowWindow( BOOL bShow, UINT nStatus)
 {
 	if (bShow)
 	{
-		SetTimer(UTIMER_DLG_ABOUT, 25, 0);
+		SetTimer(UTIMER_DLG_ABOUT, 15, 0);
 	}
 	else
 	{

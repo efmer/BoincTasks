@@ -1285,8 +1285,12 @@ $(OutDir)sign_exe.bat
     <None Include="..\..\16x16-free-application-icons\fatcow-hosting-icons-2400\16x16\shape_square_go.png" />
     <None Include="..\..\BoincTasks_1_6_3\BoincTasks\res\platform\android.bmp" />
     <None Include="..\release\html\notices_template.html" />
-    <None Include="..\release\lang\BoincTasks_BGR.btlang" />
-    <None Include="..\release\lang\BoincTasks_DEU.btlang" />
+    <Text Include="..\release\lang\BoincTasks_BGR.btlang">
+      <FileType>Document</FileType>
+    </Text>
+    <Text Include="..\release\lang\BoincTasks_DEU.btlang">
+      <FileType>Document</FileType>
+    </Text>
     <None Include="..\release\lang\BoincTasks_ENU.btlang" />
     <None Include="..\release\lang\BoincTasks_ESP.btlang" />
     <None Include="..\release\lang\BoincTasks_FRA.btlang" />
@@ -1364,7 +1368,7 @@ $(OutDir)sign_exe.bat
     <None Include="res\toolbarcomputers.bmp" />
     <None Include="res\toolbartasks.bmp" />
     <None Include="res\viewicons.bmp" />
-    <None Include="ReadMe.txt" />
+    <None Include="ReadMe.md" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BoincTasks.rc" />

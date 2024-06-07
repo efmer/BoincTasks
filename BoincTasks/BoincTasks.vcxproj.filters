@@ -1345,7 +1345,7 @@
     <None Include="res\viewicons.bmp">
       <Filter>Header Files\Resource Files</Filter>
     </None>
-    <None Include="ReadMe.txt" />
+    <None Include="ReadMe.md" />
     <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\No.bmp">
       <Filter>Header Files\Resource Files</Filter>
     </None>
@@ -1451,9 +1451,6 @@
     <None Include="res\ssl.bmp">
       <Filter>Header Files\Resource Files</Filter>
     </None>
-    <None Include="..\release\lang\BoincTasks_DEU.btlang">
-      <Filter>external\Language</Filter>
-    </None>
     <None Include="..\release\lang\BoincTasks_ENU.btlang">
       <Filter>external\Language</Filter>
     </None>
@@ -1487,9 +1484,6 @@
     <None Include="..\release\lang\BoincTasks_SVE.btlang">
       <Filter>external\Language</Filter>
     </None>
-    <None Include="..\release\lang\BoincTasks_BGR.btlang">
-      <Filter>external\Language</Filter>
-    </None>
     <None Include="..\release\html\notices_template.html">
       <Filter>external\Html</Filter>
     </None>
@@ -1517,5 +1511,13 @@
     <Image Include="..\release\html\expand.png">
       <Filter>external\Html</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\release\lang\BoincTasks_BGR.btlang">
+      <Filter>external\Language</Filter>
+    </Text>
+    <Text Include="..\release\lang\BoincTasks_DEU.btlang">
+      <Filter>external\Language</Filter>
+    </Text>
   </ItemGroup>
 </Project>
