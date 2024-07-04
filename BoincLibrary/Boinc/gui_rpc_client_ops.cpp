@@ -532,7 +532,10 @@ int APP_VERSION::parse(XML_PARSER& xp) {
     while (in.fgets(buf, 256)) {
         if (match_tag(buf, "</app_version>")) return 0;
         if (parse_str(buf, "<app_name>", app_name)) continue;
-        if (parse_int(buf, "<version_num>", version_num)) continue;
+        if (parse_int(buf, "<version_num>", version_num))
+        {
+            continue;
+        }
         if (parse_str(buf, "<plan_class>", plan_class)) continue;
 
         if (parse_str(buf, "<platform>", platform )) continue;
@@ -552,7 +555,7 @@ void APP_VERSION::clear() {
     app_name.clear();
 	platform.clear();
 	plan_class.clear();
-    version_num = 0;
+    version_num = -1; // 0
 	avg_ncpus = 0;
     ncudas = 0;
     natis = 0;
