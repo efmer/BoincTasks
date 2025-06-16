@@ -166,6 +166,9 @@
     <Filter Include="external\Html">
       <UniqueIdentifier>{9e7e868f-f5ba-4159-b74d-36ea0527d71f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\lib\bf">
+      <UniqueIdentifier>{cedd32b4-da64-4ba5-8d26-bcd07b567228}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BoincClientManager.cpp">
@@ -689,6 +692,12 @@
     </ClCompile>
     <ClCompile Include="DlgEditAppInfoConfig.cpp">
       <Filter>Source Files\dlg\Dlg Edit Config</Filter>
+    </ClCompile>
+    <ClCompile Include="bf\BlowFish.cpp">
+      <Filter>Source Files\lib\bf</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgAccept.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1235,6 +1244,12 @@
     <ClInclude Include="DlgEditAppInfoConfig.h">
       <Filter>Header Files\dlg\Dlg Edit Config</Filter>
     </ClInclude>
+    <ClInclude Include="bf\Blowfish.h">
+      <Filter>Source Files\lib\bf</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgAccept.h">
+      <Filter>Header Files\dlg</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\bmp00001.bmp">
@@ -1490,6 +1505,8 @@
     <None Include="..\release\license.htm">
       <Filter>external</Filter>
     </None>
+    <None Include="CDlgHtml.htm" />
+    <None Include="CDlgHtmlAccept.htm" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BoincTasks.rc">

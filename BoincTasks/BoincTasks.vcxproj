@@ -879,6 +879,7 @@ $(OutDir)sign_exe.bat
     <ClCompile Include="..\..\..\Common\bf\BlowFish.cpp" />
     <ClCompile Include="AnsiToUtf8.cpp" />
     <ClCompile Include="Base64.cpp" />
+    <ClCompile Include="bf\BlowFish.cpp" />
     <ClCompile Include="BoincClientManager.cpp" />
     <ClCompile Include="BoincTasks.cpp" />
     <ClCompile Include="Computers.cpp" />
@@ -896,6 +897,7 @@ $(OutDir)sign_exe.bat
     <ClCompile Include="CreateHtmlWebServerProperties.cpp" />
     <ClCompile Include="DateConvert.cpp" />
     <ClCompile Include="DgPrefExclusiveAdd.cpp" />
+    <ClCompile Include="DlgAccept.cpp" />
     <ClCompile Include="DlgBarProject.cpp" />
     <ClCompile Include="DlgBarSide.cpp" />
     <ClCompile Include="DlgDebug.cpp" />
@@ -1095,6 +1097,7 @@ $(OutDir)sign_exe.bat
   <ItemGroup>
     <ClInclude Include="AnsiToUtf8.h" />
     <ClInclude Include="Base64.h" />
+    <ClInclude Include="bf\Blowfish.h" />
     <ClInclude Include="Blowfish.h" />
     <ClInclude Include="BoincClientManager.h" />
     <ClInclude Include="BoincTasks.h" />
@@ -1116,6 +1119,7 @@ $(OutDir)sign_exe.bat
     <ClInclude Include="CreateHtmlWebServerProperties.h" />
     <ClInclude Include="DateConvert.h" />
     <ClInclude Include="DgPrefExclusiveAdd.h" />
+    <ClInclude Include="DlgAccept.h" />
     <ClInclude Include="DlgBarProject.h" />
     <ClInclude Include="DlgBarSide.h" />
     <ClInclude Include="DlgDebug.h" />
@@ -1307,6 +1311,12 @@ $(OutDir)sign_exe.bat
     </None>
     <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\About.bmp" />
     <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\No.bmp" />
+    <None Include="CDlgHtml.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="CDlgHtmlAccept.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
     <None Include="res\bitmap1.bmp" />
     <None Include="res\bitmap2.bmp" />
     <None Include="res\bitmap3.bmp" />

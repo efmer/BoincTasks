@@ -86,10 +86,10 @@ BOOL CAboutDlg::OnInitDialog()
 	sDisplayText+= " Stephen Ellison, Greg Staunton - JugNut (3), William Plachy, SekeRob2, R.A.Hicks, Rodney Duane, Matthew Belben (2), Sean Humphries, Michael Hartsell,\r\n";
 	sDisplayText+= " Lushchay Vladimir, Alain Denos, Steven Pepperell (2), Richard Roberts, Yeti, Daniel Wimmer, Richard Bassett, Wendell Dunn Iii, Damien Healy (6),\r\n";
 	sDisplayText+= " John Burton, P McVeigh, Abhinav Singh, TeeVeeEss, Giles Averay-Jones, Thorsten Sambale, Jeremy Hanson, kiberdweller.\r\n";
-	sDisplayText+= " Charles Elliott, Peter Wright, Mark Whitmore, Michael D Henderson (2), Joerg Steinmetz, Kari Hyvönen, Erik Veit (15), David Huffman-Gottschling.\r\n";
+	sDisplayText+= " Charles Elliott, Peter Wright, Mark Whitmore, Michael D Henderson (2), Joerg Steinmetz, Kari Hyvönen, Erik Veit (16), David Huffman-Gottschling.\r\n";
 	sDisplayText+= " MWG Creations, Mark Hudson, Alexander Lagerberg, Mikhail Romanov, Time Logic Systems, Inc, Dirk Gudenschwager, Daniel McArdell, James Kimball (3).\r\n";
-	sDisplayText+= " Websters computers, David Chapman.\r\n";
-// updated upto 7-june-2023
+	sDisplayText+= " Websters computers, David Chapman, William Johnston (2), Jerome Cadet, Dan Shprecher, Jave Ivanovski, Lammert Van der Veen, Toby Broom (4).\r\n";
+// updated upto 15-june-2025
 
 	sDisplayText+= gszTranslation[PosDialogAboutText2];
 

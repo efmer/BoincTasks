@@ -184,10 +184,10 @@ BEGIN
     EDITTEXT        IDC_EDIT_ABOUT,6,6,522,342,ES_MULTILINE | ES_AUTOHSCROLL | WS_DISABLED,WS_EX_CLIENTEDGE
     LTEXT           "Trl",IDC_TEXT_TRANSLATED_BY,6,357,132,9
     LTEXT           "Tm",IDC_TEXT_TRANSLATED_TEAM,144,357,199,17
-    ICON            IDR_MAINFRAME,IDC_STATIC,6,378,14,13
+    ICON            IDR_MAINFRAME,IDC_STATIC,6,378,20,20
     LTEXT           "eFMer BoincTasks Version:",IDC_STATIC,36,381,102,8,SS_NOPREFIX
     EDITTEXT        IDC_EDIT_VERSION,144,381,30,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
-    LTEXT           "Copyright © 2009-2024 By eFMer ",IDC_STATIC,6,405,132,12
+    LTEXT           "Copyright © 2009-2025 By eFMer ",IDC_STATIC,6,405,132,12
     LTEXT           "www.BoincTasks",IDC_EFMER_HTTP,6,417,90,11
     DEFPUSHBUTTON   "OK",IDOK,474,399,50,16,WS_GROUP
     CONTROL         IDB_BITMAP_SNL,IDC_BITMAP_SNL,"Static",SS_BITMAP | NOT WS_VISIBLE,252,381,133,32
@@ -597,8 +597,8 @@ BEGIN
     CONTROL         "enc",IDC_CHECK_CPID_MANUAL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,108,276,12
 END
 
-IDD_DIALOG_ADD_PROJECT1 DIALOGEX 0, 0, 498, 344
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_DIALOG_ADD_PROJECT DIALOGEX 0, 0, 498, 344
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Select a project to add"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
@@ -1570,6 +1570,17 @@ BEGIN
     PUSHBUTTON      "Button4",IDC_BUTTON4,276,96,132,14,NOT WS_VISIBLE
 END
 
+IDD_DIALOG_ACCEPT DIALOGEX 0, 0, 572, 301
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Accept Agreement"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "Accept",IDOK,514,282,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,339,282,50,14
+    EDITTEXT        IDC_ACCEPT_TEXT,7,0,557,274,ES_MULTILINE | WS_VSCROLL
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -1675,7 +1686,7 @@ BEGIN
         BOTTOMMARGIN, 219
     END
 
-    IDD_DIALOG_ADD_PROJECT1, DIALOG
+    IDD_DIALOG_ADD_PROJECT, DIALOG
     BEGIN
         LEFTMARGIN, 7
         RIGHTMARGIN, 491
@@ -1896,6 +1907,13 @@ BEGIN
         RIGHTMARGIN, 412
         TOPMARGIN, 7
         BOTTOMMARGIN, 338
+    END
+
+    IDD_DIALOG_ACCEPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 564
+        BOTTOMMARGIN, 296
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -2757,8 +2775,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,95,0,0
- PRODUCTVERSION 1,95,0,0
+ FILEVERSION 1,96,0,0
+ PRODUCTVERSION 1,96,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -2775,12 +2793,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "eFMer"
             VALUE "FileDescription", "eFMer BoincTasks,  the best way to view BOINC."
-            VALUE "FileVersion", "1.95.0.0"
+            VALUE "FileVersion", "1.96.0.0"
             VALUE "InternalName", "BoincTasks.exe"
-            VALUE "LegalCopyright", "(c) 2009-2024 eFMer.  All rights reserved."
+            VALUE "LegalCopyright", "(c) 2009-2025 eFMer.  All rights reserved."
             VALUE "OriginalFilename", "BoincTasks.exe"
             VALUE "ProductName", "eFMer BoincTask"
-            VALUE "ProductVersion", "1.95.0.0"
+            VALUE "ProductVersion", "1.96.0.0"
         END
     END
     BLOCK "VarFileInfo"
@@ -2804,6 +2822,26 @@ IDD_ABOUTBOX AFX_DIALOG_LAYOUT
 BEGIN
     0
 END
+
+IDD_DIALOG_ACCEPT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_ADD_PROJECT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_HTML_CDlgHtml       HTML                    "CDlgHtml.htm"
+
+IDR_HTML_CDlgHtmlAccept HTML                    "CDlgHtmlAccept.htm"
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -2841,7 +2879,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_PROGRAM_VERSION     "1.95"
+    IDS_PROGRAM_VERSION     "1.96"
     IDS_PROGRAM_VERSION_PREFIX "eFMer, BoincTasks"
 END
 

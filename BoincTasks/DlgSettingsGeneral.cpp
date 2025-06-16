@@ -10,7 +10,7 @@
 #include "DlgLogging.h"
 #include "DlgSettingsGeneral.h"
 #include "Translation.h"
-#include "\programma\common\bf\Blowfish.h"
+#include "bf/Blowfish.h"
 
 // CDlgSettingsGeneral dialog
 

@@ -1330,7 +1330,7 @@ PROJECT_CONFIG::~PROJECT_CONFIG() {
 }
 
 int PROJECT_CONFIG::parse(MIOFILE& in) {
-    char buf[256];
+    char buf[2048]; //256
     std::string msg;
     clear();
     while (in.fgets(buf, 256)) {
@@ -1338,6 +1338,7 @@ int PROJECT_CONFIG::parse(MIOFILE& in) {
         if (parse_int(buf, "<error_num>", error_num)) continue;
         if (parse_str(buf, "<name>", name)) continue;
         if (parse_str(buf, "<master_url>", master_url)) continue;
+        if (parse_str(buf, "web_rpc_url_base", web_rpc_url_base)) continue;
         if (parse_int(buf, "<local_revision>", local_revision)) continue;
         if (parse_int(buf, "<min_passwd_length>", min_passwd_length)) continue;
         if (parse_bool(buf, "account_manager", account_manager)) continue;
@@ -1346,7 +1347,7 @@ int PROJECT_CONFIG::parse(MIOFILE& in) {
         if (parse_bool(buf, "client_account_creation_disabled", client_account_creation_disabled)) continue;
         if (parse_str(buf, "<error_msg>", error_msg)) continue;
         if (match_tag(buf, "<terms_of_use>")) {
-            while (in.fgets(buf, 256)) {
+            while (in.fgets(buf, 1024)) { // 256
                 if (match_tag(buf, "</terms_of_use>")) break;
                 terms_of_use += buf;
             }
@@ -1367,6 +1368,7 @@ void PROJECT_CONFIG::clear() {
     error_num = 0;
     name.clear();
     master_url.clear();
+    web_rpc_url_base.clear();
     error_msg.clear();
     terms_of_use.clear();
     min_passwd_length = 6;
@@ -1394,6 +1396,8 @@ void ACCOUNT_IN::clear() {
     user_name.clear();
     passwd.clear();
     team_name.clear();
+    ldap_auth = false;
+    consented_to_terms = false;
 }
 
 ACCOUNT_OUT::ACCOUNT_OUT() {
@@ -2561,11 +2565,14 @@ int RPC_CLIENT::lookup_account(ACCOUNT_IN& ai) {
         "   <url>%s</url>\n"
         "   <email_addr>%s</email_addr>\n"
         "   <passwd_hash>%s</passwd_hash>\n"
+        "   <ldap_auth>%d</ldap_auth>\n"
         "</lookup_account>\n",
         ai.url.c_str(),
         ai.email_addr.c_str(),
-        passwd_hash.c_str()
+        passwd_hash.c_str(),
+        ai.ldap_auth ? 1 : 0
     );
+    buf[sizeof(buf) - 1] = 0;
 
     retval =  rpc.do_rpc(buf);
     if (!retval) {
@@ -2601,12 +2608,14 @@ int RPC_CLIENT::create_account(ACCOUNT_IN& ai) {
         "   <passwd_hash>%s</passwd_hash>\n"
         "   <user_name>%s</user_name>\n"
         "   <team_name>%s</team_name>\n"
+        "   %s"
         "</create_account>\n",
         ai.url.c_str(),
         ai.email_addr.c_str(),
         passwd_hash.c_str(),
         ai.user_name.c_str(),
-        ai.team_name.c_str()
+        ai.team_name.c_str(),
+        ai.consented_to_terms ? "<consented_to_terms/>\n" : ""
     );
 
     retval =  rpc.do_rpc(buf);

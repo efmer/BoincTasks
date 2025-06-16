@@ -560,6 +560,9 @@ struct PROJECT_CONFIG {
     int error_num;
     std::string name;
     std::string master_url;
+    std::string web_rpc_url_base;
+    // prefix for create_account, lookup_account web RPCs
+    // If absent, use the master URL
     int local_revision;     // SVN changeset# of server software
     int min_passwd_length;
     bool account_manager;
@@ -591,6 +594,8 @@ struct ACCOUNT_IN {
     std::string user_name;
     std::string passwd;
     std::string team_name;
+    bool ldap_auth = false;
+    bool consented_to_terms = false;
 
     ACCOUNT_IN();
     ~ACCOUNT_IN();

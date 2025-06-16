@@ -31,14 +31,17 @@
 #define IDC_EDIT_VERSION                103
 #define IDC_SNL_HTTP                    104
 #define IDD_DIALOG_ADD_PROJECT1         106
+#define IDD_DIALOG_ADD_PROJECT          106
 #define IDB_COMPUTERTREE                107
 #define IDD_DLGGRAPHICWU                109
 #define IDD_DIALOGBAR_COMPUTER          110
 #define IDP_OLE_INIT_FAILED             111
 #define IDS_TOOLBAR_TIP                 112
 #define IDD_DLGEDITCONFIGBASE           113
+#define IDR_HTML_CDlgHtml               115
 #define IDD_DIALOG_FLOATING             117
 #define IDR_MAINFRAME                   118
+#define IDR_HTML_CDlgHtmlAccept         119
 #define IDR_BoincTasksTYPE              120
 #define IDD_DIALOG_PROPERTIES           121
 #define IDR_TOOL_BOINCTASKS1            122
@@ -50,6 +53,8 @@
 #define IDD_DIALOG_TIMER                128
 #define IDD_DIALOG_NOTICES_DUMMY        129
 #define IDR_MENU_PROJECT                130
+#define IDD_CDlgAccept                  135
+#define IDD_DIALOG_ACCEPT               135
 #define IDR_MENU_TASKBAR                140
 #define IDR_ICON_LINK_HAND              141
 #define IDR_MENU_TRANSFER               142
@@ -755,6 +760,7 @@
 #define IDC_EDIT_MESSAGES_HL_1_PROJECT6 1538
 #define IDC_TEXT_RULES_GROUP_OPERATOR   1539
 #define IDC_EDIT_MESSAGES_HL_7          1539
+#define IDC_ACCEPT_TEXT                 1539
 #define IDC_EDIT_COMPUTING_SUNDAY2      1540
 #define IDC_EDIT_MESSAGES_HL_1_PROJECT7 1540
 #define IDC_TEXT_RULES_GROUP_VALUE      1541
@@ -1406,9 +1412,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        279
+#define _APS_NEXT_RESOURCE_VALUE        281
 #define _APS_NEXT_COMMAND_VALUE         13106
-#define _APS_NEXT_CONTROL_VALUE         1537
-#define _APS_NEXT_SYMED_VALUE           114
+#define _APS_NEXT_CONTROL_VALUE         1540
+#define _APS_NEXT_SYMED_VALUE           136
 #endif
 #endif

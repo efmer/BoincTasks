@@ -12,7 +12,7 @@
 #include "ThreadRpcSearch.h"
 #include "DlgLogging.h"
 #include "DlgSettingsGeneral.h"
-#include "\programma\common\bf\Blowfish.h"
+#include "bf/Blowfish.h"
 
 CRpcInfoClientSearch::CRpcInfoClientSearch()
 {

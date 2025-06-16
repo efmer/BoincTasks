@@ -10,7 +10,7 @@
 #include "ThreadCloudConnect.h"
 #include "Translation.h"
 #include "afxdialogex.h"
-#include "\programma\common\bf\Blowfish.h"
+#include "bf/Blowfish.h"
 
 // CDlgSettingsWWW dialog
 

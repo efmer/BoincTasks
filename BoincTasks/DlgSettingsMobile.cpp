@@ -8,7 +8,7 @@
 #include "ThreadWebServer.h"
 #include "Translation.h"
 #include "afxdialogex.h"
-#include "\programma\common\bf\Blowfish.h"
+#include "bf/Blowfish.h"
 
 // CDlgSettingsMobile dialog
 

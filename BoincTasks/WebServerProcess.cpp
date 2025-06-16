@@ -33,7 +33,7 @@
 #include "Translation.h"
 #include "AnsiToUtf8.h"
 
-#include "\programma\common\bf\Blowfish.h"
+#include "bf/Blowfish.h"
 
 // CWebServerProcess
 

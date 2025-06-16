@@ -6,6 +6,7 @@
 #include "DlgAddProject.h"
 #include "RemoteCombinedDoc.h"
 #include "Translation.h"
+#include "DlgAccept.h"
 
 // CDlgAddProject dialog
 
@@ -266,6 +267,8 @@ LRESULT CDlgAddProject::OnAddComputerOpen(WPARAM parm1, LPARAM parm2)
 
 	PlatformIconsHide();
 
+	m_buttonAddProject.EnableWindow(TRUE);
+
 	return 0;
 }
 
@@ -384,12 +387,34 @@ LRESULT CDlgAddProject::OnProjectConfigPollReady(WPARAM parm1, LPARAM parm2)
 
 	iStatus = (int) parm1;
 
+	m_accountIn.clear();
+
 	if (iStatus>=0)
 	{
-		m_accountIn.clear();
-		m_accountIn.url		= m_cAccountUrl;
-//		if (m_projectConfig.uses_username) m_accountIn.user_name = m_cAccountEmailOrUser;
-		//else m_accountIn.email_addr = m_cAccountEmailOrUser;
+		if (m_projectConfig.terms_of_use.length() > 20)
+		{
+			CString sUse = m_projectConfig.terms_of_use.c_str();
+			CDlgAccept dlgAccept;
+			dlgAccept.AddText(sUse);
+			int iRes = (int)dlgAccept.DoModal();
+
+			if (iRes != IDOK)
+			{
+				m_buttonAddProject.EnableWindow(TRUE);
+				return 0;
+			}
+			m_accountIn.consented_to_terms = true;
+//			m_accountIn.ldap_auth = true;
+		}
+
+		if (m_projectConfig.web_rpc_url_base.length() > 4)
+		{
+			m_accountIn.url = m_projectConfig.web_rpc_url_base;
+		}
+		else
+		{
+			m_accountIn.url = m_cAccountUrl;
+		}
 		m_accountIn.email_addr = m_cAccountEmailOrUser;
 		m_accountIn.passwd	= m_cAccountPassWrd;
 		m_accountIn.user_name = m_cAccountCreateUser;
@@ -456,7 +481,7 @@ LRESULT CDlgAddProject::OnAccountLookupPollReady(WPARAM parm1, LPARAM parm2)
 			m_buttonAddProject.EnableWindow(TRUE);
 		}
 		else
-		{
+		{		
 			m_projectAttach.m_sAuth = (char *) m_accountOut.authenticator.c_str();
 			m_projectAttach.m_sUrl = m_cAccountUrl;
 			::PostThreadMessage(m_iThreadId,UWM_MSG_THREAD_PROJECT_ATTACH,(WPARAM) this->m_hWnd, (LPARAM) &m_projectAttach);
@@ -690,7 +715,7 @@ void CDlgAddProject::OnBnClickedAdd()
 
 	m_bAccountEmail = true;
 
-	strcpy_s (m_cAccountUrl,99,sUrl.GetBuffer());	
+	strcpy_s(m_cAccountUrl, 99, sUrl.GetBuffer());
 	strcpy_s (m_cAccountEmailOrUser,99,sLogin.GetBuffer());	
 	strcpy_s (m_cAccountPassWrd,99,sPasswrd.GetBuffer());	
 	strcpy_s (m_cAccountCreateUser,99,sUserName);
