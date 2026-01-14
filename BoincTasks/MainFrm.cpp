@@ -10,8 +10,6 @@
 #include "BoincTasks.h"
 
 #include "MainFrm.h"
-#include "ThreadWebServer.h"
-#include "ThreadCloudServer.h"
 #include "ThreadGarbageCollector.h"
 #include "ListViewEx.h"					// base class
 #include "DlgUpdate.h"
@@ -468,27 +466,6 @@ BOOL CMainFrame::PreTranslateMessage(MSG *pMsg)
 
 void CMainFrame::SetBoincTasksStatus(char *pszStatus)
 {
-	if (g_pThreadWebServer != NULL)
-	{
-		if (g_bWebServerActive)
-		{
-			CString *psWebServer;
-			psWebServer = new CString;
-			*psWebServer = pszStatus;
-			g_pThreadWebServer->PostThreadMessage(UWM_MSG_THREAD_WEB_STATUS,0,(LPARAM) psWebServer);
-		}
-	}
-	if (g_pThreadCloudServer != NULL)
-	{
-		if (g_bCloudServerRequestData)
-		{
-			CString *psCloudServer;
-			psCloudServer = new CString;
-			*psCloudServer = pszStatus;
-			g_pThreadCloudServer->PostThreadMessage(UWM_MSG_THREAD_WEB_STATUS,0,(LPARAM) psCloudServer);
-		}
-	}
-
 	m_wndStatusBar.SetPaneText(1,pszStatus,TRUE);
 }
 
@@ -1499,14 +1476,14 @@ void CMainFrame::OnTaskbarExit()
 		::PostThreadMessage(theApp.m_pThreadGarbageLog->m_dThreadId, UWM_MSG_THREAD_QUIT, 0, 0);
 	}
 
-	if (g_pThreadWebServer)
-	{
-		g_pThreadWebServer->PostThreadMessage(UWM_MSG_THREAD_QUIT,0,0);
-	}
-	if (g_pThreadCloudServer)
-	{
-		g_pThreadCloudServer->PostThreadMessage(UWM_MSG_THREAD_QUIT,0,0);
-	}
+	//if (g_pThreadWebServer)
+	//{
+	//	g_pThreadWebServer->PostThreadMessage(UWM_MSG_THREAD_QUIT,0,0);
+	//}
+	//if (g_pThreadCloudServer)
+	//{
+	//	g_pThreadCloudServer->PostThreadMessage(UWM_MSG_THREAD_QUIT,0,0);
+	//}
 
 	Sleep(1000);
 

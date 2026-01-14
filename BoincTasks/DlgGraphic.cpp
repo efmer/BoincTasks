@@ -5,8 +5,6 @@
 #include "RemoteCombinedDoc.h"
 #include "DlgGraphic.h"
 #include "ThreadRpc.h"
-#include "ThreadWebServer.h"
-#include "ThreadCloudServer.h"
 #include "DlgColorGraphic.h"
 #include "DlgLogging.h"
 #include "Translation.h"
@@ -458,7 +456,7 @@ void CDlgGraphic::OnTimer(UINT_PTR nIDEvent)
 		}
 	}
 
-	if (!g_bWebServerActive && !g_bCloudServerAwake)
+	//if (!g_bWebServerActive)
 	{
 		if (!this->IsWindowVisible()) return;
 	}

@@ -24,8 +24,6 @@
 #include "DlgSettingsTasks.h"
 #include "computer.h"
 #include "ThreadRpc.h"
-#include "ThreadWebServer.h"
-#include "ThreadCloudServer.h"
 #include "DlgComputerLocation.h"
 #include "DlgNotices.h"
 #include "DlgGraphic.h"
@@ -199,16 +197,16 @@ CRemoteCombinedDoc::CRemoteCombinedDoc()
 	m_pDlgPrefMain->SetActivePage(m_pDlgPrefDisk);								// init dialog
 	m_pDlgPrefMain->SetActivePage(m_pDlgPrefProcessor);							// init dialog
 
-	if (theApp.m_pDlgSettingsMobile->m_bMobileActive)
-	{
-		if (g_pThreadWebServer == NULL)
-		{
-			g_pThreadWebServer = (CThreadWebServer *) AfxBeginThread(RUNTIME_CLASS(CThreadWebServer));
-			g_pThreadWebServer->PostThreadMessage(UWM_MSG_THREAD_WEB_START,0,theApp.m_pDlgSettingsMobile->m_iWebServerPort);
-		}
-	}
+//	if (theApp.m_pDlgSettingsMobile->m_bMobileActive)
+//	{
+//		if (g_pThreadWebServer == NULL)
+//		{
+//			g_pThreadWebServer = (CThreadWebServer *) AfxBeginThread(RUNTIME_CLASS(CThreadWebServer));
+//			g_pThreadWebServer->PostThreadMessage(UWM_MSG_THREAD_WEB_START,0,theApp.m_pDlgSettingsMobile->m_iWebServerPort);
+//		}
+//	}
 
-	theApp.m_pDlgSettingsWWW->PostMessage(UWM_MSG_START_CLOUD,0,0);
+//	theApp.m_pDlgSettingsWWW->PostMessage(UWM_MSG_START_CLOUD,0,0);
 /*
 	if (theApp.m_pDlgSettingsWWW->m_bCloudEnable)
 	{
@@ -395,21 +393,7 @@ CRemoteCombinedDoc::~CRemoteCombinedDoc()
 
 	// quiting is done in mainfrm
 	CString sStatus;
-	for (int iCount = 0; iCount < WEBSERVER_TIMEOUT; iCount++)
-	{
-		Sleep(1000);
-		if (!g_bThreadWebServerIsRunning)
-		{
-			if (!g_bThreadCloudServerIsRunning)
-			{
-				break;
-			}
-		}
-		sStatus.Format( "%d (M)",WEBSERVER_TIMEOUT - iCount);
-		sStatus = gszTranslation[PosWindowStatusMessageStatusClosing] + sStatus;
-		theApp.m_pMainFrame->SetBoincTasksStatus(sStatus.GetBuffer());sStatus.ReleaseBuffer();
-	}
-
+	
 	theApp.m_pMainFrame->PostMessage(UWM_MSG_DOCUMENT_HAS_CLOSED,0,0);
 }
 
@@ -446,14 +430,14 @@ void CRemoteCombinedDoc::OnCloseDocumentMine()
 	{
 		m_pTaskView->PostMessage(UWM_MSG_DOCUMENT_IS_CLOSING,0,0);
 		m_bDocumentIsClosing = true;
-		if (g_pThreadWebServer)
-		{
-			g_pThreadWebServer->PostThreadMessage(UWM_MSG_THREAD_QUIT,0,0);
-		}
-		if (g_pThreadCloudServer)
-		{
-			g_pThreadCloudServer->PostThreadMessage(UWM_MSG_THREAD_QUIT,0,0);
-		}
+//		if (g_pThreadWebServer)
+//		{
+//			g_pThreadWebServer->PostThreadMessage(UWM_MSG_THREAD_QUIT,0,0);
+//		}
+		//if (g_pThreadCloudServer)
+		//{
+		//	g_pThreadCloudServer->PostThreadMessage(UWM_MSG_THREAD_QUIT,0,0);
+		//}
 	}
 
 	this->m_pComputerView->SaveComputerList();

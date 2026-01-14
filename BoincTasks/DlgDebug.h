@@ -49,7 +49,7 @@ public:
 	CButton m_checkMobileScript;
 	CButton m_checkMobileConnect;
 	CButton m_checkMobileConnectDump;
-	CButton m_checkCloud;
+//	CButton m_checkCloud;
 	CButton m_checkHeap;
 	CButton m_checkFileOnly;
 	afx_msg void OnBnClickedCheckDebugConnecting();

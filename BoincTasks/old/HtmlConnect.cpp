@@ -5,7 +5,6 @@
 #include <Windows.h>
 #include "BoincTasks.h"
 #include <afxinet.h>
-#include "HtmlConnect.h"
 
 
 // CHtmlConnect

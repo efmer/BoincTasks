@@ -115,7 +115,7 @@
 class CThreadWebServer;
 extern bool	g_bSilentReboot;
 
-#define CLOUD_VERSION "1";
+//#define CLOUD_VERSION "1";
 
 //extern bool g_bBoincClientDebtValid;
 
@@ -180,8 +180,8 @@ extern VOID WriteDebugLog(char* pFileName, char* pMsg, bool bNew);
 
 #define	MAX_REFRESH_ASAP	400
 
-#define CLOUD_PORT	443
-#define CLOUD_SERVER "cloud.seti.nl"
+//#define CLOUD_PORT	443
+//#define CLOUD_SERVER "cloud.seti.nl"
 
 //#define CLOUD_PORT	80
 //#define CLOUD_SERVER 'cloud.seti.nl'
@@ -208,7 +208,7 @@ extern char *registryDebugMobile;
 extern char *registryDebugMobileScript;
 extern char *registryDebugMobileConnect;
 extern char *registryDebugMobileConnectDump;
-extern char *registryDebugCloud;
+//extern char *registryDebugCloud;
 extern char *registryDebugHeapCheck;
 extern char *registryDebugFileOnly;
 
@@ -333,11 +333,11 @@ extern char *registryLegacy;
 extern char *registryWWWEnable;
 extern char *registryWWWPassword;
 extern char *registryWWWRefreshTime;
-extern char *registryCloudEnable;
-extern char *registryCloudServer;
-extern char *registryCloudServerDebug;
-extern char *registryCloudEmail;
-extern char *registryCloudPassword;
+//extern char *registryCloudEnable;
+//extern char *registryCloudServer;
+//extern char *registryCloudServerDebug;
+//extern char *registryCloudEmail;
+//extern char *registryCloudPassword;
 
 extern char *registryEncryptionPassword;
 
@@ -1091,11 +1091,11 @@ extern char *StartupKeyValue;
 #define UWM_MSG_THREAD_WEB_HTML						WM_USER+326
 #define UWM_MSG_THREAD_WEB_STATUS					WM_USER+327
 
-#define UWM_MSG_START_CLOUD							WM_USER+338
-#define UWM_MSG_THREAD_CLOUD_STATUS					WM_USER+339
-#define UWM_MSG_THREAD_CLOUD_WRITE					WM_USER+340
-#define UWM_MSG_GET_CLOUD_DATA						WM_USER+341
-#define UWM_MSG_SET_CLOUD_COLUMN					WM_USER+342
+//#define UWM_MSG_START_CLOUD							WM_USER+338
+//#define UWM_MSG_THREAD_CLOUD_STATUS					WM_USER+339
+//#define UWM_MSG_THREAD_CLOUD_WRITE					WM_USER+340
+//#define UWM_MSG_GET_CLOUD_DATA						WM_USER+341
+//#define UWM_MSG_SET_CLOUD_COLUMN					WM_USER+342
 
 #define UWM_MSG_WEB_ITEM_SELECTED					WM_USER+345
 #define UWM_MSG_WEB_OPERATION						WM_USER+346
@@ -1314,8 +1314,6 @@ class CDlgSettingsNotices;
 class CDlgSettingsHistory;
 class CDlgSettingsTasks;
 class CDlgSettingsGadget;
-class CDlgSettingsWWW;
-class CDlgSettingsMobile;
 class CDlgSettingsExpert;
 class CDlgSettingsRules;
 class CDlgSettingsMessage;
@@ -1422,8 +1420,6 @@ public:
 	CDlgSettingsNotices		*m_pDlgSettingsNotices;
 	CDlgSettingsWarning		*m_pDlgSettingsWarning;
 	CDlgSettingsGadget		*m_pDlgSettingsGadget;
-	CDlgSettingsWWW			*m_pDlgSettingsWWW;
-	CDlgSettingsMobile		*m_pDlgSettingsMobile;
 	CDlgSettingsExpert		*m_pDlgSettingsExpert;
 	CDlgSettingsRules		*m_pDlgSettingsRules;
 

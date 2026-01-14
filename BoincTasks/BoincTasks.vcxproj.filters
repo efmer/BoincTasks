@@ -130,12 +130,6 @@
     <Filter Include="Header Files\dlg\Dlg Thread graph">
       <UniqueIdentifier>{00be49f5-8d61-47cd-8c9b-e41ae4720f9a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\mobile">
-      <UniqueIdentifier>{6ef38b7f-0889-495b-bdb0-4cc570caaf95}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\mobile">
-      <UniqueIdentifier>{f0e95b23-125c-40b4-b87c-f72c0b6502f3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\dlg\Dlg Graph Deadline">
       <UniqueIdentifier>{98e965db-f33a-4604-8317-37d768634ef2}</UniqueIdentifier>
     </Filter>
@@ -390,9 +384,6 @@
     <ClCompile Include="RemoteCombinedNoticesView.cpp">
       <Filter>Source Files\doc_view</Filter>
     </ClCompile>
-    <ClCompile Include="CreateHtml.cpp">
-      <Filter>Source Files\html</Filter>
-    </ClCompile>
     <ClCompile Include="CreateHtmlNotices.cpp">
       <Filter>Source Files\html</Filter>
     </ClCompile>
@@ -433,9 +424,6 @@
       <Filter>Source Files\dlg\Dlg Graphic Tasks</Filter>
     </ClCompile>
     <ClCompile Include="DlgSettingsExpert.cpp">
-      <Filter>Source Files\dlg\Dlg Settings</Filter>
-    </ClCompile>
-    <ClCompile Include="DlgSettingsWWW.cpp">
       <Filter>Source Files\dlg\Dlg Settings</Filter>
     </ClCompile>
     <ClCompile Include="DlgSettingsGadget.cpp">
@@ -482,9 +470,6 @@
     </ClCompile>
     <ClCompile Include="DlgComputerLocation.cpp">
       <Filter>Source Files\dlg</Filter>
-    </ClCompile>
-    <ClCompile Include="ThreadWebServer.cpp">
-      <Filter>Source Files\mobile</Filter>
     </ClCompile>
     <ClCompile Include="TextBox.cpp">
       <Filter>Source Files</Filter>
@@ -582,42 +567,6 @@
     <ClCompile Include="ThreadStats.cpp">
       <Filter>Source Files\threads</Filter>
     </ClCompile>
-    <ClCompile Include="CreateHtmlWebServerComputerSelect.cpp">
-      <Filter>Source Files\mobile</Filter>
-    </ClCompile>
-    <ClCompile Include="DlgSettingsMobile.cpp">
-      <Filter>Source Files\dlg\Dlg Settings</Filter>
-    </ClCompile>
-    <ClCompile Include="CreateHtmlWebServerFilter.cpp">
-      <Filter>Source Files\mobile</Filter>
-    </ClCompile>
-    <ClCompile Include="CreateHtmlWebServerProperties.cpp">
-      <Filter>Source Files\mobile</Filter>
-    </ClCompile>
-    <ClCompile Include="CreateHtmlWebServerGraph.cpp">
-      <Filter>Source Files\mobile</Filter>
-    </ClCompile>
-    <ClCompile Include="CreateHtmlWebServer.cpp">
-      <Filter>Source Files\mobile</Filter>
-    </ClCompile>
-    <ClCompile Include="CreateHtmlWebServerGraphProjectSelect.cpp">
-      <Filter>Source Files\mobile</Filter>
-    </ClCompile>
-    <ClCompile Include="CreateHtmlWebServerButton.cpp">
-      <Filter>Source Files\mobile</Filter>
-    </ClCompile>
-    <ClCompile Include="CreateHtmlWebServerGraphComputerSelect.cpp">
-      <Filter>Source Files\mobile</Filter>
-    </ClCompile>
-    <ClCompile Include="WebServerProcess.cpp">
-      <Filter>Source Files\mobile</Filter>
-    </ClCompile>
-    <ClCompile Include="ThreadWebServerConnection.cpp">
-      <Filter>Source Files\mobile</Filter>
-    </ClCompile>
-    <ClCompile Include="WebServer2.cpp">
-      <Filter>Source Files\mobile</Filter>
-    </ClCompile>
     <ClCompile Include="AboutDlg.cpp">
       <Filter>Source Files\dlg</Filter>
     </ClCompile>
@@ -642,17 +591,8 @@
     <ClCompile Include="DlgRules.cpp">
       <Filter>Source Files\dlg\Dlg Settings</Filter>
     </ClCompile>
-    <ClCompile Include="ThreadCloudServer.cpp">
-      <Filter>Source Files\mobile</Filter>
-    </ClCompile>
-    <ClCompile Include="HtmlConnect.cpp">
-      <Filter>Source Files\html</Filter>
-    </ClCompile>
     <ClCompile Include="Base64.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ThreadCloudConnect.cpp">
-      <Filter>Source Files\mobile</Filter>
     </ClCompile>
     <ClCompile Include="DlgBarProject.cpp">
       <Filter>Source Files\dlg</Filter>
@@ -944,9 +884,6 @@
     <ClInclude Include="DlgSetDebt.h">
       <Filter>Header Files\dlg</Filter>
     </ClInclude>
-    <ClInclude Include="CreateHtml.h">
-      <Filter>Header Files\html</Filter>
-    </ClInclude>
     <ClInclude Include="CreateHtmlNotices.h">
       <Filter>Header Files\html</Filter>
     </ClInclude>
@@ -995,9 +932,6 @@
     <ClInclude Include="DlgSettingsExpert.h">
       <Filter>Header Files\dlg\Dlg Settings</Filter>
     </ClInclude>
-    <ClInclude Include="DlgSettingsWWW.h">
-      <Filter>Header Files\dlg\Dlg Settings</Filter>
-    </ClInclude>
     <ClInclude Include="DlgSettingsGadget.h">
       <Filter>Header Files\dlg\Dlg Settings</Filter>
     </ClInclude>
@@ -1039,9 +973,6 @@
     </ClInclude>
     <ClInclude Include="ListCtrlEdit.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ThreadWebServer.h">
-      <Filter>Header Files\mobile</Filter>
     </ClInclude>
     <ClInclude Include="TextBox.h">
       <Filter>Header Files</Filter>
@@ -1142,42 +1073,6 @@
     <ClInclude Include="ThreadStats.h">
       <Filter>Header Files\threads</Filter>
     </ClInclude>
-    <ClInclude Include="CreateHtmlWebServerComputerSelect.h">
-      <Filter>Header Files\mobile</Filter>
-    </ClInclude>
-    <ClInclude Include="DlgSettingsMobile.h">
-      <Filter>Header Files\dlg\Dlg Settings</Filter>
-    </ClInclude>
-    <ClInclude Include="CreateHtmlWebServerFilter.h">
-      <Filter>Header Files\mobile</Filter>
-    </ClInclude>
-    <ClInclude Include="CreateHtmlWebServerProperties.h">
-      <Filter>Header Files\mobile</Filter>
-    </ClInclude>
-    <ClInclude Include="CreateHtmlWebServer.h">
-      <Filter>Header Files\mobile</Filter>
-    </ClInclude>
-    <ClInclude Include="CreateHtmlWebServerGraph.h">
-      <Filter>Header Files\mobile</Filter>
-    </ClInclude>
-    <ClInclude Include="CreateHtmlWebServerGraphProjectSelect.h">
-      <Filter>Header Files\mobile</Filter>
-    </ClInclude>
-    <ClInclude Include="CreateHtmlWebServerButton.h">
-      <Filter>Header Files\mobile</Filter>
-    </ClInclude>
-    <ClInclude Include="CreateHtmlWebServerGraphComputerSelect.h">
-      <Filter>Header Files\mobile</Filter>
-    </ClInclude>
-    <ClInclude Include="WebServerProcess.h">
-      <Filter>Header Files\mobile</Filter>
-    </ClInclude>
-    <ClInclude Include="ThreadWebServerConnection.h">
-      <Filter>Header Files\mobile</Filter>
-    </ClInclude>
-    <ClInclude Include="WebServer2.h">
-      <Filter>Header Files\mobile</Filter>
-    </ClInclude>
     <ClInclude Include="DlgGraphicDeadline.h">
       <Filter>Header Files\dlg\Dlg Graphic Deadline</Filter>
     </ClInclude>
@@ -1196,17 +1091,8 @@
     <ClInclude Include="WndScheduler.h">
       <Filter>Header Files\dlg\Dlg Scheduler</Filter>
     </ClInclude>
-    <ClInclude Include="ThreadCloudServer.h">
-      <Filter>Header Files\mobile</Filter>
-    </ClInclude>
-    <ClInclude Include="HtmlConnect.h">
-      <Filter>Header Files\html</Filter>
-    </ClInclude>
     <ClInclude Include="Base64.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ThreadCloudConnect.h">
-      <Filter>Header Files\mobile</Filter>
     </ClInclude>
     <ClInclude Include="DlgBarProject.h">
       <Filter>Header Files\dlg</Filter>
@@ -1505,8 +1391,6 @@
     <None Include="..\release\license.htm">
       <Filter>external</Filter>
     </None>
-    <None Include="CDlgHtml.htm" />
-    <None Include="CDlgHtmlAccept.htm" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BoincTasks.rc">

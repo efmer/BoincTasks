@@ -46,11 +46,7 @@
 #include "SortHistory.h"
 #include "OperationItem.h"
 #include "Wildcard.h"
-#include "CreateHtmlWebServer.h"
-#include "ThreadWebServer.h"
-#include "ThreadCloudServer.h"
 #include "Json.h"
-#include "WebServerProcess.h"
 
 // CRemoteProjectsView
 
@@ -1521,7 +1517,7 @@ BEGIN_MESSAGE_MAP(CRemoteCombinedHistoryView, CTemplateRemoteHistoryView)
 	ON_MESSAGE (UWM_MSG_PROXY_DIALOG, OnProxyDialog)
 
 	ON_MESSAGE (UWM_MSG_GET_FLOATER_DATA, OnFloaterData)
-	ON_MESSAGE (UWM_MSG_GET_CLOUD_DATA, OnCloudData)
+	//ON_MESSAGE (UWM_MSG_GET_CLOUD_DATA, OnCloudData)
 
 
 	ON_MESSAGE (UWM_MSG_SET_SNOOZE_CPU, OnSetSnoozeCpu)
@@ -1558,8 +1554,8 @@ BEGIN_MESSAGE_MAP(CRemoteCombinedHistoryView, CTemplateRemoteHistoryView)
 	ON_COMMAND(ID_HISTORY_COPYSELECTEDTOCLIPBOARD, &CRemoteCombinedHistoryView::OnCopyselectedtoclipboard)
 
 	ON_MESSAGE (UWM_DLG_SEARCH_COMPUTER_READY, OnSearchComputerReady)
-	ON_MESSAGE (UWM_MSG_WEB_ITEM_SELECTED, OnWebItemSelected)
-	ON_MESSAGE(UWM_MSG_WEB_SORT,OnWebSort)
+//	ON_MESSAGE (UWM_MSG_WEB_ITEM_SELECTED, OnWebItemSelected)
+//	ON_MESSAGE(UWM_MSG_WEB_SORT,OnWebSort)
 
 	ON_MESSAGE (UWM_MSG_LONG_HISTORY, OnRequestLongHistory)	
 
@@ -2327,8 +2323,6 @@ LRESULT CRemoteCombinedHistoryView::OnRpcHistoryReady(WPARAM wParam, LPARAM lPar
 	}
 
 	bool bVisible = theApp.m_pMainWnd->IsWindowVisible() == TRUE;
-	if (g_bWebServerActive) bVisible = true;
-	if (g_bCloudServerRequestData) bVisible = true;
 	int iViewActive = m_pDoc->m_iViewActive;
 	if (iViewActive != HISTORY_VIEW_ACTIVE) bVisible = false;
 
@@ -2394,39 +2388,7 @@ LRESULT CRemoteCombinedHistoryView::OnRpcHistoryReady(WPARAM wParam, LPARAM lPar
 		}
 
 		if (bNumberChanged)	Invalidate();
-
-		if (g_bWebServerActive)
-		{
-			if (!m_bDocumentIsClosing && (g_pcWebServerHtml == NULL))
-			{
-				CCreateHtmlWebServer createHtml;
-				char *pcHtml;
-				if (createHtml.Create(PosBarViewSelectHistory, this, &listCtrl, &m_iColumnOrder[0], NUM_REMOTE_HISTORY_COLUMNS, NULL, PosGroupViewTasksHistory, &pcHtml))
-				{
-					g_pcWebServerHtml = pcHtml;
-					g_pThreadWebServer->PostThreadMessage(UWM_MSG_THREAD_WEB_HTML,0,TAB_HISTORY);
-					g_tWebServerHtml = GetTickCount()/100;
-				}
-			}
-		}
-		if (g_bCloudServerRequestData)
-		{
-			if (!m_bDocumentIsClosing && (g_pcCloudServerHtml == NULL))
-			{
-				if (g_iCloudServerHtmlTabProcessed[TAB_HISTORY] == TRUE)
-				{
-					g_iCloudServerHtmlTabProcessed[TAB_HISTORY] = FALSE;
-					CCreateHtmlWebServer createHtml;
-					char *pcHtml;
-					if (createHtml.Create(PosBarViewSelectHistory, this, &listCtrl, &m_iColumnOrder[0], NUM_REMOTE_HISTORY_COLUMNS, NULL, PosGroupViewTasksHistory, &pcHtml))
-					{
-						g_pcCloudServerHtml = pcHtml;
-						g_pThreadCloudServer->PostThreadMessage(UWM_MSG_THREAD_WEB_HTML,0,TAB_HISTORY);
-						g_tCloudServerHtml = GetTickCount()/100;
-					}
-				}
-			}
-		}
+		
 	}
 
 	theApp.m_pMainFrame->SendMessage(UWM_MSG_WUS_THAT_ARE_READY,(WPARAM) m_iHistoryStateReadyCount, 0);	// total WU's that are ready
@@ -2760,6 +2722,7 @@ LRESULT CRemoteCombinedHistoryView::OnFloaterData(WPARAM wParam, LPARAM lParam)
 	return 0;
 }
 
+/*
 LRESULT CRemoteCombinedHistoryView::OnCloudData(WPARAM wParam, LPARAM lParam)
 {
 	std::deque<std::string> listItems, list;
@@ -2876,12 +2839,13 @@ LRESULT CRemoteCombinedHistoryView::OnCloudData(WPARAM wParam, LPARAM lParam)
 			list.push_back(sString);
 		}
 	}
-*/
+
 	json.Array("computers", &listItems, &list);
 
 	*psData = json.Get().c_str();
 	return TRUE;
 }
+*/
 
 LRESULT CRemoteCombinedHistoryView::OnSetSnoozeCpu(WPARAM wParam, LPARAM lParam)
 {
@@ -3041,6 +3005,7 @@ void CRemoteCombinedHistoryView::OnCopyselectedtoclipboard()
 	ClipBoard(false);
 }
 
+/*
 LRESULT CRemoteCombinedHistoryView::OnWebItemSelected(WPARAM wParam,LPARAM lParam)
 {
 	int	iRow, iOption;
@@ -3109,6 +3074,7 @@ LRESULT CRemoteCombinedHistoryView::OnWebSort(WPARAM parm1, LPARAM parm2)
 	}
 	return (LRESULT) pcHtml;
 }
+*/
 
 LRESULT CRemoteCombinedHistoryView::OnSetProjectList(WPARAM parm1, LPARAM parm2)
 {

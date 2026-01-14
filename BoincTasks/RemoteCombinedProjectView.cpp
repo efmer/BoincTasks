@@ -45,11 +45,6 @@
 #include "Xml.h"
 #include "ThreadStats.h"
 
-#include "CreateHtmlWebServer.h"
-#include "ThreadWebServer.h"
-#include "ThreadCloudServer.h"
-#include "WebServerProcess.h"
-
 // CRemoteProjectsView
 
 IMPLEMENT_DYNCREATE(CRemoteCombinedProjectView, CTemplateRemoteProjectView)
@@ -301,10 +296,10 @@ BEGIN_MESSAGE_MAP(CRemoteCombinedProjectView, CTemplateRemoteProjectView)
 	ON_MESSAGE (UWM_MSG_THREAD_READY_STATS, OnReadyStats)	
 	ON_MESSAGE (UWM_DLG_SEARCH_COMPUTER_READY, OnSearchComputerReady)
 
-	ON_MESSAGE (UWM_MSG_WEB_ITEM_SELECTED, OnWebItemSelected)
-	ON_MESSAGE(UWM_MSG_WEB_OPERATION,OnWebOperation)
-	ON_MESSAGE(UWM_MSG_WEB_SORT,OnWebSort)
-	ON_MESSAGE(UWM_MSG_WEB_PROPERTIES,OnWebProperties)
+//	ON_MESSAGE (UWM_MSG_WEB_ITEM_SELECTED, OnWebItemSelected)
+//	ON_MESSAGE(UWM_MSG_WEB_OPERATION,OnWebOperation)
+//	ON_MESSAGE(UWM_MSG_WEB_SORT,OnWebSort)
+//	ON_MESSAGE(UWM_MSG_WEB_PROPERTIES,OnWebProperties)
 
 	ON_COMMAND(ID_COMPUTERS_DETECT, &CRemoteCombinedProjectView::OnComputersDetect)
 END_MESSAGE_MAP()
@@ -552,39 +547,6 @@ LRESULT CRemoteCombinedProjectView::OnReadyRpc(WPARAM parm1, LPARAM parm2)
 	if (iItemsAdd !=0)	Invalidate();
 
 	Sort(&listCtrl);
-
-	if (g_bWebServerActive)
-	{
-		if (!m_bDocumentIsClosing && (g_pcWebServerHtml == NULL))
-		{
-			CCreateHtmlWebServer createHtml;
-			char *pcHtml;
-			if (createHtml.Create(PosBarViewSelectProjects, this, &listCtrl, &m_iColumnOrder[0], NUM_REMOTE_PROJECT_COLUMNS, NULL, PosViewProjecsRowProject, &pcHtml))
-			{
-				g_pcWebServerHtml = pcHtml;
-				g_pThreadWebServer->PostThreadMessage(UWM_MSG_THREAD_WEB_HTML,0,TAB_PROJECTS);
-				g_tWebServerHtml = GetTickCount()/100;
-			}
-		}
-	}
-	if (g_bCloudServerRequestData)
-	{
-		if (!m_bDocumentIsClosing && (g_pcCloudServerHtml == NULL))
-		{
-			if (g_iCloudServerHtmlTabProcessed[TAB_PROJECTS] == TRUE)
-			{
-				g_iCloudServerHtmlTabProcessed[TAB_PROJECTS] = FALSE;
-				CCreateHtmlWebServer createHtml;
-				char *pcHtml;
-				if (createHtml.Create(PosBarViewSelectProjects, this, &listCtrl, &m_iColumnOrder[0], NUM_REMOTE_PROJECT_COLUMNS, NULL, PosViewProjecsRowProject, &pcHtml))
-				{
-					g_pcCloudServerHtml = pcHtml;
-					if (g_pThreadCloudServer != NULL) g_pThreadCloudServer->PostThreadMessage(UWM_MSG_THREAD_WEB_HTML,0,TAB_PROJECTS);
-					g_tCloudServerHtml = GetTickCount()/100;
-				}
-			}
-		}
-	}
 
 	m_bThreadBusy = false;	
 	theApp.m_pMainFrame->SetBoincTasksStatus(TEXT_STATUS_WAITING);
@@ -2038,6 +2000,7 @@ void CRemoteCombinedProjectView::OnCopyselectedtoclipboard()
 	ClipBoard(false);
 }
 
+/*
 LRESULT CRemoteCombinedProjectView::OnWebItemSelected(WPARAM wParam,LPARAM lParam)
 {
 	int	iRow, iOption;
@@ -2108,6 +2071,7 @@ LRESULT CRemoteCombinedProjectView::OnWebProperties(WPARAM parm1, LPARAM parm2)
 	bResult =	ProjectProperties(PROPERTIES_MOBILE);
 	return bResult;
 }
+*/
 
 void CRemoteCombinedProjectView::OnComputersDetect()
 {

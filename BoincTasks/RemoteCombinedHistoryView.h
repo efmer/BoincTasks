@@ -146,7 +146,7 @@ protected:
 	afx_msg LRESULT OnRpcHistoryReady(WPARAM wParam, LPARAM lParam);
 	afx_msg LRESULT OnReadyRpcClient(WPARAM wParam, LPARAM lParam);
 	afx_msg LRESULT OnFloaterData(WPARAM wParam, LPARAM lParam);
-	afx_msg LRESULT OnCloudData(WPARAM wParam, LPARAM lParam);
+	//afx_msg LRESULT OnCloudData(WPARAM wParam, LPARAM lParam);
 	afx_msg LRESULT OnSetSnoozeCpu(WPARAM wParam, LPARAM lParam);
 	afx_msg LRESULT OnSetSnoozeGpu(WPARAM wParam, LPARAM lParam);
 	afx_msg LRESULT OnSettingsTasksSetWidth(WPARAM wParam, LPARAM lParam);
@@ -156,8 +156,8 @@ protected:
 	afx_msg LRESULT OnBoincTasksVersion(WPARAM wParam, LPARAM lParam);
 	afx_msg LRESULT OnBoincTasksRule(WPARAM wParam, LPARAM lParam);
 	afx_msg LRESULT OnSearchComputerReady(WPARAM wParam, LPARAM lParam);
-	afx_msg LRESULT OnWebItemSelected(WPARAM wParam, LPARAM lParam);
-	afx_msg LRESULT OnWebSort(WPARAM wParam, LPARAM lParam);
+//	afx_msg LRESULT OnWebItemSelected(WPARAM wParam, LPARAM lParam);
+//	afx_msg LRESULT OnWebSort(WPARAM wParam, LPARAM lParam);
 
 	afx_msg LRESULT OnFontChangeAll(WPARAM wParam, LPARAM lParam);
 	afx_msg LRESULT OnFontHasChanged(WPARAM wParam, LPARAM lParam);

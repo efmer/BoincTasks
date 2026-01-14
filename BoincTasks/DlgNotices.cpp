@@ -20,7 +20,6 @@
 #include "RemoteCombinedNoticesView.h"
 #include "TemplateRemoteTaskView.h"
 #include "RemoteCombinedTaskView.h"
-#include "ThreadWebServer.h"
 #include "PushCheck.h"
 #include "Translation.h"
 
@@ -1170,17 +1169,18 @@ LRESULT CDlgNotices::OnReadyRpc(WPARAM parm1, LPARAM parm2)
 		CString sTxt, sIDS, sProgramVersion, sNewVersion, sNewVersionBeta, sCurrentVersion;
 
 		sIDS = gszTranslation[PosDialogUpdateCurrentVersion];
-		sProgramVersion.Format("%.2f",m_noticeBoincTasksUpdate.m_dCurrentVersion);
+		sProgramVersion = m_noticeBoincTasksUpdate.m_sCurrentVersion;
 		sCurrentVersion.Format(sIDS, sProgramVersion); //"Current version of BT: %s"
 		sTxt += sCurrentVersion;
 		sTxt += "\r\n";
 
 		bool bFound = false;		if (m_noticeBoincTasksUpdate.m_iCheckBeta == 0)
 		{
-			if (CompareDouble(m_noticeBoincTasksUpdate.m_dVersion, m_noticeBoincTasksUpdate.m_dCurrentVersion, 100) == COMPARE_LARGER)
+			double dversion = m_noticeBoincTasksUpdate.m_iVersion;
+			if (CompareDouble(dversion, m_noticeBoincTasksUpdate.m_iCurrentVersion, 100) == COMPARE_LARGER)
 			{
 				sIDS= gszTranslation[PosDialogUpdateNewVersionFound];
-				sProgramVersion.Format("%.2f", m_noticeBoincTasksUpdate.m_dVersion);
+				sProgramVersion = m_noticeBoincTasksUpdate.m_sVersion;
 				sNewVersion.Format(sIDS, sProgramVersion); //"New version of BT found: %s"
 				sTxt += sNewVersion;
 				sTxt += ". ";
@@ -1193,10 +1193,11 @@ LRESULT CDlgNotices::OnReadyRpc(WPARAM parm1, LPARAM parm2)
 		}
 		else
 		{
-			if (CompareDouble(m_noticeBoincTasksUpdate.m_dVersionBeta, m_noticeBoincTasksUpdate.m_dCurrentVersion, 100) == COMPARE_LARGER)
+			double dversionBeta = m_noticeBoincTasksUpdate.m_iVersionBeta;
+			if (CompareDouble(dversionBeta, m_noticeBoincTasksUpdate.m_iCurrentVersion, 100) == COMPARE_LARGER)
 			{
 				sIDS= gszTranslation[PosDialogUpdateNewBetaVersionFound];
-				sProgramVersion.Format("%.2f", m_noticeBoincTasksUpdate.m_dVersionBeta);
+				sProgramVersion = m_noticeBoincTasksUpdate.m_sVersionBeta;
 				sNewVersion.Format(sIDS, sProgramVersion); //"New version of BT found: %s"
 				sTxt += sNewVersion;
 				sTxt += ". ";
@@ -1310,13 +1311,15 @@ LRESULT CDlgNotices::OnReadyRpc(WPARAM parm1, LPARAM parm2)
 
 				if (m_lComputerRpcInfoClient.at(iCountTThrottle)->m_fVersion >0)
 				{
-					if (CompareDouble(m_noticeBoincTasksUpdate.m_dTThrottleVersion, m_lComputerRpcInfoClient.at(iCountTThrottle)->m_fVersion, 100) == COMPARE_LARGER)
+					double dTThrottleVersion = atof(m_noticeBoincTasksUpdate.m_sTThrottleVersion);
+					if (CompareDouble(dTThrottleVersion, m_lComputerRpcInfoClient.at(iCountTThrottle)->m_fVersion, 100) == COMPARE_LARGER)
 					{
 						bFound = true;
 					}
 					if (m_noticeBoincTasksUpdate.m_iCheckBeta)
 					{
-						if (CompareDouble(m_noticeBoincTasksUpdate.m_dTThrottleVersionBeta, m_lComputerRpcInfoClient.at(iCountTThrottle)->m_fVersion, 100) == COMPARE_LARGER)
+						double dTThrottleVersionBeta = atof(m_noticeBoincTasksUpdate.m_sTThrottleVersionBeta);
+						if (CompareDouble(dTThrottleVersionBeta, m_lComputerRpcInfoClient.at(iCountTThrottle)->m_fVersion, 100) == COMPARE_LARGER)
 						{
 							bFound = true;
 						}
@@ -1341,7 +1344,7 @@ LRESULT CDlgNotices::OnReadyRpc(WPARAM parm1, LPARAM parm2)
 			if (m_noticeBoincTasksUpdate.m_iCheckBeta)
 			{
 				sIDS= gszTranslation[PosDialogUpdateNewBetaVersionFound];
-				sProgramVersion.Format("%.2f", m_noticeBoincTasksUpdate.m_dTThrottleVersionBeta);
+				sProgramVersion = m_noticeBoincTasksUpdate.m_sTThrottleVersionBeta;
 				sNewVersion.Format(sIDS, sProgramVersion); 
 				sTxt += sNewVersion;
 				sTxt += ". ";
@@ -1349,7 +1352,7 @@ LRESULT CDlgNotices::OnReadyRpc(WPARAM parm1, LPARAM parm2)
 			else
 			{
 				sIDS= gszTranslation[PosDialogUpdateNewVersionFound];
-				sProgramVersion.Format("%.2f", m_noticeBoincTasksUpdate.m_dTThrottleVersion);
+				sProgramVersion = m_noticeBoincTasksUpdate.m_sTThrottleVersion;
 				sNewVersion.Format(sIDS, sProgramVersion); 
 				sTxt = sNewVersion;
 				sTxt += ". ";
@@ -1554,8 +1557,7 @@ LRESULT CDlgNotices::OnReadyRpc(WPARAM parm1, LPARAM parm2)
 
 	if (iNotices > 0)
 	{
-		if (g_bWebServerActive) bCreated = createHtmlNotices.Create(&m_lNotices, &sHtml, &sHtmlString, sComputer.GetBuffer(), dTimeShowFrom);
-		else  bCreated = createHtmlNotices.Create(&m_lNotices, &sHtml, NULL, sComputer.GetBuffer(), dTimeShowFrom);
+		bCreated = createHtmlNotices.Create(&m_lNotices, &sHtml, NULL, sComputer.GetBuffer(), dTimeShowFrom);
 	}
 	else
 	{
@@ -1594,20 +1596,6 @@ LRESULT CDlgNotices::OnReadyRpc(WPARAM parm1, LPARAM parm2)
 
 	delete pThreadReturn;
 	pThreadReturn = NULL;
-
-	if (g_bWebServerActive)
-	{
-		if (g_pcWebServerHtml == NULL)
-		{
-			char *pcHtmlNew;
-			int iLen =sHtmlString.GetLength()+1;
-			pcHtmlNew = new char [iLen];
-			strcpy_s(pcHtmlNew, iLen, sHtmlString.GetBuffer());
-			g_pcWebServerHtml = pcHtmlNew;
-			g_pThreadWebServer->PostThreadMessage(UWM_MSG_THREAD_WEB_HTML,0,6);
-			g_tWebServerHtml = GetTickCount();
-		}
-	}
 
 	m_bThreadBusy = false;
 	m_noticeBoincTasksUpdate.m_bRead = true;
@@ -1650,15 +1638,20 @@ LRESULT CDlgNotices::OnBoincTasksVersion(WPARAM parm1, LPARAM parm2)
 
 	pNoticeBoincTasksUpdate = (CNoticeBoincTasksUpdate *) parm2;
 
-	m_noticeBoincTasksUpdate.m_dCurrentVersion = pNoticeBoincTasksUpdate->m_dCurrentVersion;
-	m_noticeBoincTasksUpdate.m_dVersion = pNoticeBoincTasksUpdate->m_dVersion;
-	m_noticeBoincTasksUpdate.m_dVersionBeta = pNoticeBoincTasksUpdate->m_dVersionBeta;
+	m_noticeBoincTasksUpdate.m_iCurrentVersion = pNoticeBoincTasksUpdate->m_iCurrentVersion;
+	m_noticeBoincTasksUpdate.m_sCurrentVersion = pNoticeBoincTasksUpdate->m_sCurrentVersion;
+	m_noticeBoincTasksUpdate.m_iVersion = pNoticeBoincTasksUpdate->m_iVersion;
+	m_noticeBoincTasksUpdate.m_sVersion = pNoticeBoincTasksUpdate->m_sVersion;
+	m_noticeBoincTasksUpdate.m_iVersionBeta = pNoticeBoincTasksUpdate->m_iVersionBeta;
+	m_noticeBoincTasksUpdate.m_sVersionBeta = pNoticeBoincTasksUpdate->m_sVersionBeta;
 	m_noticeBoincTasksUpdate.m_sVersionExe = pNoticeBoincTasksUpdate->m_sVersionExe;
 	m_noticeBoincTasksUpdate.m_sVersionBetaExe = pNoticeBoincTasksUpdate->m_sVersionBetaExe;
 	m_noticeBoincTasksUpdate.m_iType = pNoticeBoincTasksUpdate->m_iType;
 
-	m_noticeBoincTasksUpdate.m_dTThrottleVersion = pNoticeBoincTasksUpdate->m_dTThrottleVersion;
-	m_noticeBoincTasksUpdate.m_dTThrottleVersionBeta = pNoticeBoincTasksUpdate->m_dTThrottleVersionBeta;
+	m_noticeBoincTasksUpdate.m_iTThrottleVersion = pNoticeBoincTasksUpdate->m_iTThrottleVersion;
+	m_noticeBoincTasksUpdate.m_sTThrottleVersion = pNoticeBoincTasksUpdate->m_sTThrottleVersion;
+	m_noticeBoincTasksUpdate.m_iTThrottleVersionBeta = pNoticeBoincTasksUpdate->m_iTThrottleVersionBeta;
+	m_noticeBoincTasksUpdate.m_sTThrottleVersionBeta = pNoticeBoincTasksUpdate->m_sTThrottleVersionBeta;
 	m_noticeBoincTasksUpdate.m_sTThrottleVersionExe = pNoticeBoincTasksUpdate->m_sTThrottleVersionExe;
 	m_noticeBoincTasksUpdate.m_sTThrottleVersionBetaExe = pNoticeBoincTasksUpdate->m_sTThrottleVersionBetaExe;
 

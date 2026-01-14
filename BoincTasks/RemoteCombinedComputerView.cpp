@@ -37,10 +37,6 @@
 #include "TimeString.h"
 #include "DateConvert.h"
 
-#include "CreateHtmlWebServer.h"
-#include "ThreadWebServer.h"
-#include "ThreadCloudServer.h"
-
 //#/include "afxcmn.h"
 //#//include "winsock2.h"
 #include "ListCtrlFindComputers.h"
@@ -598,8 +594,8 @@ BEGIN_MESSAGE_MAP(CRemoteCombinedComputerView, CTemplateRemoteComputerView)
 //	ON_MESSAGE (UWM_MSG_NOTICES_BT_RULE, OnBoincTasksRule)	
 
 	ON_MESSAGE (UWM_DLG_SEARCH_COMPUTER_READY, OnSearchComputerReady)	
-	ON_MESSAGE (UWM_MSG_WEB_ITEM_SELECTED, OnWebItemSelected)
-	ON_MESSAGE(UWM_MSG_WEB_SORT,OnWebSort)
+//	ON_MESSAGE (UWM_MSG_WEB_ITEM_SELECTED, OnWebItemSelected)
+//	ON_MESSAGE(UWM_MSG_WEB_SORT,OnWebSort)
 END_MESSAGE_MAP()
 
 // CRemoteCombinedComputerView diagnostics
@@ -858,41 +854,6 @@ LRESULT CRemoteCombinedComputerView::OnReadyRpc(WPARAM parm1, LPARAM parm2)
 	}
 
 	if (!m_bWasEditSubLabel) StartSorting();
-
-
-	if (g_bWebServerActive)
-	{
-		if (!m_bDocumentIsClosing && (g_pcWebServerHtml == NULL))
-		{
-			CCreateHtmlWebServer createHtml;
-			char *pcHtml;
-			if (createHtml.Create(PosBarViewSelectComputers, this, &listCtrl, &m_iColumnOrder[0], NUM_REMOTE_COMPUTER_COLUMNS, NULL, PosGroupViewComputer, &pcHtml))
-			{
-				g_pcWebServerHtml = pcHtml;
-				g_pThreadWebServer->PostThreadMessage(UWM_MSG_THREAD_WEB_HTML,0,TAB_COMPUTER);
-				g_tWebServerHtml = GetTickCount()/100;
-			}
-		}
-	}
-
-	if (g_bCloudServerRequestData)
-	{
-		if (!m_bDocumentIsClosing && (g_pcCloudServerHtml == NULL))
-		{
-			if (g_iCloudServerHtmlTabProcessed[TAB_COMPUTER] == TRUE)
-			{
-				g_iCloudServerHtmlTabProcessed[TAB_COMPUTER] = FALSE;
-				CCreateHtmlWebServer createHtml;
-				char *pcHtml;
-				if (createHtml.Create(PosBarViewSelectComputers, this, &listCtrl, &m_iColumnOrder[0], NUM_REMOTE_COMPUTER_COLUMNS, NULL, PosGroupViewComputer, &pcHtml))
-				{
-					g_pcCloudServerHtml = pcHtml;
-					if (g_pThreadCloudServer != NULL) g_pThreadCloudServer->PostThreadMessage(UWM_MSG_THREAD_WEB_HTML,0,TAB_COMPUTER);
-					g_tCloudServerHtml = GetTickCount()/100;
-				}
-			}
-		}
-	}
 
 	m_pDoc->DisplayStatus(m_iReadyRpcCount, &m_lComputerRpcInfo.at(0)->m_iStatusRpc);
 	m_bThreadBusy = false;
@@ -1619,6 +1580,7 @@ void CRemoteCombinedComputerView::OnSize(UINT nType, int cx, int cy )
 	CTemplateRemoteComputerView::OnSize(nType, cx, cy );
 }
 
+/*
 LRESULT CRemoteCombinedComputerView::OnWebItemSelected(WPARAM wParam,LPARAM lParam)
 {
 //	int iRow, iOption;
@@ -1641,7 +1603,9 @@ LRESULT CRemoteCombinedComputerView::OnWebItemSelected(WPARAM wParam,LPARAM lPar
 
 	return NULL;
 }
+*/
 
+/*
 LRESULT CRemoteCombinedComputerView::OnWebSort(WPARAM parm1, LPARAM parm2)
 {
 	char	*pcSort;
@@ -1664,3 +1628,4 @@ LRESULT CRemoteCombinedComputerView::OnWebSort(WPARAM parm1, LPARAM parm2)
 	}
 	return (LRESULT) pcHtml;
 }
+*/

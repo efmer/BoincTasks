@@ -66,7 +66,6 @@
 #include "DlgAddAccountManager.h"
 #include "DlgSetDebt.h"
 
-#include "ThreadWebServer.h"
 #include "ThreadGarbageCollector.h"
 #include "ThreadBoincClient.h"
 #include "ThreadIpSearch.h"
@@ -513,6 +512,14 @@ CBoincTasksApp::CBoincTasksApp()
 	m_dwThreadPriority = THREAD_PRIORITY_NORMAL;
 
 	m_iThreadTimeout = TIMEOUT_THREAD_LOCKED_DEFAULT;
+
+	/*
+	HIGHCONTRAST hc;
+	ZeroMemory(&hc, sizeof(HIGHCONTRAST));
+	hc.cbSize = sizeof(HIGHCONTRAST);
+	hc.dwFlags = HCF_HIGHCONTRASTON;
+	SystemParametersInfo(SPI_SETHIGHCONTRAST, 0, &hc, SPIF_SENDCHANGE);
+	*/
 }
 
 
@@ -997,8 +1004,6 @@ BOOL CBoincTasksApp::InitInstance()
 	m_pDlgSettingsWarning	= new CDlgSettingsWarning;
 	m_pDlgSettingsRules		= new CDlgSettingsRules;
 	m_pDlgSettingsGadget	= new CDlgSettingsGadget;
-	m_pDlgSettingsWWW		= new CDlgSettingsWWW;
-	m_pDlgSettingsMobile	= new CDlgSettingsMobile;
 	m_pDlgSettingsExpert	= new CDlgSettingsExpert;
 
 	m_pDlgSettingsMainDummy	= new CDlgSettingsMain("");
@@ -1131,8 +1136,6 @@ BOOL CBoincTasksApp::InitInstance()
 	m_pDlgSettingsMain->AddPage(m_pDlgSettingsWarning);
 	m_pDlgSettingsMain->AddPage(m_pDlgSettingsGadget);
 	m_pDlgSettingsMain->AddPage(m_pDlgSettingsRules);
-	m_pDlgSettingsMain->AddPage(m_pDlgSettingsWWW);
-	m_pDlgSettingsMain->AddPage(m_pDlgSettingsMobile);
 	m_pDlgSettingsMain->AddPage(m_pDlgSettingsExpert);
 
 
@@ -1151,8 +1154,6 @@ BOOL CBoincTasksApp::InitInstance()
 	m_pDlgSettingsMain->SetActivePage(m_pDlgSettingsNotices);
 	m_pDlgSettingsMain->SetActivePage(m_pDlgSettingsWarning);						// init dialog
 	m_pDlgSettingsMain->SetActivePage(m_pDlgSettingsRules);							// init dialog
-	m_pDlgSettingsMain->SetActivePage(m_pDlgSettingsWWW);							// init dialog
-	m_pDlgSettingsMain->SetActivePage(m_pDlgSettingsMobile);							// init dialog
 	m_pDlgSettingsMain->SetActivePage(m_pDlgSettingsGeneral);						// init dialog
 
 	m_pDlgSettingsMainDummy->SetActivePage(m_pDlgSettingsTransfer);						// init dialog
@@ -2227,8 +2228,6 @@ int CBoincTasksApp::ExitInstance()
 	delete m_pDlgSettingsMessage; m_pDlgSettingsMessage = NULL;
 	delete m_pDlgSettingsTransfer; m_pDlgSettingsTransfer = NULL;
 	delete m_pDlgSettingsGadget; m_pDlgSettingsGadget = NULL;
-	delete m_pDlgSettingsWWW; m_pDlgSettingsWWW = NULL;
-	delete m_pDlgSettingsMobile; m_pDlgSettingsMobile = NULL;
 	delete m_pDlgSettingsExpert; m_pDlgSettingsExpert = NULL;
 	delete m_pDlgSettingsMain; m_pDlgSettingsMain = NULL;
 	delete m_pDlgSettingsMainDummy; m_pDlgSettingsMainDummy = NULL;

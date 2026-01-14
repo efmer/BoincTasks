@@ -566,7 +566,7 @@ void CDlgLogging::AddLoggingInfo()
 		if (m_bLogDebugMobile)			AddLogging("Logging","mobile", true, false);
 		if (m_bLogDebugMobileConnect)	AddLogging("Logging","mobile_connect", true, false);
 		if (m_bLogDebugMobileConnectDump) AddLogging("Logging","mobile_connect_dump", true, false);
-		if (m_bLogDebugCloud)			AddLogging("Logging","cloud", true, false);
+//		if (m_bLogDebugCloud)			AddLogging("Logging","cloud", true, false);
 
 		if (m_bLogDebugLocalDirectory)	AddLogging("Logging","local_directory", true, false);
 		if (m_bLogDebugHeapCheck)		AddLogging("Logging","heap_check", true, false);

@@ -66,7 +66,6 @@ class CComputerRemoteDoc;
 class CSortColumn;
 class CSelection;
 class CThreadStats;
-class CCreateHtmlWebServerProperties;
 class CTemplateRemoteProjectView : public CListViewEx 
 {
 	friend class CRemoteCombinedDoc;
@@ -103,8 +102,8 @@ protected:
 	int		GetRank(CString *psProject, CString *psUrl, CString *psRank);
 	int		GetTeamRank(CString *psProject, CString *psUrl, CString *psRank);
 
-	void	ProjectProperties1(CComputerProjectListItem *pComputerProjectListItem, int iProjects, CCreateHtmlWebServerProperties *pCreateHtmlWebServerProperties);
-	void	ProjectProperties2(DISK_USAGE *pInfo, int iPos, CCreateHtmlWebServerProperties *pCreateHtmlWebServerProperties);
+	void	ProjectProperties1(CComputerProjectListItem *pComputerProjectListItem, int iProjects);
+	void	ProjectProperties2(DISK_USAGE *pInfo, int iPos);
 //	void	TimeString(int iTime, char *pBuffer, int iNrBuffer, char *pBefore, char *pAfter);
 	CString FormatNumber(double dNr, int iNrComma=1);
 	bool	GetTaskCount(char *pcComputer, char  *pszProject, int *piTasksCpu, int *piTasksGpu, __int64 *piTimeLeftCpu, __int64 *piTimeLeftGpu, int *piCoresCpu,  int *piCoresGpu, int *piCoresLow, bool *pbWarning );
@@ -164,8 +163,8 @@ protected:
 
 	void				ProjectPropertiesGet(int iBusy);
 	afx_msg LRESULT		OnProjectPropertiesReady(WPARAM parm1, LPARAM parm2);
-	void				PropertiesAddRow(CCreateHtmlWebServerProperties *pCreateHtmlWebServerProperties, CString *psColumn0, CString *psColumn1);
-	void				ProjectPropertiesReady(CCreateHtmlWebServerProperties *pCreateHtmlWebServerProperties);
+	void				PropertiesAddRow(CString *psColumn0, CString *psColumn1);
+	void				ProjectPropertiesReady();
 
 	std::deque<CProjectPropertiesItem*>		m_lProjectProperties;
 

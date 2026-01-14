@@ -104,8 +104,8 @@ protected:
 	afx_msg LRESULT OnBoincTasksVersion(WPARAM wParam, LPARAM lParam);
 	afx_msg LRESULT OnBoincTasksRule(WPARAM wParam, LPARAM lParam);
 	afx_msg LRESULT OnSearchComputerReady(WPARAM wParam, LPARAM lParam);
-	afx_msg LRESULT OnWebItemSelected(WPARAM wParam, LPARAM lParam);
-	afx_msg LRESULT OnWebSort(WPARAM wParam, LPARAM lParam);
+//	afx_msg LRESULT OnWebItemSelected(WPARAM wParam, LPARAM lParam);
+//	afx_msg LRESULT OnWebSort(WPARAM wParam, LPARAM lParam);
 
 	afx_msg LRESULT OnFontChangeAll(WPARAM wParam, LPARAM lParam);
 	afx_msg LRESULT OnFontHasChanged(WPARAM wParam, LPARAM lParam);

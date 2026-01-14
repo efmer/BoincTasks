@@ -115,7 +115,7 @@ protected:
 	bool	m_bFilterGeneral;
 	bool	m_bFilterChanged;
 	bool	m_bWebserverNeedsUpdate;
-	bool	m_bCloudserverNeedsUpdate;
+//	bool	m_bCloudserverNeedsUpdate;
 
 	int		m_iSortingPrimary;
 

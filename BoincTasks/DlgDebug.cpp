@@ -45,7 +45,7 @@ void CDlgDebug::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_CHECK_DEBUG_MOBILE_SCRIPT, m_checkMobileScript);
 	DDX_Control(pDX, IDC_CHECK_DEBUG_MOBILE_CONNECT, m_checkMobileConnect);
 	DDX_Control(pDX, IDC_CHECK_DEBUG_MOBILE_CONNECT_DUMP, m_checkMobileConnectDump);
-	DDX_Control(pDX, IDC_CHECK_DEBUG_CLOUD, m_checkCloud);
+//	DDX_Control(pDX, IDC_CHECK_DEBUG_CLOUD, m_checkCloud);
 	DDX_Control(pDX, IDC_CHECK_DEBUG_HEAP, m_checkHeap);
 	DDX_Control(pDX, IDC_CHECK_DEBUG_FILE_ONLY, m_checkFileOnly);
 	DDX_Control(pDX, IDC_CHECK_DEBUG_TASKS_SHOW, m_checkTasksShow);
@@ -73,7 +73,7 @@ BEGIN_MESSAGE_MAP(CDlgDebug, CDialogEx)
 	ON_BN_CLICKED(IDC_CHECK_DEBUG_MOBILE_SCRIPT, &CDlgDebug::OnBnClickedCheckDebugMobileScript)
 	ON_BN_CLICKED(IDC_CHECK_DEBUG_MOBILE_CONNECT, &CDlgDebug::OnBnClickedCheckDebugMobileConnect)
 	ON_BN_CLICKED(IDC_CHECK_DEBUG_MOBILE_CONNECT_DUMP, &CDlgDebug::OnBnClickedCheckDebugMobileConnectDump)
-	ON_BN_CLICKED(IDC_CHECK_DEBUG_CLOUD, &CDlgDebug::OnBnClickedCheckDebugCloud)
+//	ON_BN_CLICKED(IDC_CHECK_DEBUG_CLOUD, &CDlgDebug::OnBnClickedCheckDebugCloud)
 	ON_BN_CLICKED(IDC_CHECK_DEBUG_HEAP, &CDlgDebug::OnBnClickedCheckDebugHeap)
 	ON_BN_CLICKED(IDC_CHECK_DEBUG_FILE_ONLY, &CDlgDebug::OnBnClickedCheckDebugFileOnly)
 	ON_BN_CLICKED(IDC_CHECK_DEBUG_TASKS_SHOW, &CDlgDebug::OnBnClickedCheckDebugTasksShow)
@@ -150,8 +150,8 @@ BOOL CDlgDebug::OnInitDialog()
 	m_pLogging->m_bLogDebugMobileConnectDump = theApp.GetProfileInt(registrySectionDebugLog, registryDebugMobileConnectDump, 0) != 0;
 	if (m_pLogging->m_bLogDebugMobileConnectDump)	m_checkMobileConnectDump.SetCheck(1);
 
-	m_pLogging->m_bLogDebugCloud = theApp.GetProfileInt(registrySectionDebugLog, registryDebugCloud, 0) != 0;
-	if (m_pLogging->m_bLogDebugCloud)	 m_checkCloud.SetCheck(1);
+//	m_pLogging->m_bLogDebugCloud = theApp.GetProfileInt(registrySectionDebugLog, registryDebugCloud, 0) != 0;
+//	if (m_pLogging->m_bLogDebugCloud)	 m_checkCloud.SetCheck(1);
 
 	m_pLogging->m_bLogDebugHeapCheck = theApp.GetProfileInt(registrySectionDebugLog, registryDebugHeapCheck, 0) != 0;
 	if (m_pLogging->m_bLogDebugHeapCheck)	m_checkHeap.SetCheck(1);
@@ -332,12 +332,12 @@ void CDlgDebug::OnBnClickedCheckDebugMobileConnectDump()
 }
 
 
-void CDlgDebug::OnBnClickedCheckDebugCloud()
-{
-	m_pLogging->m_bLogDebugCloud = m_checkCloud.GetCheck() != 0;
-	theApp.WriteProfileInt(registrySectionDebugLog, registryDebugCloud, m_pLogging->m_bLogDebugCloud);
-	m_pLogging->AddLoggingInfo();
-}
+//void CDlgDebug::OnBnClickedCheckDebugCloud()
+//{
+//	m_pLogging->m_bLogDebugCloud = m_checkCloud.GetCheck() != 0;
+//	theApp.WriteProfileInt(registrySectionDebugLog, registryDebugCloud, m_pLogging->m_bLogDebugCloud);
+//	m_pLogging->AddLoggingInfo();
+//}
 
 
 void CDlgDebug::OnBnClickedCheckDebugHeap()

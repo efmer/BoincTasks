@@ -126,7 +126,7 @@ class CRemoteCombinedDoc;
 class CDlgTimer;
 class CSortColumn;
 class CSelection;
-class CCreateHtmlWebServerProperties;
+//class CCreateHtmlWebServerProperties;
 class CTemplateRemoteTaskView : public CListViewEx
 {
 	friend class CRemoteCombinedDoc;
@@ -219,7 +219,7 @@ protected:
 
 	void				TaskPropertiesGet(int iBusy);
 	void				DeletePropertiesList();
-	void				TaskProperties(CTasksProperties *pTasksProperties, CCreateHtmlWebServerProperties *pCreateHtmlWebServerProperties = NULL);
+	void				TaskProperties(CTasksProperties *pTasksProperties);
 	afx_msg LRESULT		TaskPropertiesGetReady(WPARAM parm1, LPARAM parm2);
 
 //	std::deque<CTaskPropertiesItem*>		m_lTaskProperties;
@@ -327,8 +327,8 @@ protected:
 
 	afx_msg LRESULT OnSettingsApplyChangesTasks(WPARAM parm1, LPARAM parm2);
 	afx_msg LRESULT OnTaskPropertiesReady(WPARAM parm1, LPARAM parm2);
-	void PropertiesAddRow(CCreateHtmlWebServerProperties *pCreateHtmlWebServerProperties, CString *psColumn0, CString *psColumn1);
-	void TaskPropertiesReady(CCreateHtmlWebServerProperties *pCreateHtmlWebServerProperties);
+	void PropertiesAddRow(CString *psColumn0, CString *psColumn1);
+	void TaskPropertiesReady();
 
 	afx_msg LRESULT OnCloudColumn(WPARAM parm1, LPARAM parm2);
 

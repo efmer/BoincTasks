@@ -81,6 +81,7 @@ public:
 	void	SendUpdateNotice(CNoticeBoincTasksUpdate *pNoticeBoincTasksUpdate);
 	void	CheckUpdate();
 	int		GetVersion();
+	int		VersionToInt(CString version);
 	void	ShowVersion();
 	BOOL	BrowseForFolder(HWND hwnd, LPCTSTR szCurrent, LPTSTR szPath);
 

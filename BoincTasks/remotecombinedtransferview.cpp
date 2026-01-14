@@ -34,10 +34,7 @@
 #include "StringCopyNew.h"
 #include "SortTransfer.h"
 
-#include "CreateHtmlWebServer.h"
-#include "ThreadWebServer.h"
-#include "ThreadCloudServer.h"
-#include "WebServerProcess.h"
+
 
 // CRemoteCombinedTransferView
 
@@ -156,9 +153,9 @@ BEGIN_MESSAGE_MAP(CRemoteCombinedTransferView, CTemplateRemoteTransferView)
 
 	ON_MESSAGE (UWM_DLG_SEARCH_COMPUTER_READY, OnSearchComputerReady)	
 
-	ON_MESSAGE (UWM_MSG_WEB_ITEM_SELECTED, OnWebItemSelected)
-	ON_MESSAGE(UWM_MSG_WEB_OPERATION,OnWebOperation)
-	ON_MESSAGE(UWM_MSG_WEB_SORT,OnWebSort)
+//	ON_MESSAGE (UWM_MSG_WEB_ITEM_SELECTED, OnWebItemSelected)
+//	ON_MESSAGE(UWM_MSG_WEB_OPERATION,OnWebOperation)
+//	ON_MESSAGE(UWM_MSG_WEB_SORT,OnWebSort)
 // There is no dialog yet	ON_COMMAND(ID_HEADER_SETHEADERITEMS, &CRemoteCombinedTransferView::OnHeaderSetItems)
 
 //	ON_MESSAGE (UWM_MSG_THREAD_SET_RPC_PROJECT_LIST, OnSetProjectList)	
@@ -449,39 +446,6 @@ LRESULT CRemoteCombinedTransferView::OnReadyRpc(WPARAM parm1, LPARAM parm2)
 		listCtrl.SortItems(TransferSorting,iSorting);
 	}
 	DisplayMakeLineColors(theApp.m_pDlgSettingsView->m_bAlternatingStriped, theApp.m_pDlgSettingsView->m_bUseSkin, theApp.m_pDlgSettingsView->m_iUseSkin);
-
-	if (g_bWebServerActive)
-	{
-		if (g_pcWebServerHtml == NULL)
-		{
-			CCreateHtmlWebServer createHtml;
-			char *pcHtml;
-			if (createHtml.Create(PosBarViewSelectTransfers, this, &listCtrl, &m_iColumnOrder[0], NUM_REMOTE_TRANSFER_COLUMNS, NULL, PosGroupViewTasksTransfer, &pcHtml))
-			{
-				g_pcWebServerHtml = pcHtml;
-				g_pThreadWebServer->PostThreadMessage(UWM_MSG_THREAD_WEB_HTML,0,TAB_TRANSFERS);
-				g_tWebServerHtml = GetTickCount()/100;
-			}
-		}
-	}
-	if (g_bCloudServerRequestData)
-	{
-		if (g_pcCloudServerHtml == NULL)
-		{
-			if (g_iCloudServerHtmlTabProcessed[TAB_TRANSFERS] == TRUE)
-			{
-				g_iCloudServerHtmlTabProcessed[TAB_TRANSFERS] = FALSE;
-				CCreateHtmlWebServer createHtml;
-				char *pcHtml;
-				if (createHtml.Create(PosBarViewSelectTransfers, this, &listCtrl, &m_iColumnOrder[0], NUM_REMOTE_TRANSFER_COLUMNS, NULL, PosGroupViewTasksTransfer, &pcHtml))
-				{
-					g_pcCloudServerHtml = pcHtml;
-					g_pThreadCloudServer->PostThreadMessage(UWM_MSG_THREAD_WEB_HTML,0,TAB_TRANSFERS);
-					g_tCloudServerHtml = GetTickCount()/100;
-				}
-			}
-		}
-	}
 
 	m_bThreadBusy = false;
 
@@ -915,6 +879,7 @@ void CRemoteCombinedTransferView::OnCopyselectedtoclipboard()
 	ClipBoard(false);
 }
 
+/*/
 LRESULT CRemoteCombinedTransferView::OnWebItemSelected(WPARAM wParam,LPARAM lParam)
 {
 	int	iRow, iOption;
@@ -981,6 +946,7 @@ LRESULT CRemoteCombinedTransferView::OnWebSort(WPARAM parm1, LPARAM parm2)
 //
 //	return 0;
 //}
+*/
 
 void CRemoteCombinedTransferView::OnComputersDetect()
 {

@@ -885,16 +885,7 @@ $(OutDir)sign_exe.bat
     <ClCompile Include="Computers.cpp" />
     <ClCompile Include="CondenseResource.cpp" />
     <ClCompile Include="ContextMenu.cpp" />
-    <ClCompile Include="CreateHtml.cpp" />
-    <ClCompile Include="CreateHtmlWebServer.cpp" />
-    <ClCompile Include="CreateHtmlWebServerButton.cpp" />
-    <ClCompile Include="CreateHtmlWebServerComputerSelect.cpp" />
     <ClCompile Include="CreateHtmlNotices.cpp" />
-    <ClCompile Include="CreateHtmlWebServerFilter.cpp" />
-    <ClCompile Include="CreateHtmlWebServerGraph.cpp" />
-    <ClCompile Include="CreateHtmlWebServerGraphComputerSelect.cpp" />
-    <ClCompile Include="CreateHtmlWebServerGraphProjectSelect.cpp" />
-    <ClCompile Include="CreateHtmlWebServerProperties.cpp" />
     <ClCompile Include="DateConvert.cpp" />
     <ClCompile Include="DgPrefExclusiveAdd.cpp" />
     <ClCompile Include="DlgAccept.cpp" />
@@ -925,17 +916,14 @@ $(OutDir)sign_exe.bat
     <ClCompile Include="DlgSelectComputer.cpp" />
     <ClCompile Include="DlgSetDebt.cpp" />
     <ClCompile Include="DlgSettingsMessage.cpp" />
-    <ClCompile Include="DlgSettingsMobile.cpp" />
     <ClCompile Include="DlgSettingsNotices.cpp" />
     <ClCompile Include="DlgSettingsProject.cpp" />
     <ClCompile Include="DlgSettingsRules.cpp" />
     <ClCompile Include="DlgSettingsTransfer.cpp" />
-    <ClCompile Include="DlgSettingsWWW.cpp" />
     <ClCompile Include="DlgThreadGraph.cpp" />
     <ClCompile Include="DlgTThrottle.cpp" />
     <ClCompile Include="Draw.cpp" />
     <ClCompile Include="History.cpp" />
-    <ClCompile Include="HtmlConnect.cpp" />
     <ClCompile Include="Json.cpp" />
     <ClCompile Include="ListCtrlEdit.cpp" />
     <ClCompile Include="ListCtrlHistory.cpp" />
@@ -955,8 +943,6 @@ $(OutDir)sign_exe.bat
     <ClCompile Include="TasksProperties.cpp" />
     <ClCompile Include="TextBox.cpp" />
     <ClCompile Include="ThreadBoincClient.cpp" />
-    <ClCompile Include="ThreadCloudConnect.cpp" />
-    <ClCompile Include="ThreadCloudServer.cpp" />
     <ClCompile Include="ThreadConnect.cpp" />
     <ClCompile Include="ThreadGarbageCollector.cpp" />
     <ClCompile Include="ThreadHostSearch.cpp" />
@@ -983,15 +969,11 @@ $(OutDir)sign_exe.bat
     <ClCompile Include="ThreadRpcClientSearch.cpp" />
     <ClCompile Include="ThreadRpcSearch.cpp" />
     <ClCompile Include="ThreadStats.cpp" />
-    <ClCompile Include="ThreadWebServer.cpp" />
-    <ClCompile Include="ThreadWebServerConnection.cpp" />
     <ClCompile Include="TimeString.cpp" />
     <ClCompile Include="ThreadRpcClient.cpp" />
     <ClCompile Include="Translate.cpp" />
     <ClCompile Include="UpdateCheck.cpp" />
     <ClCompile Include="UseCpuGpu.cpp" />
-    <ClCompile Include="WebServer2.cpp" />
-    <ClCompile Include="WebServerProcess.cpp" />
     <ClCompile Include="Wildcard.cpp" />
     <ClCompile Include="WndColor.cpp" />
     <ClCompile Include="WndGraphic.cpp" />
@@ -1107,16 +1089,7 @@ $(OutDir)sign_exe.bat
     <ClInclude Include="Computer.h" />
     <ClInclude Include="CondenseResource.h" />
     <ClInclude Include="ContextMenu.h" />
-    <ClInclude Include="CreateHtml.h" />
-    <ClInclude Include="CreateHtmlWebServer.h" />
-    <ClInclude Include="CreateHtmlWebServerButton.h" />
-    <ClInclude Include="CreateHtmlWebServerComputerSelect.h" />
     <ClInclude Include="CreateHtmlNotices.h" />
-    <ClInclude Include="CreateHtmlWebServerFilter.h" />
-    <ClInclude Include="CreateHtmlWebServerGraph.h" />
-    <ClInclude Include="CreateHtmlWebServerGraphComputerSelect.h" />
-    <ClInclude Include="CreateHtmlWebServerGraphProjectSelect.h" />
-    <ClInclude Include="CreateHtmlWebServerProperties.h" />
     <ClInclude Include="DateConvert.h" />
     <ClInclude Include="DgPrefExclusiveAdd.h" />
     <ClInclude Include="DlgAccept.h" />
@@ -1147,17 +1120,14 @@ $(OutDir)sign_exe.bat
     <ClInclude Include="DlgSelectComputer.h" />
     <ClInclude Include="DlgSetDebt.h" />
     <ClInclude Include="DlgSettingsMessage.h" />
-    <ClInclude Include="DlgSettingsMobile.h" />
     <ClInclude Include="DlgSettingsNotices.h" />
     <ClInclude Include="DlgSettingsProject.h" />
     <ClInclude Include="DlgSettingsRules.h" />
     <ClInclude Include="DlgSettingsTransfer.h" />
-    <ClInclude Include="DlgSettingsWWW.h" />
     <ClInclude Include="DlgThreadGraph.h" />
     <ClInclude Include="DlgTThrottle.h" />
     <ClInclude Include="Draw.h" />
     <ClInclude Include="History.h" />
-    <ClInclude Include="HtmlConnect.h" />
     <ClInclude Include="Json.h" />
     <ClInclude Include="ListCtrlEdit.h" />
     <ClInclude Include="ListCtrlHistory.h" />
@@ -1177,8 +1147,6 @@ $(OutDir)sign_exe.bat
     <ClInclude Include="TasksProperties.h" />
     <ClInclude Include="TextBox.h" />
     <ClInclude Include="ThreadBoincClient.h" />
-    <ClInclude Include="ThreadCloudConnect.h" />
-    <ClInclude Include="ThreadCloudServer.h" />
     <ClInclude Include="ThreadConnect.h" />
     <ClInclude Include="ThreadGarbageCollector.h" />
     <ClInclude Include="ThreadHostSearch.h" />
@@ -1195,14 +1163,10 @@ $(OutDir)sign_exe.bat
     <ClInclude Include="ThreadRpcClientSearch.h" />
     <ClInclude Include="ThreadRpcSearch.h" />
     <ClInclude Include="ThreadStats.h" />
-    <ClInclude Include="ThreadWebServer.h" />
-    <ClInclude Include="ThreadWebServerConnection.h" />
     <ClInclude Include="TimeString.h" />
     <ClInclude Include="Translate.h" />
     <ClInclude Include="UpdateCheck.h" />
     <ClInclude Include="UseCpuGpu.h" />
-    <ClInclude Include="WebServer2.h" />
-    <ClInclude Include="WebServerProcess.h" />
     <ClInclude Include="Wildcard.h" />
     <ClInclude Include="WndColor.h" />
     <ClInclude Include="WndGraphic.h" />
@@ -1311,12 +1275,6 @@ $(OutDir)sign_exe.bat
     </None>
     <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\About.bmp" />
     <None Include="16x16-free-application-icons\16x16-free-application-icons\bmp\16x16\No.bmp" />
-    <None Include="CDlgHtml.htm">
-      <DeploymentContent>true</DeploymentContent>
-    </None>
-    <None Include="CDlgHtmlAccept.htm">
-      <DeploymentContent>true</DeploymentContent>
-    </None>
     <None Include="res\bitmap1.bmp" />
     <None Include="res\bitmap2.bmp" />
     <None Include="res\bitmap3.bmp" />

@@ -29,10 +29,6 @@
 #include "Translation.h"
 #include "MainFrm.h"
 
-#include "CreateHtmlWebServer.h"
-#include "ThreadWebServer.h"
-#include "ThreadCloudServer.h"
-
 //static _TCHAR *_gszRemoteCombinedMessageColumnLabel[NUM_REMOTE_COMBINED_MESSAGE_COLUMNS] =
 //{
 //	"Nr"		,"Project"		,"Time"			,"Message"		,"Computer"
@@ -57,7 +53,6 @@ CRemoteCombinedMessageView::CRemoteCombinedMessageView()
 	m_iSelected		= -1;
 
 	m_bWebserverNeedsUpdate = true;
-	m_bCloudserverNeedsUpdate = true;
 
 	m_iThreadRpcId	= -1;
 	m_bThreadRpcInit= false;
@@ -273,8 +268,8 @@ BEGIN_MESSAGE_MAP(CRemoteCombinedMessageView, CTemplateRemoteMessageView)
 	ON_COMMAND(UWM_MSG_MESSAGE_PROJECT_FILTER+79, &CRemoteCombinedMessageView::OnFilterProject79)
 
 	ON_MESSAGE (UWM_DLG_SEARCH_COMPUTER_READY, OnSearchComputerReady)	
-	ON_MESSAGE (UWM_MSG_WEB_ITEM_SELECTED, OnWebItemSelected)
-	ON_MESSAGE(UWM_MSG_WEB_SORT,OnWebSort)
+//	ON_MESSAGE (UWM_MSG_WEB_ITEM_SELECTED, OnWebItemSelected)
+//	ON_MESSAGE(UWM_MSG_WEB_SORT,OnWebSort)
 	ON_COMMAND(ID_COMPUTERS_DETECT, &CRemoteCombinedMessageView::OnComputersDetect)
 END_MESSAGE_MAP()
 
@@ -624,66 +619,6 @@ LRESULT CRemoteCombinedMessageView::OnReadyRpc(WPARAM parm1, LPARAM parm2)
 	}
 	if (iItemsAdd !=0) Invalidate();
 
-	if (g_bWebServerActive)
-	{
-		if (bChanged) m_bWebserverNeedsUpdate = true;
-		if (m_bWebserverNeedsUpdate)
-		{
-			if (!m_bDocumentIsClosing && (g_pcWebServerHtml == NULL))
-			{
-				m_bWebserverNeedsUpdate = false;
-				CCreateHtmlWebServer createHtml;
-				char *pcHtml;
-				if (createHtml.Create(PosBarViewSelectMessages, this, &listCtrl, &m_iColumnOrder[0], NUM_REMOTE_MESSAGE_COLUMNS, NULL, PosGroupViewTasksMessages, &pcHtml))
-				{
-					g_pcWebServerHtml = pcHtml;
-					g_pThreadWebServer->PostThreadMessage(UWM_MSG_THREAD_WEB_HTML,0,TAB_MESSAGES);
-					g_tWebServerHtml = GetTickCount()/100;
-				}
-			}
-		}
-	}
-
-	if (g_bCloudServerRequestData)
-	{
-		char *pcHtml;
-		if (bChanged) m_bCloudserverNeedsUpdate = true;
-		if (m_bCloudserverNeedsUpdate)
-		{
-			if (g_pcCloudServerHtml == NULL)
-			{
-				if (g_iCloudServerHtmlTabProcessed[TAB_MESSAGES] == TRUE)
-				{
-					g_iCloudServerHtmlTabProcessed[TAB_MESSAGES] = FALSE;
-					m_bCloudserverNeedsUpdate = false;
-					CCreateHtmlWebServer createHtml;
-					if (createHtml.Create(PosBarViewSelectMessages, this, &listCtrl, &m_iColumnOrder[0], NUM_REMOTE_MESSAGE_COLUMNS, NULL, PosGroupViewTasksMessages, &pcHtml))
-					{
-						g_pcCloudServerHtml = pcHtml;
-						g_pThreadCloudServer->PostThreadMessage(UWM_MSG_THREAD_WEB_HTML,0,TAB_MESSAGES);
-						g_tCloudServerHtml = GetTickCount()/100;
-					}
-				}
-			}
-		}
-		else
-		{
-			if (g_pcCloudServerHtml == NULL)
-			{
-				if (g_iCloudServerHtmlTabProcessed[TAB_MESSAGES] == TRUE)
-				{
-					g_iCloudServerHtmlTabProcessed[TAB_MESSAGES] = FALSE;
-					CString sTxt = "<equ>";
-					int iLen =sTxt.GetLength()+1;
-					pcHtml = new char [iLen];
-					strcpy_s(pcHtml, iLen, sTxt.GetBuffer());
-					g_pcCloudServerHtml = pcHtml;
-					g_pThreadCloudServer->PostThreadMessage(UWM_MSG_THREAD_WEB_HTML,0,TAB_MESSAGES);
-					g_tCloudServerHtml = GetTickCount()/100;
-				}
-			}
-		}
-	}
 
 	m_bThreadBusy = false;
 
@@ -958,7 +893,7 @@ LRESULT CRemoteCombinedMessageView::OnSwitch(WPARAM parm1, LPARAM parm2)
 	}
 
 	m_iSelected = -1;
-	m_bCloudserverNeedsUpdate = true;
+//	m_bCloudserverNeedsUpdate = true;
 	theApp.m_pMainFrame->SetBoincTasksStatus(gszTranslation[PosWindowStatusMessageStatusSwitched]);
 	return 0;
 }
@@ -1441,9 +1376,9 @@ LRESULT CRemoteCombinedMessageView::OnFontHasChanged(WPARAM wParam,LPARAM lParam
 	return 0;
 }
 
+/*
 LRESULT CRemoteCombinedMessageView::OnWebItemSelected(WPARAM wParam,LPARAM lParam)
 {
-/*
 	int iRow, iOption;
 
 	if (m_bDocumentIsClosing) 	return 0;			// everything is closing down.
@@ -1462,11 +1397,13 @@ LRESULT CRemoteCombinedMessageView::OnWebItemSelected(WPARAM wParam,LPARAM lPara
 		createHtml.Create(PosBarViewSelectTasks, this, &listCtrl, &m_iColumnOrder[0], NUM_REMOTE_TASK_COLUMNS, PosGroupViewTasks, &pcHtml);
 	}
 	return (LRESULT) pcHtml;
-*/
+
 
 	return NULL;
 }
+*/
 
+/*
 LRESULT CRemoteCombinedMessageView::OnWebSort(WPARAM parm1, LPARAM parm2)
 {
 	char	*pcSort;
@@ -1496,6 +1433,7 @@ LRESULT CRemoteCombinedMessageView::OnWebSort(WPARAM parm1, LPARAM parm2)
 	}
 	return (LRESULT) pcHtml;
 }
+*/
 
 LRESULT CRemoteCombinedMessageView::OnMessagesInvalidate(WPARAM parm1, LPARAM parm2)
 {

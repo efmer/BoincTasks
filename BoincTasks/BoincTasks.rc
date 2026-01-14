@@ -187,11 +187,9 @@ BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,6,378,20,20
     LTEXT           "eFMer BoincTasks Version:",IDC_STATIC,36,381,102,8,SS_NOPREFIX
     EDITTEXT        IDC_EDIT_VERSION,144,381,30,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
-    LTEXT           "Copyright © 2009-2025 By eFMer ",IDC_STATIC,6,405,132,12
+    LTEXT           "Copyright © 2009-2026 By eFMer ",IDC_STATIC,6,405,132,12
     LTEXT           "www.BoincTasks",IDC_EFMER_HTTP,6,417,90,11
     DEFPUSHBUTTON   "OK",IDOK,474,399,50,16,WS_GROUP
-    CONTROL         IDB_BITMAP_SNL,IDC_BITMAP_SNL,"Static",SS_BITMAP | NOT WS_VISIBLE,252,381,133,32
-    LTEXT           "Sluit je aan bij SETI@Netherlands",IDC_SNL_HTTP,252,417,132,11,NOT WS_VISIBLE
 END
 
 IDD_DIALOG_PROPERTIES DIALOGEX 0, 0, 465, 338
@@ -2775,8 +2773,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,96,0,0
- PRODUCTVERSION 1,96,0,0
+ FILEVERSION 2,0,0,0
+ PRODUCTVERSION 2,0,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -2793,12 +2791,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "eFMer"
             VALUE "FileDescription", "eFMer BoincTasks,  the best way to view BOINC."
-            VALUE "FileVersion", "1.96.0.0"
+            VALUE "FileVersion", "2.0.0.0"
             VALUE "InternalName", "BoincTasks.exe"
-            VALUE "LegalCopyright", "(c) 2009-2025 eFMer.  All rights reserved."
+            VALUE "LegalCopyright", "(c) 2009-2026 eFMer.  All rights reserved."
             VALUE "OriginalFilename", "BoincTasks.exe"
             VALUE "ProductName", "eFMer BoincTask"
-            VALUE "ProductVersion", "1.96.0.0"
+            VALUE "ProductVersion", "2.0.0.0"
         END
     END
     BLOCK "VarFileInfo"
@@ -2836,16 +2834,6 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// HTML
-//
-
-IDR_HTML_CDlgHtml       HTML                    "CDlgHtml.htm"
-
-IDR_HTML_CDlgHtmlAccept HTML                    "CDlgHtmlAccept.htm"
-
-
-/////////////////////////////////////////////////////////////////////////////
-//
 // String Table
 //
 
@@ -2879,7 +2867,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_PROGRAM_VERSION     "1.96"
+    IDS_PROGRAM_VERSION     "2.0.0"
     IDS_PROGRAM_VERSION_PREFIX "eFMer, BoincTasks"
 END
 
@@ -2914,8 +2902,6 @@ IDB_STATEICONS          BITMAP                  "res\\stateico.bmp"
 IDB_TOOLBAR_OPERATIONS_DISABLED24 BITMAP                  "res\\toolbar_operations _disabled24.bmp"
 
 IDB_BITMAP_HELP         BITMAP                  "res\\Help symbol.bmp"
-
-IDB_BITMAP_SNL          BITMAP                  "res\\s_at_nl.bmp"
 
 IDB_BITMAP_P_LINUX      BITMAP                  "res\\platform\\linux.bmp"
 

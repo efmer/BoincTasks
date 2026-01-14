@@ -39,7 +39,6 @@ public:
 	afx_msg void OnStnClickedEfmerHttp();
 	afx_msg void OnStnClickedSnlHttp();
 	CLabel m_efmerHttp;
-	CLabel m_snlHttp;
 	CEdit m_version;
 	CStatic m_textTranslatedBy;
 	CLabel m_textTranslatedTeam;

@@ -1,6 +1,7 @@
 
 #include "stdafx.h"
 #include <stdlib.h>
+#include <string.h>
 #include <io.h>
 #include "BoincTasks.h"
 #include "threadrpc.h"
@@ -14,6 +15,9 @@
 #include "Translation.h"
 
 #define DEBUG_UPDATE_TEST false
+#define DEBUG_UPDATE_TEST_VERSION "2.1.2"
+#define DEBUG_UPDATE_TEST_VERSION_TT_I 911
+#define DEBUG_UPDATE_TEST_VERSION_TT "9.11"
 
 // CDlgUpdate dialog
 
@@ -78,9 +82,11 @@ BOOL CDlgUpdate::OnInitDialog()
 
 	CheckUpdate();
 
-	m_versionBoincTasks.m_dCurrentVersion = 0;
-	m_versionBoincTasks.m_dVersion = 0;
-	m_versionBoincTasks.m_dVersionBeta = 0;
+	m_versionBoincTasks.m_iCurrentVersion = 0;
+	m_versionBoincTasks.m_sCurrentVersion = "";
+
+	m_versionBoincTasks.m_iVersion = 0;
+	m_versionBoincTasks.m_iVersionBeta = 0;
 
 	iCheck = theApp.GetProfileInt(registrySectionSettings, registryUpdateUseBrowser, 0);
 	m_checkUseBrowser.SetCheck(iCheck);
@@ -120,21 +126,32 @@ int CDlgUpdate::CheckForNewVersion(bool bForceCheck)
 			CNoticeBoincTasksUpdate noticeBoincTasksUpdate;
 
 			noticeBoincTasksUpdate.m_iType = iVersionCount;
-			noticeBoincTasksUpdate.m_dVersion = m_versionBoincTasks.m_dVersion;
-			noticeBoincTasksUpdate.m_dVersionBeta = m_versionBoincTasks.m_dVersionBeta;
+			noticeBoincTasksUpdate.m_iVersion = m_versionBoincTasks.m_iVersion;
+			noticeBoincTasksUpdate.m_sVersion = m_versionBoincTasks.m_sVersionHttp;
+			noticeBoincTasksUpdate.m_iVersionBeta = m_versionBoincTasks.m_iVersionBeta;
+			noticeBoincTasksUpdate.m_sVersionBeta = m_versionBoincTasks.m_sVersionBetaHttp;
 			noticeBoincTasksUpdate.m_sVersionExe = "http://" + m_versionBoincTasks.m_sVersionExe;
 			noticeBoincTasksUpdate.m_sVersionBetaExe = "http://" + m_versionBoincTasks.m_sVersionBetaExe;
-			noticeBoincTasksUpdate.m_dCurrentVersion = m_versionBoincTasks.m_dCurrentVersion;
+			noticeBoincTasksUpdate.m_iCurrentVersion = m_versionBoincTasks.m_iCurrentVersion;
+			noticeBoincTasksUpdate.m_sCurrentVersion = m_versionBoincTasks.m_sCurrentVersion;
 
-			noticeBoincTasksUpdate.m_dTThrottleVersion = m_versionTThrottle.m_dVersion;
-			noticeBoincTasksUpdate.m_dTThrottleVersionBeta = m_versionTThrottle.m_dVersionBeta;
+			noticeBoincTasksUpdate.m_iTThrottleVersion = m_versionTThrottle.m_iVersion;
+			noticeBoincTasksUpdate.m_sTThrottleVersion = m_versionTThrottle.m_sVersionHttp;
+			noticeBoincTasksUpdate.m_iTThrottleVersionBeta = m_versionTThrottle.m_iVersionBeta;
+			noticeBoincTasksUpdate.m_sTThrottleVersionBeta = m_versionTThrottle.m_sVersionBetaHttp;
 			noticeBoincTasksUpdate.m_sTThrottleVersionExe = "http://" + m_versionTThrottle.m_sVersionExe;
 			noticeBoincTasksUpdate.m_sTThrottleVersionBetaExe = "http://" + m_versionTThrottle.m_sVersionBetaExe;
 			noticeBoincTasksUpdate.m_iCheckBeta = m_iCheckBeta;
 
+			if (DEBUG_UPDATE_TEST)
+			{
+				noticeBoincTasksUpdate.m_iTThrottleVersionBeta = DEBUG_UPDATE_TEST_VERSION_TT_I;
+				noticeBoincTasksUpdate.m_sTThrottleVersionBeta = DEBUG_UPDATE_TEST_VERSION_TT;
+			}
+
 			if (iVersionCount > 1)
 			{
-				if (m_versionBoincTasks.m_dVersionBeta > m_versionBoincTasks.m_dCurrentVersion)
+				if (m_versionBoincTasks.m_iVersionBeta > m_versionBoincTasks.m_iCurrentVersion)
 				{
 					if (theApp.m_pDlgSettingsNotices->m_iCheckEvery == 0)										 // 0 = notices disabled
 					{
@@ -146,7 +163,7 @@ int CDlgUpdate::CheckForNewVersion(bool bForceCheck)
 			}
 			else
 			{
-				if (m_versionBoincTasks.m_dVersion > m_versionBoincTasks.m_dCurrentVersion)
+				if (m_versionBoincTasks.m_iVersion > m_versionBoincTasks.m_iCurrentVersion)
 				{
 					if (theApp.m_pDlgSettingsNotices->m_iCheckEvery == 0) // 0 = notices disabled
 					{
@@ -158,7 +175,6 @@ int CDlgUpdate::CheckForNewVersion(bool bForceCheck)
 			}
 			if (theApp.m_pDlgSettingsNotices->m_iCheckEvery != 0)												 // !0 = notices enabled
 			{
-//				noticeBoincTasksUpdate.m_dTThrottleVersionBeta = 4.6;
 				SendUpdateNotice(&noticeBoincTasksUpdate);
 			}
 		}
@@ -223,10 +239,11 @@ int CDlgUpdate::GetVersion()
 	m_versionTThrottle.m_sVersionBetaExe = "";
 
 
-	m_versionBoincTasks.m_dVersion = 0;
-	m_versionBoincTasks.m_dVersionBeta = 0;
-	m_versionTThrottle.m_dVersion = 0;
-	m_versionTThrottle.m_dVersionBeta = 0;
+	m_versionBoincTasks.m_iVersion = 0;
+	m_versionBoincTasks.m_iVersionBeta = 0;
+
+	m_versionTThrottle.m_iVersion = 0;
+	m_versionTThrottle.m_iVersionBeta = 0;
 
 	iStatus = 0;
 	CUpdateCheck getVersion;
@@ -237,18 +254,20 @@ int CDlgUpdate::GetVersion()
 	if (bFound)
 	{
 		sProgramVersion.LoadString(IDS_PROGRAM_VERSION);
-		m_versionBoincTasks.m_dCurrentVersion = atof(sProgramVersion);
-		m_versionBoincTasks.m_dVersion = atof(m_versionBoincTasks.m_sVersionHttp);
+		m_versionBoincTasks.m_sCurrentVersion = sProgramVersion;
+		m_versionBoincTasks.m_iCurrentVersion = VersionToInt(sProgramVersion);
+
+		if (DEBUG_UPDATE_TEST)
+		{
+			m_versionBoincTasks.m_sVersionBetaExe = DEBUG_UPDATE_TEST_VERSION;
+			m_versionBoincTasks.m_sVersionBetaHttp = DEBUG_UPDATE_TEST_VERSION;
+		}
+
+		m_versionBoincTasks.m_iVersion = VersionToInt(m_versionBoincTasks.m_sVersionHttp);
 
 		if (m_versionBoincTasks.m_sVersionBetaHttp.GetLength() > 0)
 		{
-			m_versionBoincTasks.m_dVersionBeta = atof(m_versionBoincTasks.m_sVersionBetaHttp);
-
-			if (DEBUG_UPDATE_TEST)
-			{
-				m_versionBoincTasks.m_dVersionBeta = 2.00;
-			}
-
+			m_versionBoincTasks.m_iVersionBeta = VersionToInt(m_versionBoincTasks.m_sVersionBetaHttp);
 			iStatus = 2;
 		}
 		else
@@ -263,16 +282,25 @@ int CDlgUpdate::GetVersion()
 	if (bFound)
 	{
 //		sProgramVersion.LoadString(IDS_PROGRAM_VERSION);
-		m_versionTThrottle.m_dVersion = atof(m_versionTThrottle.m_sVersionHttp);
+		m_versionTThrottle.m_iVersion = VersionToInt(m_versionTThrottle.m_sVersionHttp);
 //
 		if (m_versionTThrottle.m_sVersionBetaHttp.GetLength() > 0)
 		{
-			m_versionTThrottle.m_dVersionBeta = atof(m_versionTThrottle.m_sVersionBetaHttp);
+			m_versionTThrottle.m_iVersionBeta = VersionToInt(m_versionTThrottle.m_sVersionBetaHttp);
 //			iStatus = 2;
 		}
 //		iStatus = 1;
 	}
 	return iStatus;
+}
+
+int CDlgUpdate::VersionToInt(CString version)
+{
+	std::string versionc = version;
+	versionc.erase(std::remove(versionc.begin(), versionc.end(), '.'), versionc.end());
+	CString versioni = versionc.c_str();
+	int iVersion = atoi(versioni);
+	return iVersion;
 }
 
 void CDlgUpdate::ShowVersion()
@@ -285,38 +313,38 @@ void CDlgUpdate::ShowVersion()
 	m_buttonUpdate.EnableWindow(FALSE);
 	m_updateFolder.EnableWindow(FALSE);
 
-	if (m_versionBoincTasks.m_dVersionBeta > 0)
+	if (m_versionBoincTasks.m_iVersionBeta > 0)
 	{
 		sIDS= gszTranslation[PosDialogUpdateLatestBetaVersion];
-		sProgramVersion.Format("%.2f", m_versionBoincTasks.m_dVersionBeta);
-		sLatestVersionBeta.Format(sIDS, sProgramVersion);
+//		sProgramVersion.Format("%.2f", m_versionBoincTasks.m_iVersionBeta);
+		sLatestVersionBeta.Format(sIDS, m_versionBoincTasks.m_sVersionBetaHttp);
 	}
 
-	if (m_versionBoincTasks.m_dVersionBeta > 0)
+	if (m_versionBoincTasks.m_iVersionBeta > 0)
 	{
 		sIDS= gszTranslation[PosDialogUpdateNewBetaVersionFound];
-		sProgramVersion.Format("%.2f", m_versionBoincTasks.m_dVersionBeta);
-		sNewVersionBeta.Format(sIDS, sProgramVersion);
+	//	sProgramVersion.Format("%.2f", m_versionBoincTasks.m_iVersionBeta);
+		sNewVersionBeta.Format(sIDS, m_versionBoincTasks.m_sVersionBetaHttp);
 	}
 
-	if (m_versionBoincTasks.m_dVersion > 0)
+	if (m_versionBoincTasks.m_iVersion > 0)
 	{
 		sIDS= gszTranslation[PosDialogUpdateLatestVersion];
-		sProgramVersion.Format("%.2f", m_versionBoincTasks.m_dVersion);
-		sLatestVersion.Format(sIDS, sProgramVersion);
+//		sProgramVersion.Format("%.2f", m_versionBoincTasks.m_iVersion);
+		sLatestVersion.Format(sIDS, m_versionBoincTasks.m_sVersionHttp);
 	}
 
 	sIDS= gszTranslation[PosDialogUpdateNewVersionFound];
-	sProgramVersion.Format("%.2f", m_versionBoincTasks.m_dVersion);
-	sNewVersion.Format(sIDS, sProgramVersion); //"New version of BT found: %s"
+//	sProgramVersion.Format("%.2f", m_versionBoincTasks.m_iVersion);
+	sNewVersion.Format(sIDS, m_versionBoincTasks.m_sVersionHttp); //"New version of BT found: %s"
 
 	sIDS= gszTranslation[PosDialogUpdateNewBetaVersionFound];
-	sProgramVersion.Format("%.2f", m_versionBoincTasks.m_dVersionBeta);
-	sNewVersionBeta.Format(sIDS, sProgramVersion); //"New version of BT found: %s"
+//	sProgramVersion.Format("%.2f", m_versionBoincTasks.m_iVersionBeta);
+	sNewVersionBeta.Format(sIDS, m_versionBoincTasks.m_sVersionBetaHttp); //"New version of BT found: %s"
 
 	sIDS = gszTranslation[PosDialogUpdateCurrentVersion];
-	sProgramVersion.Format("%.2f", m_versionBoincTasks.m_dCurrentVersion);
-	sCurrentVersion.Format(sIDS, sProgramVersion); //"Current version of BT: %s"
+//	sProgramVersion.Format("%.2f", m_versionBoincTasks.m_iCurrentVersion);
+	sCurrentVersion.Format(sIDS, m_versionBoincTasks.m_sCurrentVersion); //"Current version of BT: %s"
 
 	sTxt += sCurrentVersion;
 	sTxt += "  ( " + sLatestVersion + " , " + sLatestVersionBeta + " )";
@@ -324,11 +352,11 @@ void CDlgUpdate::ShowVersion()
 
 	if (m_iCheckBeta)
 	{
-		if (m_versionBoincTasks.m_dVersionBeta > 0)
+		if (m_versionBoincTasks.m_iVersionBeta > 0)
 		{
-			if (m_versionBoincTasks.m_dCurrentVersion < m_versionBoincTasks.m_dVersionBeta)
+			if (m_versionBoincTasks.m_iCurrentVersion < m_versionBoincTasks.m_iVersionBeta)
 			{
-				if (m_versionBoincTasks.m_dVersion == m_versionBoincTasks.m_dVersionBeta)
+				if (m_versionBoincTasks.m_iVersion == m_versionBoincTasks.m_iVersionBeta)
 				{
 					sTxt += sNewVersion + sCrLf;
 					sIDS = gszTranslation[PosDialogUpdateClickUpdate];
@@ -354,9 +382,9 @@ void CDlgUpdate::ShowVersion()
 	}
 	else
 	{
-		if (m_versionBoincTasks.m_dVersion > 0)
+		if (m_versionBoincTasks.m_iVersion > 0)
 		{
-			if (m_versionBoincTasks.m_dCurrentVersion < m_versionBoincTasks.m_dVersion)
+			if (m_versionBoincTasks.m_iCurrentVersion < m_versionBoincTasks.m_iVersion)
 			{
 				sTxt += sNewVersion + sCrLf;
 				sIDS = gszTranslation[PosDialogUpdateClickUpdate];

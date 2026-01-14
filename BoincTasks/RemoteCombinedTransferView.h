@@ -126,9 +126,9 @@ public:
 	afx_msg void OnTransferRetryall();
 	afx_msg void OnTransferAbort();
 
-	afx_msg LRESULT OnWebOperation(WPARAM wParam, LPARAM lParam);
-	afx_msg LRESULT OnWebItemSelected(WPARAM wParam, LPARAM lParam);
-	afx_msg LRESULT OnWebSort(WPARAM wParam, LPARAM lParam);
+//	afx_msg LRESULT OnWebOperation(WPARAM wParam, LPARAM lParam);
+//	afx_msg LRESULT OnWebItemSelected(WPARAM wParam, LPARAM lParam);
+//	afx_msg LRESULT OnWebSort(WPARAM wParam, LPARAM lParam);
 
 	afx_msg void OnComputersDetect();
 };

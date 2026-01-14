@@ -21,7 +21,7 @@ CThreadWebServer	*g_pThreadWebServer = NULL;
 bool	g_bThreadWebServerIsRunning = false;
 
 bool	g_bWebServerRunning = false;
-bool	g_bWebServerActive = false;
+//bool	g_bWebServerActive = false;
 char	*g_pcWebServerHtmlTab[7];
 int		g_iWebServerHtmlTabSend[7];
 char	g_pcStatusToSend[128];

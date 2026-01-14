@@ -64,7 +64,7 @@ void CDlgSettingsMain::OnSysCommand(UINT nID, LPARAM lParam)
 	if (nID == SC_CLOSE)
 	{
 		// close window = hide
-		theApp.m_pDlgSettingsMobile->GiveWarningDeactivate();
+	//	theApp.m_pDlgSettingsMobile->GiveWarningDeactivate();
 		ShowWindow(SW_HIDE);
 		theApp.m_pDlgSettingsMain->SafeWindowPlacement();
 		return;

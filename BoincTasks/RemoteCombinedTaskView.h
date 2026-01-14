@@ -262,12 +262,12 @@ public:
 	afx_msg void OnTaskProjectsuspend();
 	afx_msg void OnTaskProjectresume();
 
-	afx_msg LRESULT OnWebOperation(WPARAM wParam, LPARAM lParam);
-	afx_msg LRESULT OnWebFilter(WPARAM wParam, LPARAM lParam);
-	afx_msg LRESULT OnWebSort(WPARAM wParam, LPARAM lParam);
-	afx_msg LRESULT OnWebProperties(WPARAM wParam, LPARAM lParam);
+//	afx_msg LRESULT OnWebOperation(WPARAM wParam, LPARAM lParam);
+//	afx_msg LRESULT OnWebFilter(WPARAM wParam, LPARAM lParam);
+//	afx_msg LRESULT OnWebSort(WPARAM wParam, LPARAM lParam);
+//	afx_msg LRESULT OnWebProperties(WPARAM wParam, LPARAM lParam);
 
-	afx_msg LRESULT OnWebItemSelected(WPARAM wParam, LPARAM lParam);
+//	afx_msg LRESULT OnWebItemSelected(WPARAM wParam, LPARAM lParam);
 	afx_msg void OnTaskShowcpu();
 	afx_msg void OnTaskShowNonCpuIntensive();
 	afx_msg void OnTaskShowgpu();

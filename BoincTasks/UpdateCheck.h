@@ -5,14 +5,19 @@
 class CUpdateVersion
 {
 public:
-	double m_dVersion;
-	double m_dVersionBeta;
-	double m_dCurrentVersion;
+	int		m_iVersion;
+	CString	m_sVersionHttp;
 
-	CString		m_sVersionHttp;
-	CString		m_sVersionExe;
-	CString		m_sVersionBetaHttp;
-	CString		m_sVersionBetaExe;
+	int		m_iVersionBeta;
+	CString	m_sVersionBetaHttp;
+
+	int		m_iCurrentVersion;
+	CString m_sCurrentVersion;
+
+
+	CString	m_sVersionExe;
+
+	CString	m_sVersionBetaExe;
 
 };
 

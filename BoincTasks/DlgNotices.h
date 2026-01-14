@@ -58,15 +58,20 @@ public:
 
 	int			m_iType;
 
-	double		m_dCurrentVersion;
-	double		m_dVersion;
-	double		m_dVersionBeta;
+	int			m_iCurrentVersion;
+	CString		m_sCurrentVersion;
+	int			m_iVersion;
+	CString		m_sVersion;
+	int			m_iVersionBeta;
+	CString		m_sVersionBeta;
 
 	CString		m_sVersionExe;
 	CString		m_sVersionBetaExe;
 
-	double		m_dTThrottleVersion;
-	double		m_dTThrottleVersionBeta;
+	int 		m_iTThrottleVersion;
+	int			m_iTThrottleVersionBeta;
+	CString 	m_sTThrottleVersion;
+	CString		m_sTThrottleVersionBeta;
 
 	CString		m_sTThrottleVersionExe;
 	CString		m_sTThrottleVersionBetaExe;

@@ -22,7 +22,6 @@
 #include "TimeString.h"
 #include "DateConvert.h"
 #include "Xml.h"
-#include "CreateHtmlWebServerProperties.h"
 #include "MainFrm.h"
 #include "Translation.h"
 
@@ -1480,7 +1479,6 @@ void CTemplateRemoteProjectView::ProjectPropertiesGet(int iBusy)
 LRESULT CTemplateRemoteProjectView::OnProjectPropertiesReady(WPARAM parm1, LPARAM parm2)
 {
 	CRpcThreadReturn *pRpcThreadReturn;
-	CCreateHtmlWebServerProperties createHtmlWebServerProperties;
 
 	pRpcThreadReturn = (CRpcThreadReturn *) parm2;
 	delete pRpcThreadReturn;
@@ -1489,8 +1487,8 @@ LRESULT CTemplateRemoteProjectView::OnProjectPropertiesReady(WPARAM parm1, LPARA
 	if (m_iProjectPropertiesThreadsReturnCount != m_iProjectPropertiesThreadsPostedCount) return 0; // wait for the rest
 
 	// got them all.
-	if (m_iProjectPropertiesBusy == PROPERTIES_DIALOG)	ProjectPropertiesReady(NULL);
-	else												ProjectPropertiesReady(&createHtmlWebServerProperties);
+	if (m_iProjectPropertiesBusy == PROPERTIES_DIALOG)	ProjectPropertiesReady();
+	else												ProjectPropertiesReady();
 
 	DeleteProjectProperties();
 	for (int iCount = 0; iCount < (int) m_lProjectItem.size(); iCount++)
@@ -1503,16 +1501,12 @@ LRESULT CTemplateRemoteProjectView::OnProjectPropertiesReady(WPARAM parm1, LPARA
 	return 0;
 }
 
-void CTemplateRemoteProjectView::PropertiesAddRow(CCreateHtmlWebServerProperties *pCreateHtmlWebServerProperties, CString *psColumn0, CString *psColumn1)
+void CTemplateRemoteProjectView::PropertiesAddRow(CString *psColumn0, CString *psColumn1)
 {
-	if (pCreateHtmlWebServerProperties)
-	{
-		pCreateHtmlWebServerProperties->Add(psColumn0, psColumn1);
-	}
-	else theApp.m_pDlgProperties->SendMessage(UWM_MSG_DLG_PROPERTIES_ADD_ROW, (WPARAM) psColumn0, (LPARAM) psColumn1);
+	theApp.m_pDlgProperties->SendMessage(UWM_MSG_DLG_PROPERTIES_ADD_ROW, (WPARAM) psColumn0, (LPARAM) psColumn1);
 }
 
-void CTemplateRemoteProjectView::ProjectPropertiesReady(CCreateHtmlWebServerProperties *pCreateHtmlWebServerProperties)
+void CTemplateRemoteProjectView::ProjectPropertiesReady()
 {
 	int			iThreadId;
 	CString		sTxt;
@@ -1521,11 +1515,8 @@ void CTemplateRemoteProjectView::ProjectPropertiesReady(CCreateHtmlWebServerProp
 	bool		bFirstTime = true;
 
 
-	if (pCreateHtmlWebServerProperties == NULL)
-	{
-		theApp.m_pDlgProperties->SetWindowText(gszTranslation[PosDialogProjectPropTitleProjectP]);		//"Project properties");
-		theApp.m_pDlgProperties->SendMessage(UWM_MSG_DLG_PROPERTIES_SETUP,2,(LPARAM) registryPropertiesProject);	// 2 columns
-	}
+	theApp.m_pDlgProperties->SetWindowText(gszTranslation[PosDialogProjectPropTitleProjectP]);		//"Project properties");
+	theApp.m_pDlgProperties->SendMessage(UWM_MSG_DLG_PROPERTIES_SETUP,2,(LPARAM) registryPropertiesProject);	// 2 columns	
 
 	for (int iSelected = 0; iSelected < (int) m_lProjectProperties.size(); iSelected++)
 	{
@@ -1539,31 +1530,25 @@ void CTemplateRemoteProjectView::ProjectPropertiesReady(CCreateHtmlWebServerProp
 				{
 					if (m_lProjectProperties.at(iSelected)->m_sProject == m_lProjectItem.at(iProjectPos)->m_projects.projects[iProjects]->project_name.c_str())
 					{
-						if (pCreateHtmlWebServerProperties == NULL)
-						{
+
 						if (!bFirstTime) {sColumn0 = "=================================================";sColumn1 = sColumn0; theApp.m_pDlgProperties->SendMessage(UWM_MSG_DLG_PROPERTIES_ADD_ROW, (WPARAM) &sColumn0, (LPARAM) &sColumn1);}
-						}
-						else
-						{
-							if (!bFirstTime) {sColumn0 = "============";sColumn1 = sColumn0; pCreateHtmlWebServerProperties->Add(&sColumn0, &sColumn1);}
-						}
 						bFirstTime = false;
 						if (sComputer != m_lProjectProperties.at(iSelected)->m_sComputerId)
 						{
 							sComputer = m_lProjectProperties.at(iSelected)->m_sComputerId;
 							sColumn0 = gszTranslation[PosDialogProjectPropComputer];	
 							sColumn1 = sComputer;
-							PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+							PropertiesAddRow(&sColumn0, &sColumn1);
 						}
 						
-						sColumn0 = gszTranslation[PosDialogProjectPropProject]; sColumn1 = m_lProjectProperties.at(iSelected)->m_sProject; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-						sColumn0 = "";sColumn1 = sColumn0; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+						sColumn0 = gszTranslation[PosDialogProjectPropProject]; sColumn1 = m_lProjectProperties.at(iSelected)->m_sProject; PropertiesAddRow(&sColumn0, &sColumn1);
+						sColumn0 = "";sColumn1 = sColumn0; PropertiesAddRow(&sColumn0, &sColumn1);
 
-						ProjectProperties1(m_lProjectItem.at(iProjectPos), iProjects, pCreateHtmlWebServerProperties);
+						ProjectProperties1(m_lProjectItem.at(iProjectPos), iProjects);
 
 						if ((int) m_lProjectItem.at(iProjectPos)->m_diskUsage.projects.size() == iSize)
 						{
-							ProjectProperties2(&m_lProjectItem.at(iProjectPos)->m_diskUsage, iProjects, pCreateHtmlWebServerProperties);
+							ProjectProperties2(&m_lProjectItem.at(iProjectPos)->m_diskUsage, iProjects);
 						}
 					}
 				}
@@ -1571,10 +1556,9 @@ void CTemplateRemoteProjectView::ProjectPropertiesReady(CCreateHtmlWebServerProp
 			}
 		}
 	}
-	if (pCreateHtmlWebServerProperties) pCreateHtmlWebServerProperties->Finish();
 }
 
-void CTemplateRemoteProjectView::ProjectProperties1(CComputerProjectListItem *pComputerProjectListItem, int iProjects, CCreateHtmlWebServerProperties *pCreateHtmlWebServerProperties)
+void CTemplateRemoteProjectView::ProjectProperties1(CComputerProjectListItem *pComputerProjectListItem, int iProjects)
 {
 	CString		sColumn0, sColumn1;
 	char		cBuffer[256];
@@ -1587,79 +1571,79 @@ void CTemplateRemoteProjectView::ProjectProperties1(CComputerProjectListItem *pC
 
 	pInfo = pComputerProjectListItem->m_projects.projects.at(iProjects);
 
-	sColumn0 = gszTranslation[PosDialogProjectPropGeneral]; sColumn1 = ""; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = "";sColumn1 = sColumn0; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropGeneral]; sColumn1 = ""; PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = "";sColumn1 = sColumn0; PropertiesAddRow(&sColumn0, &sColumn1);
 
-	sColumn0 = gszTranslation[PosDialogProjectPropMasterUrl]; sColumn1 = pInfo->master_url.c_str(); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropUserName]; sColumn1 = pInfo->user_name.c_str(); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropTeamName]; sColumn1 = pInfo->team_name.c_str(); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropVenue]; sColumn1 = pInfo->venue.c_str(); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropResourseShare]; sColumn1 = numberFormat.FormatNumber(pInfo->resource_share, 0);PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropMasterUrl]; sColumn1 = pInfo->master_url.c_str(); PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropUserName]; sColumn1 = pInfo->user_name.c_str(); PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropTeamName]; sColumn1 = pInfo->team_name.c_str(); PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropVenue]; sColumn1 = pInfo->venue.c_str(); PropertiesAddRow( &sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropResourseShare]; sColumn1 = numberFormat.FormatNumber(pInfo->resource_share, 0);PropertiesAddRow(&sColumn0, &sColumn1);
 
 	if (pInfo->upload_backoff)
 	{
 		timeString.TimeString((int) pInfo->upload_backoff, cBuffer, 50, "", "");
-		sColumn0 = gszTranslation[PosDialogProjectPropFileUploadDeferred]; sColumn1 = cBuffer; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+		sColumn0 = gszTranslation[PosDialogProjectPropFileUploadDeferred]; sColumn1 = cBuffer; PropertiesAddRow(&sColumn0, &sColumn1);
 	}
 	if (pInfo->download_backoff)
 	{
 		timeString.TimeString((int) pInfo->download_backoff, cBuffer, 50, "", "");
-		sColumn0 = gszTranslation[PosDialogProjectPropFileDownloadDeferred]; sColumn1 = cBuffer; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+		sColumn0 = gszTranslation[PosDialogProjectPropFileDownloadDeferred]; sColumn1 = cBuffer; PropertiesAddRow(&sColumn0, &sColumn1);
 	}
 
 
-	sColumn0 = gszTranslation[PosDialogProjectPropTasksCompleted]; _snprintf_s(&cBuffer[0],50,_TRUNCATE,"%d",pInfo->njobs_success);sColumn1 = cBuffer; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectTasksError]; _snprintf_s(&cBuffer[0],50,_TRUNCATE,"%d",pInfo->njobs_error);sColumn1 = cBuffer; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropTasksCompleted]; _snprintf_s(&cBuffer[0],50,_TRUNCATE,"%d",pInfo->njobs_success);sColumn1 = cBuffer; PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectTasksError]; _snprintf_s(&cBuffer[0],50,_TRUNCATE,"%d",pInfo->njobs_error);sColumn1 = cBuffer; PropertiesAddRow(&sColumn0, &sColumn1);
 
 
-	sColumn0 = gszTranslation[PosDialogProjectPropComputerId];_snprintf_s(&cBuffer[0],50,_TRUNCATE,"%d",pInfo->hostid); sColumn1 = cBuffer; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropProjectId];sColumn1 = pInfo->external_cpid; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropComputerId];_snprintf_s(&cBuffer[0],50,_TRUNCATE,"%d",pInfo->hostid); sColumn1 = cBuffer; PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropProjectId];sColumn1 = pInfo->external_cpid; PropertiesAddRow(&sColumn0, &sColumn1);
 
-	sColumn0 = gszTranslation[PosDialogProjectPropNonCpuIntensive]; sColumn1 = YesNo(pInfo->non_cpu_intensive); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropSuspendedGui]; sColumn1 = YesNo(pInfo->suspended_via_gui); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropDontReqWork]; sColumn1 = YesNo(pInfo->dont_request_more_work); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropSchedulerInProg]; sColumn1 = YesNo(pInfo->scheduler_rpc_in_progress); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropAttachedAcountM]; sColumn1 = YesNo(pInfo->attached_via_acct_mgr); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropDetachWD]; sColumn1 = YesNo(pInfo->detach_when_done); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropEnded]; sColumn1 = YesNo(pInfo->ended); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropNonCpuIntensive]; sColumn1 = YesNo(pInfo->non_cpu_intensive); PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropSuspendedGui]; sColumn1 = YesNo(pInfo->suspended_via_gui); PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropDontReqWork]; sColumn1 = YesNo(pInfo->dont_request_more_work); PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropSchedulerInProg]; sColumn1 = YesNo(pInfo->scheduler_rpc_in_progress); PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropAttachedAcountM]; sColumn1 = YesNo(pInfo->attached_via_acct_mgr); PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropDetachWD]; sColumn1 = YesNo(pInfo->detach_when_done); PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropEnded]; sColumn1 = YesNo(pInfo->ended); PropertiesAddRow(&sColumn0, &sColumn1);
 
-	sColumn0 = "";sColumn1 = sColumn0; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropCredit];sColumn1 = ""; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = "";sColumn1 = sColumn0; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+	sColumn0 = "";sColumn1 = sColumn0; PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropCredit];sColumn1 = ""; PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = "";sColumn1 = sColumn0; PropertiesAddRow(&sColumn0, &sColumn1);
 	CString sTotal, sAverage;
 	sTotal		= gszTranslation[PosDialogProjectPropTotal];
 	sAverage	= gszTranslation[PosDialogProjectPropAverage];
 
-	sColumn0 = gszTranslation[PosDialogProjectPropUserCredit];	sColumn1 = numberFormat.FormatNumber(pInfo->user_total_credit, 2); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = "";												sColumn1 = numberFormat.FormatNumber(pInfo->user_expavg_credit, 2); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropHostCredit];	sColumn1 = numberFormat.FormatNumber(pInfo->host_total_credit, 2); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = "";												sColumn1 = numberFormat.FormatNumber(pInfo->host_expavg_credit, 2); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);	
+	sColumn0 = gszTranslation[PosDialogProjectPropUserCredit];	sColumn1 = numberFormat.FormatNumber(pInfo->user_total_credit, 2); PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = "";												sColumn1 = numberFormat.FormatNumber(pInfo->user_expavg_credit, 2); PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropHostCredit];	sColumn1 = numberFormat.FormatNumber(pInfo->host_total_credit, 2); PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = "";												sColumn1 = numberFormat.FormatNumber(pInfo->host_expavg_credit, 2); PropertiesAddRow(&sColumn0, &sColumn1);	
 
-	sColumn0 = "";sColumn1 = sColumn0; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropMore]; sColumn1 = ""; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = "";sColumn1 = sColumn0; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+	sColumn0 = "";sColumn1 = sColumn0; PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropMore]; sColumn1 = ""; PropertiesAddRow( &sColumn0, &sColumn1);
+	sColumn0 = "";sColumn1 = sColumn0; PropertiesAddRow(&sColumn0, &sColumn1);
 
-	sColumn0 = gszTranslation[PosDialogProjectPropDurationF]; sColumn1 = numberFormat.FormatNumber(pInfo->duration_correction_factor,10); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropDurationF]; sColumn1 = numberFormat.FormatNumber(pInfo->duration_correction_factor,10); PropertiesAddRow(&sColumn0, &sColumn1);
 
 	if (pComputerProjectListItem->m_projectsDiskUsage.m_bBoincClientV6)
 	{
-		sColumn0 = gszTranslation[PosDialogProjectPropSchedulePending]; sColumn1 = numberFormat.FormatNumber(pInfo->sched_rpc_pending, 0); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-		sColumn0 = gszTranslation[PosDialogProjectPropCpuShortTimeDebt]; sColumn1 = numberFormat.FormatNumber(pInfo->cpu_short_term_debt, 2); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-		sColumn0 = gszTranslation[PosDialogProjectPropCpuLongTimeDebt]; sColumn1 = numberFormat.FormatNumber(pInfo->cpu_long_term_debt, 2); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+		sColumn0 = gszTranslation[PosDialogProjectPropSchedulePending]; sColumn1 = numberFormat.FormatNumber(pInfo->sched_rpc_pending, 0); PropertiesAddRow(&sColumn0, &sColumn1);
+		sColumn0 = gszTranslation[PosDialogProjectPropCpuShortTimeDebt]; sColumn1 = numberFormat.FormatNumber(pInfo->cpu_short_term_debt, 2); PropertiesAddRow(&sColumn0, &sColumn1);
+		sColumn0 = gszTranslation[PosDialogProjectPropCpuLongTimeDebt]; sColumn1 = numberFormat.FormatNumber(pInfo->cpu_long_term_debt, 2); PropertiesAddRow(&sColumn0, &sColumn1);
 		if (pComputerProjectListItem->m_projectsDiskUsage.bHave_cuda)
 		{
-			sColumn0 = gszTranslation[PosDialogProjectPropCudaShortTimeDebt]; sColumn1 = numberFormat.FormatNumber(pInfo->cuda_short_term_debt, 2); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-			sColumn0 = gszTranslation[PosDialogProjectPropCudaLongTimeDebt]; sColumn1 = numberFormat.FormatNumber(pInfo->cuda_debt, 2); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+			sColumn0 = gszTranslation[PosDialogProjectPropCudaShortTimeDebt]; sColumn1 = numberFormat.FormatNumber(pInfo->cuda_short_term_debt, 2); PropertiesAddRow(&sColumn0, &sColumn1);
+			sColumn0 = gszTranslation[PosDialogProjectPropCudaLongTimeDebt]; sColumn1 = numberFormat.FormatNumber(pInfo->cuda_debt, 2); PropertiesAddRow(&sColumn0, &sColumn1);
 		}
 		if (pComputerProjectListItem->m_projectsDiskUsage.bHave_ati)
 		{
-			sColumn0 = gszTranslation[PosDialogProjectPropAtiShortTimeDebt]; sColumn1 = numberFormat.FormatNumber(pInfo->ati_short_term_debt, 2); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-			sColumn0 = gszTranslation[PosDialogProjectPropAtiLongTimeDebt]; sColumn1 = numberFormat.FormatNumber(pInfo->ati_debt, 2); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+			sColumn0 = gszTranslation[PosDialogProjectPropAtiShortTimeDebt]; sColumn1 = numberFormat.FormatNumber(pInfo->ati_short_term_debt, 2); PropertiesAddRow(&sColumn0, &sColumn1);
+			sColumn0 = gszTranslation[PosDialogProjectPropAtiLongTimeDebt]; sColumn1 = numberFormat.FormatNumber(pInfo->ati_debt, 2); PropertiesAddRow(&sColumn0, &sColumn1);
 		}
 	}
 	else
 	{
-		sColumn0 = gszTranslation[PosDialogProjectPropSchedulingPriority]; sColumn1 = numberFormat.FormatNumber(pInfo->sched_priority, 2, true); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+		sColumn0 = gszTranslation[PosDialogProjectPropSchedulingPriority]; sColumn1 = numberFormat.FormatNumber(pInfo->sched_priority, 2, true); PropertiesAddRow(&sColumn0, &sColumn1);
 	}
 
 	time_t tSystemTime;
@@ -1667,7 +1651,7 @@ void CTemplateRemoteProjectView::ProjectProperties1(CComputerProjectListItem *pC
 
 	if (pInfo->no_cpu_pref)
 	{
-		sColumn0 = gszTranslation[PosDialogProjectPropProject]; sColumn1 = gszTranslation[PosDialogProjectPropCpuDontFetch]; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+		sColumn0 = gszTranslation[PosDialogProjectPropProject]; sColumn1 = gszTranslation[PosDialogProjectPropCpuDontFetch]; PropertiesAddRow(&sColumn0, &sColumn1);
 	}
 
 	CDateConvert	dateConvert;
@@ -1679,15 +1663,15 @@ void CTemplateRemoteProjectView::ProjectProperties1(CComputerProjectListItem *pC
 //	{
 //		timeString.TimeString((int) pInfo->cpu_backoff_time, cBuffer, 255, "", "", false, false);
 //	}
-	sColumn0 = gszTranslation[PosDialogProjectPropCpuBackoff]; sColumn1 = cBuffer; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropCpuBackoff]; sColumn1 = cBuffer; PropertiesAddRow(&sColumn0, &sColumn1);
 	timeString.TimeString((int) pInfo->cpu_backoff_interval, cBuffer, 255, "", "", false, false);
-	sColumn0 = gszTranslation[PosDialogProjectPropCpuBackoffInterval]; sColumn1 = cBuffer; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropCpuBackoffInterval]; sColumn1 = cBuffer; PropertiesAddRow(&sColumn0, &sColumn1);
 
 	if (pComputerProjectListItem->m_projectsDiskUsage.bHave_cuda)
 	{
 		if (pInfo->no_cuda_pref)
 		{
-			sColumn0 = gszTranslation[PosDialogProjectPropProject]; sColumn1 = gszTranslation[PosDialogProjectPropAtiDontFetch]; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+			sColumn0 = gszTranslation[PosDialogProjectPropProject]; sColumn1 = gszTranslation[PosDialogProjectPropAtiDontFetch]; PropertiesAddRow(&sColumn0, &sColumn1);
 		}
 //		if (bV6)
 		{
@@ -1697,16 +1681,16 @@ void CTemplateRemoteProjectView::ProjectProperties1(CComputerProjectListItem *pC
 //		{
 //			timeString.TimeString((int) pInfo->cuda_backoff_time, cBuffer, 255, "", "", false, false);
 //		}
-		sColumn0 = gszTranslation[PosDialogProjectPropCudaBackoff]; sColumn1 = cBuffer; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+		sColumn0 = gszTranslation[PosDialogProjectPropCudaBackoff]; sColumn1 = cBuffer; PropertiesAddRow(&sColumn0, &sColumn1);
 		timeString.TimeString((int) pInfo->cuda_backoff_interval, cBuffer, 255, "", "", false, false);
-		sColumn0 = gszTranslation[PosDialogProjectPropCpuBackoffInterval]; sColumn1 = cBuffer; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+		sColumn0 = gszTranslation[PosDialogProjectPropCpuBackoffInterval]; sColumn1 = cBuffer; PropertiesAddRow(&sColumn0, &sColumn1);
 	}
 
 	if (pComputerProjectListItem->m_projectsDiskUsage.bHave_ati)
 	{
 		if (pInfo->no_ati_pref)
 		{
-			sColumn0 = gszTranslation[PosDialogProjectPropProject]; sColumn1 = gszTranslation[PosDialogProjectPropAtiDontFetch]; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+			sColumn0 = gszTranslation[PosDialogProjectPropProject]; sColumn1 = gszTranslation[PosDialogProjectPropAtiDontFetch]; PropertiesAddRow(&sColumn0, &sColumn1);
 		}
 //		if (bV6)
 		{
@@ -1716,21 +1700,21 @@ void CTemplateRemoteProjectView::ProjectProperties1(CComputerProjectListItem *pC
 //		{
 //			timeString.TimeString((int) pInfo->ati_backoff_time, cBuffer, 255, "", "", false, false);
 //		}
-		sColumn0 = gszTranslation[PosDialogProjectPropAtiBackoff]; sColumn1 = cBuffer; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+		sColumn0 = gszTranslation[PosDialogProjectPropAtiBackoff]; sColumn1 = cBuffer; PropertiesAddRow(&sColumn0, &sColumn1);
 		timeString.TimeString((int) pInfo->ati_backoff_interval, cBuffer, 255, "", "", true, false);
-		sColumn0 = gszTranslation[PosDialogProjectPropCpuBackoffInterval]; sColumn1 = cBuffer; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+		sColumn0 = gszTranslation[PosDialogProjectPropCpuBackoffInterval]; sColumn1 = cBuffer; PropertiesAddRow(&sColumn0, &sColumn1);
 	}
 }
 
-void CTemplateRemoteProjectView::ProjectProperties2(DISK_USAGE *pInfo, int iPos, CCreateHtmlWebServerProperties *pCreateHtmlWebServerProperties)
+void CTemplateRemoteProjectView::ProjectProperties2(DISK_USAGE *pInfo, int iPos)
 {
 	CString		sColumn0, sColumn1;
 
-	sColumn0 = "";sColumn1 = sColumn0; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropDisk]; sColumn1 = ""; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = "";sColumn1 = sColumn0; PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+	sColumn0 = "";sColumn1 = sColumn0; PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropDisk]; sColumn1 = ""; PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = "";sColumn1 = sColumn0; PropertiesAddRow(&sColumn0, &sColumn1);
 
-	sColumn0 = gszTranslation[PosDialogProjectPropDiskUse]; sColumn1 = DiskSpace(pInfo->projects[iPos]->disk_usage); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropDiskUse]; sColumn1 = DiskSpace(pInfo->projects[iPos]->disk_usage); PropertiesAddRow(&sColumn0, &sColumn1);
 
 	int iSize = (int) pInfo->projects.size();
 	double dTotalUsed = 0;
@@ -1738,11 +1722,11 @@ void CTemplateRemoteProjectView::ProjectProperties2(DISK_USAGE *pInfo, int iPos,
 	{
 		dTotalUsed += pInfo->projects[iCount]->disk_usage;
 	}
-	sColumn0 = gszTranslation[PosDialogProjectPropDiskAll]; sColumn1 = DiskSpace(dTotalUsed); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropDiskAllowed]; sColumn1 = DiskSpace(pInfo->d_allowed); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropDiskBoinc]; sColumn1 = DiskSpace(pInfo->d_boinc); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropDiskFree]; sColumn1 = DiskSpace(pInfo->d_free); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
-	sColumn0 = gszTranslation[PosDialogProjectPropDiskTotal]; sColumn1 = DiskSpace(pInfo->d_total); PropertiesAddRow(pCreateHtmlWebServerProperties, &sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropDiskAll]; sColumn1 = DiskSpace(dTotalUsed); PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropDiskAllowed]; sColumn1 = DiskSpace(pInfo->d_allowed); PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropDiskBoinc]; sColumn1 = DiskSpace(pInfo->d_boinc); PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropDiskFree]; sColumn1 = DiskSpace(pInfo->d_free); PropertiesAddRow(&sColumn0, &sColumn1);
+	sColumn0 = gszTranslation[PosDialogProjectPropDiskTotal]; sColumn1 = DiskSpace(pInfo->d_total); PropertiesAddRow(&sColumn0, &sColumn1);
 }
 
 CString CTemplateRemoteProjectView::DiskSpace(double dSpace)

@@ -38,10 +38,8 @@
 #define IDP_OLE_INIT_FAILED             111
 #define IDS_TOOLBAR_TIP                 112
 #define IDD_DLGEDITCONFIGBASE           113
-#define IDR_HTML_CDlgHtml               115
 #define IDD_DIALOG_FLOATING             117
 #define IDR_MAINFRAME                   118
-#define IDR_HTML_CDlgHtmlAccept         119
 #define IDR_BoincTasksTYPE              120
 #define IDD_DIALOG_PROPERTIES           121
 #define IDR_TOOL_BOINCTASKS1            122

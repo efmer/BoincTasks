@@ -458,12 +458,12 @@ void CWebServerProcess::Post()
 	cBuffer[512] = 0;
 	strcpy_s(cBuffer, 512, m_htmlHeaderRecieve.m_sUrl.c_str());
 
-	if (m_sAWebServerPasswordClear.compare(theApp.m_pDlgSettingsMobile->m_sPassword) != 0)
-	{
-		// password changed
-
-		ResetPassword();
-	}
+//	if (m_sAWebServerPasswordClear.compare(theApp.m_pDlgSettingsMobile->m_sPassword) != 0)
+//	{
+//		// password changed
+//
+//		ResetPassword();
+//	}
 
 	if (strlen(m_cRandomString) > 0)
 	{
@@ -480,7 +480,7 @@ void CWebServerProcess::Post()
 		}
 	}
 
-	if (theApp.m_pDlgSettingsMobile->m_sPassword.GetLength() == 0) bSessionValid = true;
+//	if (theApp.m_pDlgSettingsMobile->m_sPassword.GetLength() == 0) bSessionValid = true;
 
 	// agent
 	pcFound = (char *) strstr(cBuffer, pcFindAgent);
@@ -540,6 +540,7 @@ void CWebServerProcess::Post()
 //		pcFound+= strlen(pcFindPassword);
 		bool bPasswordOk = false;
 
+		/*
 		if (theApp.m_pDlgSettingsMobile->m_sPassword.GetLength() == 0) 
 		{
 			CLoggingMessage sLog;
@@ -591,6 +592,7 @@ void CWebServerProcess::Post()
 				return;
 			}
 		}
+		*/
 		sMessage = m_cRandomString;
 		SetMessage(&sMessage);
 		return;
@@ -1596,6 +1598,7 @@ void CWebServerProcess::AddCrLf(string *psSend)
 
 void CWebServerProcess::ResetPassword()
 {
+	/*
 	CBlowFish bf;
 	string sPassword;
 	char cHex[2048*2];
@@ -1616,6 +1619,7 @@ void CWebServerProcess::ResetPassword()
 	{
 		m_iWebServerLogin = WEBSERVER_LOGIN_AUTO;
 	}
+	*/
 }
 
 

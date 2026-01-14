@@ -114,10 +114,10 @@ protected:
 	afx_msg void OnCopyalltoclipboard();
 	afx_msg void OnCopyselectedtoclipboard();
 
-	afx_msg LRESULT OnWebOperation(WPARAM wParam, LPARAM lParam);
-	afx_msg LRESULT OnWebItemSelected(WPARAM wParam, LPARAM lParam);
-	afx_msg LRESULT OnWebSort(WPARAM wParam, LPARAM lParam);
-	afx_msg LRESULT OnWebProperties(WPARAM wParam, LPARAM lParam);
+//	afx_msg LRESULT OnWebOperation(WPARAM wParam, LPARAM lParam);
+//	afx_msg LRESULT OnWebItemSelected(WPARAM wParam, LPARAM lParam);
+//	afx_msg LRESULT OnWebSort(WPARAM wParam, LPARAM lParam);
+//	afx_msg LRESULT OnWebProperties(WPARAM wParam, LPARAM lParam);
 	BOOL ProjectProperties(int iBusy);
 
 	afx_msg void OnComputersDetect();

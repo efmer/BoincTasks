@@ -86,10 +86,11 @@ BOOL CAboutDlg::OnInitDialog()
 	sDisplayText+= " Stephen Ellison, Greg Staunton - JugNut (3), William Plachy, SekeRob2, R.A.Hicks, Rodney Duane, Matthew Belben (2), Sean Humphries, Michael Hartsell,\r\n";
 	sDisplayText+= " Lushchay Vladimir, Alain Denos, Steven Pepperell (2), Richard Roberts, Yeti, Daniel Wimmer, Richard Bassett, Wendell Dunn Iii, Damien Healy (6),\r\n";
 	sDisplayText+= " John Burton, P McVeigh, Abhinav Singh, TeeVeeEss, Giles Averay-Jones, Thorsten Sambale, Jeremy Hanson, kiberdweller.\r\n";
-	sDisplayText+= " Charles Elliott, Peter Wright, Mark Whitmore, Michael D Henderson (2), Joerg Steinmetz, Kari Hyvönen, Erik Veit (16), David Huffman-Gottschling.\r\n";
+	sDisplayText+= " Charles Elliott, Peter Wright, Mark Whitmore, Michael D Henderson (2), Joerg Steinmetz, Kari Hyvönen, Erik Veit (17), David Huffman-Gottschling.\r\n";
 	sDisplayText+= " MWG Creations, Mark Hudson, Alexander Lagerberg, Mikhail Romanov, Time Logic Systems, Inc, Dirk Gudenschwager, Daniel McArdell, James Kimball (3).\r\n";
-	sDisplayText+= " Websters computers, David Chapman, William Johnston (2), Jerome Cadet, Dan Shprecher, Jave Ivanovski, Lammert Van der Veen, Toby Broom (4).\r\n";
-// updated upto 15-june-2025
+	sDisplayText+= " Websters computers, David Chapman, William Johnston (3), Jerome Cadet, Dan Shprecher, Jave Ivanovski, Lammert Van der Veen, Toby Broom (5).\r\n";
+	sDisplayText+= " .\r\n";
+// updated upto 1-jan-2026
 
 	sDisplayText+= gszTranslation[PosDialogAboutText2];
 
@@ -102,11 +103,6 @@ BOOL CAboutDlg::OnInitDialog()
 	m_efmerHttp.SetTextColor(RGB(0,0,255));
 	m_efmerHttp.SetFontUnderline(TRUE);
 	m_efmerHttp.SetLinkCursor(m_hCursor);
-
-	m_snlHttp.SetLink(TRUE,FALSE);
-	m_snlHttp.SetTextColor(RGB(0,0,255));
-	m_snlHttp.SetFontUnderline(TRUE);
-	m_snlHttp.SetLinkCursor(m_hCursor);
 
 	CString sTxt;
 	sTxt = gszTranslation[PosDialogAboutCreditsLinkHttp];
@@ -133,12 +129,6 @@ BOOL CAboutDlg::OnInitDialog()
 
 	m_text.SetWindowText(sDisplayText);
 
-	if (theApp.m_pTranslation->m_lcid == 1043)
-	{
-		m_bmpSnl.ShowWindow(SW_SHOW);
-		m_snlHttp.ShowWindow(SW_SHOW);
-	}
-
 	SetTimer(UTIMER_DLG_ABOUT, 50, 0);
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
@@ -148,11 +138,9 @@ void CAboutDlg::DoDataExchange(CDataExchange* pDX)
 	CDialog::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_EDIT_ABOUT, m_text);
 	DDX_Control(pDX, IDC_EFMER_HTTP, m_efmerHttp);
-	DDX_Control(pDX, IDC_SNL_HTTP, m_snlHttp);
 	DDX_Control(pDX, IDC_EDIT_VERSION, m_version);
 	DDX_Control(pDX, IDC_TEXT_TRANSLATED_BY, m_textTranslatedBy);
 	DDX_Control(pDX, IDC_TEXT_TRANSLATED_TEAM, m_textTranslatedTeam);
-	DDX_Control(pDX, IDC_BITMAP_SNL, m_bmpSnl);
 }
 
 
@@ -161,7 +149,7 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialog)
 	ON_WM_SHOWWINDOW()
 	ON_BN_CLICKED(IDOK, OnBnClickedOk)
 	ON_STN_CLICKED(IDC_EFMER_HTTP, OnStnClickedEfmerHttp)
-	ON_STN_CLICKED(IDC_SNL_HTTP, OnStnClickedSnlHttp)
+//	ON_STN_CLICKED(IDC_SNL_HTTP, OnStnClickedSnlHttp)
 	ON_STN_CLICKED(IDC_TEXT_TRANSLATED_TEAM, &CAboutDlg::OnStnClickedTextTranslatedTeam)
 END_MESSAGE_MAP()
 
@@ -181,6 +169,7 @@ void CAboutDlg::OnStnClickedEfmerHttp()
 	ShellExecute(NULL,_T("open"),strLink.IsEmpty() ? strLink : strLink,NULL,NULL,SW_SHOWNORMAL);
 }
 
+/*
 void CAboutDlg::OnStnClickedSnlHttp()
 {
 	CString strLink;
@@ -188,6 +177,7 @@ void CAboutDlg::OnStnClickedSnlHttp()
 
 	ShellExecute(NULL,_T("open"),strLink.IsEmpty() ? strLink : strLink,NULL,NULL,SW_SHOWNORMAL);
 }
+*/
 
 void CAboutDlg::OnTimer(UINT_PTR nIDEvent)
 {

@@ -20,7 +20,7 @@ char *registryDebugMobile			= "debug_mobile";
 char *registryDebugMobileScript		= "debug_mobile_script";
 char *registryDebugMobileConnect	= "debug_mobile_connect";
 char *registryDebugMobileConnectDump= "debug_mobile_connect_dump";
-char *registryDebugCloud			= "debug_cloud";
+//char *registryDebugCloud			= "debug_cloud";
 char *registryDebugHeapCheck		= "debug_heap_check";
 char *registryDebugFileOnly			= "debug_file_only";
 
@@ -147,11 +147,11 @@ char *registryLegacy				= "legacy";
 char *registryWWWEnable				= "www_enable";
 char *registryWWWPassword			= "www_password";
 char *registryWWWRefreshTime		= "www_refresh_time";
-char *registryCloudEnable			= "cloud_enable";
-char *registryCloudServer			= "cloud_server";
-char *registryCloudServerDebug		= "cloud_debug";
-char *registryCloudEmail			= "cloud_email";
-char *registryCloudPassword			= "cloud_password";
+//char *registryCloudEnable			= "cloud_enable";
+//char *registryCloudServer			= "cloud_server";
+//char *registryCloudServerDebug		= "cloud_debug";
+//char *registryCloudEmail			= "cloud_email";
+//char *registryCloudPassword			= "cloud_password";
 
 char *registrySectionFloating		= "gadget";
 char *registryFloatingLeft			= "left";

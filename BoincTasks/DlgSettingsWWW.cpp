@@ -6,8 +6,6 @@
 #include "BoincTasks.h"
 #include "DlgSettingsMain.h"
 #include "DlgSettingsWWW.h"
-#include "ThreadCloudServer.h"
-#include "ThreadCloudConnect.h"
 #include "Translation.h"
 #include "afxdialogex.h"
 #include "bf/Blowfish.h"
@@ -71,13 +69,13 @@ BOOL CDlgSettingsWWW::OnInitDialog()
 	sFormat.Format("%d", m_iRefreshTime);
 	m_editRefresh.SetWindowText(sFormat);
 
-	iCheck = theApp.GetProfileInt(registrySectionSettings, registryCloudEnable, 0);
-	if (iCheck > 0) iCheck = 1;
-	m_checkEnableCloud.SetCheck(iCheck);
-	m_bCloudEnable = (iCheck > 0);
+//	iCheck = theApp.GetProfileInt(registrySectionSettings, registryCloudEnable, 0);
+//	if (iCheck > 0) iCheck = 1;
+//	m_checkEnableCloud.SetCheck(iCheck);
+//	m_bCloudEnable = (iCheck > 0);
 
 	bool bServerInvalid = false;
-	m_sServer = theApp.GetProfileString(registrySectionSettings, registryCloudServer, "seti.nl");
+//	m_sServer = theApp.GetProfileString(registrySectionSettings, registryCloudServer, "seti.nl");
 
 
 #ifdef _DEBUG
@@ -85,7 +83,7 @@ BOOL CDlgSettingsWWW::OnInitDialog()
 	m_checkUseLocalhost.ShowWindow(SW_SHOW);
 	iCheck = theApp.GetProfileInt(registrySectionSettings, registryCloudServerDebug,1);
 	m_checkUseLocalhost.SetCheck(iCheck);
-	m_sServer = CLOUD_SERVER;
+//	m_sServer = CLOUD_SERVER;
 	if (iCheck)
 	{
 		m_sServer = "localhost";
