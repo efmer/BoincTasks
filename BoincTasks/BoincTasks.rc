@@ -2773,8 +2773,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2,0,0,0
- PRODUCTVERSION 2,0,0,0
+ FILEVERSION 2,0,1,0
+ PRODUCTVERSION 2,0,1,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -2791,12 +2791,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "eFMer"
             VALUE "FileDescription", "eFMer BoincTasks,  the best way to view BOINC."
-            VALUE "FileVersion", "2.0.0.0"
+            VALUE "FileVersion", "2.0.1.0"
             VALUE "InternalName", "BoincTasks.exe"
             VALUE "LegalCopyright", "(c) 2009-2026 eFMer.  All rights reserved."
             VALUE "OriginalFilename", "BoincTasks.exe"
             VALUE "ProductName", "eFMer BoincTask"
-            VALUE "ProductVersion", "2.0.0.0"
+            VALUE "ProductVersion", "2.0.1.0"
         END
     END
     BLOCK "VarFileInfo"
@@ -2867,7 +2867,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_PROGRAM_VERSION     "2.0.0"
+    IDS_PROGRAM_VERSION     "2.0.1"
     IDS_PROGRAM_VERSION_PREFIX "eFMer, BoincTasks"
 END
 

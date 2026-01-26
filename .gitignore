@@ -366,3 +366,4 @@ FodyWeavers.xsd
 *.exe
 /BoincTasks.sln
 /release/lang/BoincTasks_BGR.btlang
+private sign/
